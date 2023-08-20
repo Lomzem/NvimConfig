@@ -1,0 +1,5 @@
+require("lomzem.remaps")
+require("lomzem.lazy")
+require("lomzem.telescope")
+require("lomzem.treesitter")
+require("lomzem.lsp")
