@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- General
 vim.keymap.set("n", "<C-a>", "ggVG") -- Select all
-vim.keymap.set("n", "y=", "<cmd>silent exec '!xclip -selection clipboard -i %'<CR>") -- Copy all
+vim.keymap.set("n", "y=", "<cmd>silent exec '!xclip -selection clipboard -i %'<CR><cmd>echo 'Successfully copied all!'<CR>") -- Copy all
 vim.keymap.set("n", "<A-q>", "<cmd>q<CR>") -- Quit
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
