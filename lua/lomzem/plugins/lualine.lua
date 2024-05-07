@@ -3,7 +3,12 @@ return {
 	opts = {
 		options = {
 			icons_enabled = false,
+<<<<<<< HEAD
 			theme = "auto",
+=======
+			theme = require("lomzem.lualine_themes.transparent").theme(),
+			-- theme = "rose-pine",
+>>>>>>> 6ad1d21 (what)
 			component_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
 			disabled_filetypes = {

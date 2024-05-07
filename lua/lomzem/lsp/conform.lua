@@ -1,10 +1,10 @@
 require("conform").setup({
-	format_on_save = {
-		async = true,
-		lsp_fallback = true,
-	},
-    -- I miss autoformat :(
-	-- format_on_save = function() end,
+	-- format_on_save = {
+	-- 	async = true,
+	-- 	lsp_fallback = true,
+	-- },
+	-- I miss autoformat :(
+	format_on_save = function() end,
 	formatters_by_ft = {
 		go = { "gofmt" },
 		lua = { "stylua" },
