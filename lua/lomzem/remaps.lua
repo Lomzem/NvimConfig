@@ -20,16 +20,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers page down
 vim.keymap.set("n", "n", "nzzzv") -- Centers search forward
 vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
--- vim.keymap.set("n", "j", "jzz")                 -- Centers down
--- vim.keymap.set("n", "k", "kzz")                 -- Centers up
-
+vim.keymap.set("n", "<C-i>", "<C-i>zz")
+vim.keymap.set("n", "<C-o>", "<C-o>zz")
 vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
+
 vim.keymap.set("n", "<leader>pv", "<CMD>Ex<CR><CMD>set rnu<CR>") -- Opens Netrw
 vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
 
 -- Clipboard
-vim.keymap.set("n", "<leader>y", '"+y') -- Saves to system clipboard
-vim.keymap.set("v", "<leader>y", '"+y') -- Saves to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y') -- Saves to system clipboard
 vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
