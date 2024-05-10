@@ -11,8 +11,11 @@ return {
 					find_files = {
 						find_command = {
 							"fd",
+                            "-H",
 							"-t",
 							"f",
+                            "-E",
+                            "*.git/*",
 							"-E",
 							"*.jpg",
 							"-E",
@@ -35,6 +38,7 @@ return {
 			})
 
 			vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>pg", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>cmd", builtin.commands, {})
 
