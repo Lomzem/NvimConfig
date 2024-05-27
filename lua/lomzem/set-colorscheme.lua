@@ -1,4 +1,4 @@
--- vim.cmd("colorscheme rose-pine-main")
+vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme catppuccin")
 -- vim.cmd("colorscheme catppuccin-mocha")
