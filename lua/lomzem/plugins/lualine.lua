@@ -4,7 +4,7 @@ return {
 		options = {
 			icons_enabled = false,
 			-- theme = "auto",
-			theme = require("lomzem.lualine_themes.transparent").theme(),
+			theme = require("lomzem.lualine_themes.transparent_lualine").theme(),
 			component_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
 			disabled_filetypes = {
