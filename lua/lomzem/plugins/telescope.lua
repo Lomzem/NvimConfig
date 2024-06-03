@@ -11,11 +11,11 @@ return {
 					find_files = {
 						find_command = {
 							"fd",
-                            "-H",
+							"-H",
 							"-t",
 							"f",
-                            "-E",
-                            "*.git/*",
+							"-E",
+							"*.git/*",
 							"-E",
 							"*.jpg",
 							"-E",
