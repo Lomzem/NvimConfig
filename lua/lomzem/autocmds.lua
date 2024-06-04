@@ -29,3 +29,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
 		require("lomzem/lsp/snippets/qalc")
 	end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*.txt",
+	callback = function()
+		vim.cmd("Wrap")
+	end,
+})
