@@ -42,7 +42,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word
 vim.keymap.set("i", "<C-x>", "<C-o>x")
-vim.keymap.set("i", "<C-W>", "<C-o>dw")
 
 -- front/back
 vim.keymap.set({ "n", "v" }, "H", "_")
