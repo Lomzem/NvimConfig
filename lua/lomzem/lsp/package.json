@@ -6,10 +6,12 @@
     "contributes": {
         "snippets": [
             {
-                "language": [
-                    "html"
-                ],
+                "language": "html",
                 "path": "./snippets/html.json"
+            },
+            {
+                "language": "css",
+                "path": "./snippets/css.json"
             }
         ]
     }
