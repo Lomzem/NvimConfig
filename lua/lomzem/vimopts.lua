@@ -34,3 +34,4 @@ vim.opt.splitbelow = true
 vim.opt.smartcase = true
 vim.opt.swapfile = false
 vim.api.nvim_create_user_command("Wrap", "lua vim.cmd([[set wrap | set linebreak | set spell]])", {})
+vim.opt.undofile = true
