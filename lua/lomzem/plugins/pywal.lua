@@ -77,5 +77,3 @@ return {
 		-- is loaded before other plugins
 	},
 }
-
--- return {}

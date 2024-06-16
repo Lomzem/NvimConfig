@@ -58,3 +58,4 @@ vim.keymap.set("v", ">", ">gv")
 
 -- Commands
 vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
+vim.keymap.set("n", "<leader>co", "<cmd>Cola<CR>")

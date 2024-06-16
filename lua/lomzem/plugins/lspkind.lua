@@ -1,1 +1,2 @@
-return { "onsails/lspkind.nvim" }
+return {}
+-- return { "onsails/lspkind.nvim" }

@@ -1,7 +1,6 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.2",
 		config = function()
 			local telescope = require("telescope")
 			local builtin = require("telescope.builtin")
@@ -62,8 +61,8 @@ return {
 				},
 			})
 
-			require("telescope").load_extension("fzy_native")
+			-- require("telescope").load_extension("fzy_native")
 		end,
 	},
-	{ "nvim-telescope/telescope-fzy-native.nvim" },
+	-- { "nvim-telescope/telescope-fzy-native.nvim" },
 }
