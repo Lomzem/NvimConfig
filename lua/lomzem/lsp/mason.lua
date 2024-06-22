@@ -1,20 +1,20 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		-- "asm_lsp",
-		"cssls",
 		"clangd",
+		"cssls",
+		"emmet-language-server",
 		"eslint",
 		"gopls",
 		"html",
-		-- "jedi_language_server",
 		"jsonls",
 		"lua_ls",
+		"pyright",
 		"rust_analyzer",
-		"texlab",
 		"tsserver",
 		"typst_lsp",
-		"pyright",
+		-- "asm_lsp",
+		-- "jedi_language_server",
 	},
 })
 
