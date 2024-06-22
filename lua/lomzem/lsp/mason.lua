@@ -3,7 +3,7 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"clangd",
 		"cssls",
-		"emmet-language-server",
+		"emmet_language_server",
 		"eslint",
 		"gopls",
 		"html",
