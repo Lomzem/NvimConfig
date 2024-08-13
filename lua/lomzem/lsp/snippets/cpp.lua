@@ -42,6 +42,15 @@ ls.add_snippets("cpp", {
 	}),
 
 	s({
+		trig = "npt",
+		snippetType = "autosnippet",
+		name = "nullptr",
+		dscr = "nullptr",
+	}, {
+		t("nullptr"),
+	}),
+
+	s({
 		trig = "tfor",
 		snippetType = "autosnippet",
 		name = "Traditional For Loop",

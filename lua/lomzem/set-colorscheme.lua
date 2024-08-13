@@ -1,7 +1,8 @@
-vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd("colorscheme rose-pine-main")
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-frappe")
 -- vim.cmd("colorscheme catppuccin-mocha")
 -- vim.cmd("colorscheme tokyonight-moon")
 
