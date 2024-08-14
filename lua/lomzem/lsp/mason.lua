@@ -27,7 +27,8 @@ require("mason-tool-installer").setup({
 	},
 })
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 require("mason-lspconfig").setup_handlers({
 	function(server_name)
@@ -45,6 +46,11 @@ require("mason-lspconfig").setup_handlers({
 					diagnostics = { globals = { "vim" } },
 				},
 			},
+		})
+	end,
+	["clangd"] = function()
+		require("lspconfig").clangd.setup({
+			capabilities = capabilities,
 		})
 	end,
 	["rust_analyzer"] = function()
