@@ -51,6 +51,15 @@ ls.add_snippets("cpp", {
 	}),
 
 	s({
+		trig = "unstd",
+		snippetType = "autosnippet",
+		name = "using namespace std",
+		dscr = "using namespace std",
+	}, {
+		t("using namespace std;"),
+	}),
+
+	s({
 		trig = "tfor",
 		snippetType = "autosnippet",
 		name = "Traditional For Loop",
