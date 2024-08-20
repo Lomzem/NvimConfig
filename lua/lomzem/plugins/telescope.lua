@@ -39,7 +39,7 @@ return {
 			vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 			vim.keymap.set("n", "<leader>pg", builtin.git_files, {})
 			vim.keymap.set("n", "<leader>ps", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>cmd", builtin.commands, {})
+			vim.keymap.set("n", "<leader>cm", builtin.commands, {})
 
 			vim.api.nvim_create_user_command("Cola", function()
 				-- builtin.colorscheme({

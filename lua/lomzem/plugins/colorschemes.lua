@@ -14,7 +14,7 @@ return {
 		name = "catpuccin",
 		priority = 1000,
 		config = function()
-			require("catppuccin").setup({ flavour = "frappe", transparent_background = "true" })
+			require("catppuccin").setup({ transparent_background = "true" })
 		end,
 	},
 	{
