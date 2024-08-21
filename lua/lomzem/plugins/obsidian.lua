@@ -11,6 +11,26 @@ return {
 		vim.keymap.set("n", "<leader>bl", "<cmd>ObsidianBacklinks<CR>")
 
 		require("obsidian").setup({
+			mappings = {
+				["gf"] = {
+					action = function()
+						return require("obsidian").util.gf_passthrough()
+					end,
+					opts = { noremap = false, expr = true, buffer = true },
+				},
+				["<leader>ch"] = {
+					action = function()
+						return require("obsidian").util.toggle_checkbox()
+					end,
+					opts = { buffer = true },
+				},
+				-- ["<cr>"] = {
+				-- 	action = function()
+				-- 		return require("obsidian").util.smart_action()
+				-- 	end,
+				-- 	opts = { buffer = true, expr = true },
+				-- },
+			},
 			note_path_func = function(spec)
 				local path = spec.dir / tostring(spec.title)
 				return path:with_suffix(".md")
