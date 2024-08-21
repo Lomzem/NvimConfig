@@ -42,6 +42,18 @@ ls.add_snippets("cpp", {
 	}),
 
 	s({
+		trig = "vector",
+		snippetType = "autosnippet",
+		name = "vector",
+		dscr = "vector",
+	}, {
+		t("vector<"),
+		i(1),
+		t(">"),
+		i(0),
+	}),
+
+	s({
 		trig = "npt",
 		snippetType = "autosnippet",
 		name = "nullptr",
