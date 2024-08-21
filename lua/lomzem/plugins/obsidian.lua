@@ -6,22 +6,28 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	opts = {
-		note_path_func = function(spec)
-			local path = spec.dir / tostring(spec.title)
-			return path:with_suffix(".md")
-		end,
-		ui = {
-			checkboxes = {
-				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-				["x"] = { char = "", hl_group = "ObsidianDone" },
+	config = function()
+		vim.keymap.set("n", "<leader>li", "<cmd>ObsidianLinks<CR>")
+		vim.keymap.set("n", "<leader>bl", "<cmd>ObsidianBacklinks<CR>")
+
+		require("obsidian").setup({
+			note_path_func = function(spec)
+				local path = spec.dir / tostring(spec.title)
+				return path:with_suffix(".md")
+			end,
+			ui = {
+				checkboxes = {
+					[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+					["x"] = { char = "", hl_group = "ObsidianDone" },
+				},
 			},
-		},
-		workspaces = {
-			{
-				name = "getting started",
-				path = "~/coding/obsidian-getting-started/",
+			wiki_link_func = "use_alias_only",
+			workspaces = {
+				{
+					name = "getting started",
+					path = "~/coding/obsidian-getting-started/",
+				},
 			},
-		},
-	},
+		})
+	end,
 }
