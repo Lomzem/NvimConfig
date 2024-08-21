@@ -65,7 +65,7 @@ ls.add_snippets("cpp", {
 		name = "Traditional For Loop",
 		dscr = "for (int i(0); i < $1; i++) {}",
 	}, {
-		t("for (size_t i(0); i < "),
+		t("for (int i(0); i < "),
 		i(1),
 		t({ "; i++) {", "\t" }),
 		i(2),
