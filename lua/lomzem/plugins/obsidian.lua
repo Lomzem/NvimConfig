@@ -9,6 +9,7 @@ return {
 	config = function()
 		vim.keymap.set("n", "<leader>li", "<cmd>ObsidianLinks<CR>")
 		vim.keymap.set("n", "<leader>bl", "<cmd>ObsidianBacklinks<CR>")
+		vim.keymap.set("n", "<leader>co", "<cmd>ObsidianTOC<CR>")
 
 		require("obsidian").setup({
 			mappings = {
@@ -44,8 +45,8 @@ return {
 			wiki_link_func = "use_alias_only",
 			workspaces = {
 				{
-					name = "getting started",
-					path = "~/coding/obsidian-getting-started/",
+					name = "311",
+					path = "~/coding/chico-obsidian/311/",
 				},
 			},
 		})
