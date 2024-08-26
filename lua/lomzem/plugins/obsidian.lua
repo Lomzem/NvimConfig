@@ -12,6 +12,9 @@ return {
 		vim.keymap.set("n", "<leader>co", "<cmd>ObsidianTOC<CR>")
 
 		require("obsidian").setup({
+			follow_url_func = function(url)
+				vim.ui.open(url)
+			end,
 			mappings = {
 				["gf"] = {
 					action = function()
