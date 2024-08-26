@@ -45,10 +45,14 @@ return {
 			wiki_link_func = "use_alias_only",
 			workspaces = {
 				{
-					name = "311",
-					path = "~/coding/chico-obsidian/311/",
+					name = "Chico Obsidian",
+					path = "~/coding/chico-obsidian/",
 				},
 			},
+			-- {
+			-- 	name = "301W",
+			-- 	path = "~/coding/chico-obsidian/301W/",
+			-- },
 		})
 	end,
 }
