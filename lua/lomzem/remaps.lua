@@ -30,7 +30,7 @@ vim.keymap.set("n", "<C-i>", "<C-i>zz")
 vim.keymap.set("n", "<C-o>", "<C-o>zz")
 vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
 
-vim.keymap.set("n", "<leader>pv", "<CMD>Ex<CR><CMD>set rnu<CR>") -- Opens Netrw
+vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>") -- Opens Netrw
 vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
 
 -- Clipboard
@@ -39,7 +39,7 @@ vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
 vim.keymap.set("n", "D", "dd")
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "J", ":m'>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word

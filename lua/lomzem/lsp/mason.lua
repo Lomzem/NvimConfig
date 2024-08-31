@@ -12,8 +12,6 @@ require("mason-lspconfig").setup({
 		"pyright",
 		"rust_analyzer",
 		"tsserver",
-		"typst_lsp",
-		-- "asm_lsp",
 		-- "jedi_language_server",
 	},
 })
