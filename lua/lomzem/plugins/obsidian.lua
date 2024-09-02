@@ -10,6 +10,7 @@ return {
 		vim.keymap.set("n", "<leader>li", "<cmd>ObsidianLinks<CR>")
 		vim.keymap.set("n", "<leader>bl", "<cmd>ObsidianBacklinks<CR>")
 		vim.keymap.set("n", "<leader>co", "<cmd>ObsidianTOC<CR>")
+		vim.keymap.set("n", "<leader>ot", "<cmd>ObsidianTags<CR>")
 
 		require("obsidian").setup({
 			follow_url_func = function(url)
