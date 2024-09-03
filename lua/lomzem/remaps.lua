@@ -14,8 +14,8 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
 
 -- Quickfix
-vim.keymap.set("n", "<leader>cn", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<leader>cp", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>")
 
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- Save
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
@@ -23,7 +23,7 @@ vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
 vim.keymap.set("n", "<leader>w", "<Esc><cmd>w<CR>") -- Save
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
-vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers page down
+vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers page d-own
 vim.keymap.set("n", "n", "nzzzv") -- Centers search forward
 vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
 vim.keymap.set("n", "<C-i>", "<C-i>zz")
