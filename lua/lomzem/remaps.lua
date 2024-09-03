@@ -14,8 +14,9 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
 
 -- Quickfix
-vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
 
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- Save
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
