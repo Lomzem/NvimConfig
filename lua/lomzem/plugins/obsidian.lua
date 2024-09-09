@@ -41,10 +41,11 @@ return {
 				return path:with_suffix(".md")
 			end,
 			ui = {
-				checkboxes = {
-					[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-					["x"] = { char = "", hl_group = "ObsidianDone" },
-				},
+				enable = false,
+				-- checkboxes = {
+				-- 	[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+				-- 	["x"] = { char = "", hl_group = "ObsidianDone" },
+				-- },
 			},
 			wiki_link_func = "use_alias_only",
 			workspaces = {

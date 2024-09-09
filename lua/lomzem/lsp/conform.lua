@@ -4,7 +4,7 @@ require("conform").setup({
 		lsp_fallback = true,
 	},
 	-- I miss autoformat :(
-	format_after_save = function() end,
+	-- format_after_save = function() end,
 	formatters_by_ft = {
 		go = { "gofmt" },
 		lua = { "stylua" },
