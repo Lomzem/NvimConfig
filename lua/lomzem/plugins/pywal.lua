@@ -8,7 +8,7 @@ return {
 				},
 			}
 
-			vim.cmd([[colorscheme mbc]]) -- activate the colorscheme
+			-- vim.cmd([[colorscheme mbc]]) -- activate the colorscheme
 			local groups = {
 				"Normal",
 				"NormalFloat",
