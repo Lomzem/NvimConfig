@@ -10,9 +10,7 @@ return {
 					find_files = {
 						find_command = {
 							"fd",
-							"-H",
-							"-t",
-							"f",
+							"--unrestricted",
 							"-E",
 							"*.git/*",
 							"-E",
