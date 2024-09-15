@@ -1,21 +1,18 @@
 return {
 	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		opts = { transparent_background = true },
+	},
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		opts = {
 			variant = "moon",
 			disable_background = true,
 			disable_float_background = true,
-			-- disable_italics = true,
 		},
-	},
-	{
-		"catppuccin/nvim",
-		name = "catpuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({ transparent_background = "true" })
-		end,
 	},
 	{
 		"folke/tokyonight.nvim",
