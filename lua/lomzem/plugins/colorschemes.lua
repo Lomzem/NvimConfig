@@ -11,7 +11,7 @@ return {
 		opts = {
 			variant = "moon",
 			disable_background = true,
-			disable_float_background = true,
+			-- disable_float_background = true,
 		},
 	},
 	{
