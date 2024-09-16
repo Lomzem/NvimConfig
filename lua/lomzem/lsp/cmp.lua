@@ -65,3 +65,43 @@ local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 vim.opt.pumheight = 10
+
+cmp.setup.cmdline(":", {
+	mapping = {
+		["<C-j>"] = {
+			c = function(fallback)
+				if cmp.visible() then
+					cmp.select_next_item()
+				else
+					fallback()
+				end
+			end,
+		},
+		["<C-k>"] = {
+			c = function(fallback)
+				if cmp.visible() then
+					cmp.select_prev_item()
+				else
+					fallback()
+				end
+			end,
+		},
+		["<C-l>"] = {
+			c = function(fallback)
+				if not require("cmp").confirm({ select = true }) then
+					fallback()
+				end
+			end,
+		},
+	},
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+		{
+			name = "cmdline",
+			option = {
+				ignore_cmds = { "Man", "!" },
+			},
+		},
+	}),
+})
