@@ -29,12 +29,6 @@ return {
 				end,
 				opts = { buffer = true },
 			},
-			-- ["<cr>"] = {
-			-- 	action = function()
-			-- 		return require("obsidian").util.smart_action()
-			-- 	end,
-			-- 	opts = { buffer = true, expr = true },
-			-- },
 		},
 		note_path_func = function(spec)
 			local path = spec.dir / tostring(spec.title)
@@ -42,10 +36,10 @@ return {
 		end,
 		ui = {
 			enable = false,
-			-- checkboxes = {
-			-- 	[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-			-- 	["x"] = { char = "", hl_group = "ObsidianDone" },
-			-- },
+			checkboxes = {
+				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+				["x"] = { char = "", hl_group = "ObsidianDone" },
+			},
 		},
 		wiki_link_func = "use_alias_only",
 		workspaces = {
