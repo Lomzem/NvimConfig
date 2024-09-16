@@ -7,42 +7,6 @@ return {
 				build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 			},
 		},
-		opts = {
-			extensions = {
-				fzf = {
-					fuzzy = true, -- false will only do exact matching
-					override_generic_sorter = true, -- override the generic sorter
-					override_file_sorter = true, -- override the file sorter
-					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-				},
-			},
-			pickers = {
-				find_files = {
-					find_command = {
-						"fd",
-						"--unrestricted",
-						"-E",
-						"*.git/*",
-						"-E",
-						"*.jpg",
-						"-E",
-						"*.png",
-						"-E",
-						"*.log",
-						"-E",
-						"*.jpeg",
-						"-E",
-						"lazy-lock*",
-						"-E",
-						"*.pdf",
-						"-E",
-						"*.out",
-						"-E",
-						"*.o",
-					},
-				},
-			},
-		},
 		keys = {
 			{ "<C-p>", require("telescope.builtin").find_files, "Telescope Find Files" },
 			{ "<leader>pg", require("telescope.builtin").git_files, "Telescope Git Files" },
@@ -51,6 +15,41 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
+				extensions = {
+					fzf = {
+						fuzzy = true, -- false will only do exact matching
+						override_generic_sorter = true, -- override the generic sorter
+						override_file_sorter = true, -- override the file sorter
+						case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+					},
+				},
+				pickers = {
+					find_files = {
+						find_command = {
+							"fd",
+							"--unrestricted",
+							"-E",
+							"*.git/*",
+							"-E",
+							"*.jpg",
+							"-E",
+							"*.png",
+							"-E",
+							"*.log",
+							"-E",
+							"*.jpeg",
+							"-E",
+							"lazy-lock*",
+							"-E",
+							"*.pdf",
+							"-E",
+							"*.out",
+							"-E",
+							"*.o",
+						},
+					},
+				},
+
 				defaults = {
 					mappings = {
 						i = {
