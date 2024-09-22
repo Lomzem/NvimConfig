@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<leader>ru", ":w<CR>:term make<cr>")
+vim.keymap.set("n", "<leader>ru", ":w<cr>:term make<cr>")

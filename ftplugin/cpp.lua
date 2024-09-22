@@ -1,2 +1,2 @@
-vim.keymap.set("n", "<leader>ru", ":w<CR>:term g++ % && ./a.out<CR>")
+vim.keymap.set("n", "<leader>ru", ":w<cr>:term make<cr>")
 require("lomzem/lsp/snippets/cpp")
