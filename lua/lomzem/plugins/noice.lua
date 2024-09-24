@@ -1,7 +1,22 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
-	opts = {},
+	opts = {
+		cmdline = {
+			view = "cmdline",
+		},
+
+		routes = {
+			{
+				filter = {
+					-- hide search virtual text
+					event = "msg_show",
+					kind = "search_count",
+				},
+				opts = { skip = true },
+			},
+		},
+	},
 	keys = {
 		{ "<leader>nd", "<cmd>NoiceDismiss<cr>", "n", "[N]oice [D]ismiss" },
 	},
