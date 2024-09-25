@@ -18,6 +18,8 @@ vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
 
+vim.keymap.set("n", "<leader>z=", "1z=") --spellcheck
+
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- Save
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
 vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
