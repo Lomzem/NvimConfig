@@ -5,7 +5,7 @@ return {
 		priority = 1000,
 		opts = {
 			transparent = true,
-			borderless_telescope = true,
+			borderless_telescope = false,
 		},
 	},
 	{
