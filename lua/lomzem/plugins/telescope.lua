@@ -56,6 +56,7 @@ return {
 							["<C-k>"] = require("telescope.actions").move_selection_previous,
 							["<C-j>"] = require("telescope.actions").move_selection_next,
 							["<C-c>"] = require("telescope.actions").close,
+							["<C-x>"] = require("telescope.actions").file_vsplit,
 						},
 					},
 				},
