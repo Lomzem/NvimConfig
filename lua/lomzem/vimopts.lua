@@ -1,6 +1,7 @@
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.fillchars = { eob = " " }
 
 -- tabs and indenting
 vim.opt.tabstop = 4
