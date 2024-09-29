@@ -11,6 +11,7 @@ return {
 		{ "<leader>pg", require("telescope.builtin").git_files, "Telescope Git Files" },
 		{ "<leader>ps", require("telescope.builtin").live_grep, "Telescope Live Grep" },
 		{ "<leader>cm", require("telescope.builtin").commands, "Telescope Commands" },
+		{ "gm", require("telescope.builtin").marks, "Telescope Marks" },
 	},
 	config = function()
 		require("telescope").setup({
