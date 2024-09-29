@@ -9,7 +9,7 @@ return {
 	keys = {
 		{ "<leader>li", "<cmd>ObsidianLinks<cr>", "n" },
 		{ "<leader>bl", "<cmd>ObsidianBacklinks<cr>", "n" },
-		{ "<leader>co", "<cmd>ObsidianTOC<cr>", "n" },
+		{ "gs", "<cmd>ObsidianTOC<cr>", "n" },
 		{ "<leader>ot", "<cmd>ObsidianTags<cr>", "n" },
 	},
 	opts = {
