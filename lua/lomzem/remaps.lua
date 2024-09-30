@@ -49,8 +49,8 @@ vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("i", "<C-x>", "<C-o>x")
 
 -- front/back
-vim.keymap.set({ "n", "v" }, "H", "_")
-vim.keymap.set({ "n", "v" }, "L", "$")
+vim.keymap.set({ "n", "v", "o" }, "H", "_")
+vim.keymap.set({ "n", "v", "o" }, "L", "$")
 
 -- Save my left pinky
 vim.keymap.set("n", "<A-a>", "A")
