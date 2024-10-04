@@ -3,6 +3,7 @@ require("lomzem.remaps")
 
 require("lomzem.lazy")
 require("lomzem.lsp.lsp")
+require("lomzem.lsp.mason")
 require("lomzem.autocmds")
 require("lomzem.set-colorscheme")
 
