@@ -6,13 +6,6 @@ return {
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 		},
 	},
-	keys = {
-		{ "<C-p>", require("telescope.builtin").find_files, "Telescope Find Files" },
-		{ "<leader>pg", require("telescope.builtin").git_files, "Telescope Git Files" },
-		{ "<leader>ps", require("telescope.builtin").live_grep, "Telescope Live Grep" },
-		{ "<leader>cm", require("telescope.builtin").commands, "Telescope Commands" },
-		{ "gm", require("telescope.builtin").marks, "Telescope Marks" },
-	},
 	config = function()
 		require("telescope").setup({
 			extensions = {
@@ -62,6 +55,10 @@ return {
 			},
 		})
 
+		vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, {})
+		vim.keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep, {})
+		vim.keymap.set("n", "<leader>cm", require("telescope.builtin").commands, {})
+		vim.keymap.set("n", "gm", require("telescope.builtin").marks, {})
 		require("telescope").load_extension("fzf")
 
 		vim.api.nvim_create_user_command("Cola", function()

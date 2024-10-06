@@ -11,8 +11,6 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"pyright",
 		"rust_analyzer",
-		-- "ts_ls",
-		-- "jedi_language_server",
 	},
 })
 
@@ -27,6 +25,7 @@ require("mason-tool-installer").setup({
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 
 require("mason-lspconfig").setup_handlers({
 	function(server_name)
@@ -46,6 +45,7 @@ require("mason-lspconfig").setup_handlers({
 	end,
 	["clangd"] = function()
 		require("lspconfig").clangd.setup({
+			cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
 			capabilities = capabilities,
 		})
 	end,
