@@ -11,10 +11,14 @@ local function file_exists(name)
 	end
 end
 
-if file_exists(makefile_path) then
-	vim.keymap.set("n", "<leader>ru", ":w<cr>:term make<cr>")
-else
-	vim.keymap.set("n", "<leader>ru", ":w<cr>:term g++ % && ./a.out && rm ./a.out<cr>")
-end
+vim.keymap.set("n", "<leader>ru", function()
+	if file_exists(makefile_path) then
+		vim.cmd("w")
+		vim.cmd("term make")
+	else
+		vim.cmd("w")
+		vim.cmd("term g++ % && ./a.out && rm ./a.out")
+	end
+end)
 
 require("lomzem/lsp/snippets/cpp")
