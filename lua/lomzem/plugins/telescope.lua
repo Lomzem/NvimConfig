@@ -56,7 +56,7 @@ return {
 		})
 
 		vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, {})
-		vim.keymap.set("n", "<leader>pg", require("telescope.builtin").live_grep, {})
+		vim.keymap.set("n", "<leader>ps", require("telescope.builtin").live_grep, {})
 		vim.keymap.set("n", "<leader>cm", require("telescope.builtin").commands, {})
 		vim.keymap.set("n", "gm", require("telescope.builtin").marks, {})
 		require("telescope").load_extension("fzf")
