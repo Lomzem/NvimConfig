@@ -13,13 +13,23 @@ return {
 				["cmp.entry.get_documentation"] = true,
 			},
 		},
-
+		presets = {
+			lsp_doc_border = true,
+		},
 		routes = {
 			{
 				filter = {
 					-- hide search virtual text
 					event = "msg_show",
 					kind = "search_count",
+				},
+				opts = { skip = true },
+			},
+			{
+				filter = {
+					event = "msg_show",
+					kind = "",
+					find = "written",
 				},
 				opts = { skip = true },
 			},
