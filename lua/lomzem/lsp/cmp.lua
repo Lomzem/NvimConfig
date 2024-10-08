@@ -14,7 +14,7 @@ cmp.setup({
 	},
 	mapping = {
 		["<C-l>"] = cmp.mapping.confirm({ select = true }),
-		["<C-q>"] = cmp.mapping.abort(),
+		["<C-e>"] = cmp.mapping.abort(),
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
 		["<C-u>"] = cmp.mapping.scroll_docs(-4),
 
@@ -79,42 +79,42 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
 vim.opt.pumheight = 10
 
-cmp.setup.cmdline(":", {
-	mapping = {
-		["<C-j>"] = {
-			c = function(fallback)
-				if cmp.visible() then
-					cmp.select_next_item()
-				else
-					fallback()
-				end
-			end,
-		},
-		["<C-k>"] = {
-			c = function(fallback)
-				if cmp.visible() then
-					cmp.select_prev_item()
-				else
-					fallback()
-				end
-			end,
-		},
-		["<C-l>"] = {
-			c = function(fallback)
-				if not require("cmp").confirm({ select = true }) then
-					fallback()
-				end
-			end,
-		},
-	},
-	sources = cmp.config.sources({
-		{ name = "path" },
-	}, {
-		{
-			name = "cmdline",
-			option = {
-				ignore_cmds = { "Man", "!" },
-			},
-		},
-	}),
-})
+-- cmp.setup.cmdline(":", {
+-- 	mapping = {
+-- 		["<C-j>"] = {
+-- 			c = function(fallback)
+-- 				if cmp.visible() then
+-- 					cmp.select_next_item()
+-- 				else
+-- 					fallback()
+-- 				end
+-- 			end,
+-- 		},
+-- 		["<C-k>"] = {
+-- 			c = function(fallback)
+-- 				if cmp.visible() then
+-- 					cmp.select_prev_item()
+-- 				else
+-- 					fallback()
+-- 				end
+-- 			end,
+-- 		},
+-- 		["<C-l>"] = {
+-- 			c = function(fallback)
+-- 				if not require("cmp").confirm({ select = true }) then
+-- 					fallback()
+-- 				end
+-- 			end,
+-- 		},
+-- 	},
+-- 	sources = cmp.config.sources({
+-- 		{ name = "path" },
+-- 	}, {
+-- 		{
+-- 			name = "cmdline",
+-- 			option = {
+-- 				ignore_cmds = { "Man", "!" },
+-- 			},
+-- 		},
+-- 	}),
+-- })
