@@ -6,12 +6,12 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	keys = {
-		{ "<leader>li", "<cmd>ObsidianLinks<cr>", "n" },
-		{ "<leader>bl", "<cmd>ObsidianBacklinks<cr>", "n" },
-		{ "gs", "<cmd>ObsidianTOC<cr>", "n" },
-		{ "<leader>ot", "<cmd>ObsidianTags<cr>", "n" },
-	},
+	-- keys = {
+	-- 	{ "<leader>li", "<cmd>ObsidianLinks<cr>", "n" },
+	-- 	{ "<leader>bl", "<cmd>ObsidianBacklinks<cr>", "n" },
+	-- 	{ "gs", "<cmd>ObsidianTOC<cr>", "n" },
+	-- 	{ "<leader>ot", "<cmd>ObsidianTags<cr>", "n" },
+	-- },
 	opts = {
 		follow_url_func = function(url)
 			vim.ui.open(url)
