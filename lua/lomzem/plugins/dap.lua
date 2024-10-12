@@ -16,12 +16,30 @@ return {
 			command = "cppdbg",
 		}
 		dap.configurations.c = {
+			-- {
+			-- 	name = "Launch file",
+			-- 	type = "cppdbg",
+			-- 	request = "launch",
+			-- 	program = function()
+			-- 		return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+			-- 	end,
+			-- 	cwd = "${workspaceFolder}",
+			-- 	stopAtEntry = true,
+			-- },
 			{
 				name = "Launch file",
 				type = "cppdbg",
 				request = "launch",
 				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+					-- Find the first executable in current directory
+					local cwd = vim.fn.getcwd()
+					local executables = vim.fn.glob(cwd .. "/*", 1, 1) -- 1 for files only
+					for _, file in ipairs(executables) do
+						if vim.fn.executable(file) == 1 then
+							return file
+						end
+					end
+					return vim.fn.input("Path to executable: ", cwd .. "/", "file")
 				end,
 				cwd = "${workspaceFolder}",
 				stopAtEntry = true,
