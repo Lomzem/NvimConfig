@@ -21,26 +21,6 @@ local csci_21_filename = function()
 end
 
 ls.add_snippets("cpp", {
-	s({ trig = "csci", snippetType = "autosnippet", name = "CSCI-21 Template", dscr = "Template for CSCI-21" }, {
-		t({ "/***************************************", "" }),
-		f(csci_21_filename),
-		-- insert(1, f(csci_21_filename)),
-		t({ "", "Author: Lawjay Lee" }),
-		t({ "", "Date Completed: " }),
-		f(date, nil),
-		t({ "", "Description: " }),
-		i(1, "TODO!"),
-		t({ "", "***************************************/" }),
-		t({ "", "" }),
-		t({ "", "#include <iostream>" }),
-		t({ "", "using namespace std;" }),
-		t({ "", "" }),
-		t({ "", "int main() {", "\t" }),
-		i(0),
-		t({ "", "\treturn 0;" }),
-		t({ "", "}" }),
-	}),
-
 	s({
 		trig = "npt",
 		snippetType = "autosnippet",
@@ -51,8 +31,7 @@ ls.add_snippets("cpp", {
 	}),
 
 	s({
-		trig = "unstd",
-		snippetType = "autosnippet",
+		trig = "u",
 		name = "using namespace std",
 		dscr = "using namespace std",
 	}, {
@@ -70,5 +49,15 @@ ls.add_snippets("cpp", {
 		t({ "; i++) {", "\t" }),
 		i(2),
 		t({ "", "}" }),
+	}),
+
+	s({
+		trig = "m",
+		name = "main",
+		dscr = "main",
+	}, {
+		t({ "using namespace std;", "", "int main() {", "\t" }),
+		i(0),
+		t({ "", "\treturn 0;", "}" }),
 	}),
 })
