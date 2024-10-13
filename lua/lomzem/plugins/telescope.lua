@@ -7,6 +7,7 @@ return {
 		},
 	},
 	config = function()
+		local actions = require("telescope.actions")
 		require("telescope").setup({
 			extensions = {
 				fzf = {
@@ -46,15 +47,16 @@ return {
 			defaults = {
 				mappings = {
 					i = {
-						["<C-k>"] = require("telescope.actions").move_selection_previous,
-						["<C-j>"] = require("telescope.actions").move_selection_next,
-						["<C-c>"] = require("telescope.actions").close,
-						["<C-x>"] = require("telescope.actions").file_vsplit,
+						["<C-k>"] = actions.move_selection_previous,
+						["<C-j>"] = actions.move_selection_next,
+						["<C-c>"] = actions.close,
+						["<C-x>"] = actions.file_vsplit,
 					},
 				},
 			},
 		})
 
+		vim.keymap.set("n", "<leader>h", require("telescope.builtin").help_tags, {})
 		vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, {})
 		vim.keymap.set("n", "<leader>ps", require("telescope.builtin").live_grep, {})
 		vim.keymap.set("n", "<leader>cm", require("telescope.builtin").commands, {})
