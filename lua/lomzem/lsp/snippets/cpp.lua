@@ -1,24 +1,19 @@
 local ls = require("luasnip")
 local s = ls.snippet
-local node = ls.snippet_node
+local sn = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
-local f = ls.function_node
-local choice = ls.choice_node
-local dynamicn = ls.dynamic_node
-local fmt = require("luasnip.extras.fmt").fmt
+local d = ls.dynamic_node
+local c = ls.choice_node
 
-local date = function()
-	return { os.date("%Y-%m-%d") }
-end
+local extras = require("luasnip.extras")
+local rep = extras.rep
 
-local csci_21_filename = function()
-	local fn = vim.api.nvim_buf_get_name(0)
-	local dirname = string.match(fn, "/([a-zA-Z0-9_-]+)/[a-zA-Z0-9_-]+.cpp")
-	dirname = string.gsub(dirname, "-", " ")
-	dirname = string.gsub(dirname, "_", " ")
-	return string.gsub(" " .. dirname, "%W%l", string.upper):sub(2)
-end
+vim.keymap.set("i", "<c-p>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end)
 
 ls.add_snippets("cpp", {
 	s({
@@ -39,8 +34,7 @@ ls.add_snippets("cpp", {
 	}),
 
 	s({
-		trig = "tfor",
-		snippetType = "autosnippet",
+		trig = "tf",
 		name = "Traditional For Loop",
 		dscr = "for (int i(0); i < $1; i++) {}",
 	}, {
@@ -59,5 +53,28 @@ ls.add_snippets("cpp", {
 		t({ "using namespace std;", "", "int main() {", "\t" }),
 		i(0),
 		t({ "", "\treturn 0;", "}" }),
+	}),
+	s({
+		trig = "it",
+		name = "Iterator For Loop",
+		dscr = "Iterator For Loop",
+	}, {
+		t("for (auto i = "),
+		i(1),
+		t(".begin(); i != "),
+		rep(1),
+		t({ ".end(); i++) {", "\t" }),
+		i(2),
+		t({ "", "}" }),
+	}),
+
+	s("co", {
+		t("cout << "),
+		i(1),
+		c(1, {
+			t(' << "\\n"'),
+			t(""),
+		}),
+		t(";"),
 	}),
 })
