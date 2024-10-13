@@ -19,3 +19,5 @@ vim.keymap.set("n", "<leader>ru", function()
 		vim.cmd("term gcc % && ./a.out && rm ./a.out")
 	end
 end)
+
+require("lomzem/lsp/snippets/c")
