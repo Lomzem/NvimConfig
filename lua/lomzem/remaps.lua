@@ -17,6 +17,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
 vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
+vim.keymap.set("n", "gl", "'.")
 
 vim.keymap.set("n", "<leader>z=", "1z=") --spellcheck
 

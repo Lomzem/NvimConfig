@@ -16,16 +16,6 @@ return {
 			command = "cppdbg",
 		}
 		dap.configurations.c = {
-			-- {
-			-- 	name = "Launch file",
-			-- 	type = "cppdbg",
-			-- 	request = "launch",
-			-- 	program = function()
-			-- 		return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-			-- 	end,
-			-- 	cwd = "${workspaceFolder}",
-			-- 	stopAtEntry = true,
-			-- },
 			{
 				name = "Launch file",
 				type = "cppdbg",
@@ -37,9 +27,10 @@ return {
 					for _, file in ipairs(executables) do
 						if vim.fn.executable(file) == 1 then
 							return file
+						else
+							return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 						end
 					end
-					return vim.fn.input("Path to executable: ", cwd .. "/", "file")
 				end,
 				cwd = "${workspaceFolder}",
 				stopAtEntry = true,
