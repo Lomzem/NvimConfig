@@ -1,27 +1,5 @@
 require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		"clangd",
-		"cssls",
-		"emmet_language_server",
-		"eslint",
-		"gopls",
-		"html",
-		"jsonls",
-		"lua_ls",
-		"pyright",
-		"rust_analyzer",
-	},
-})
-
-require("mason-tool-installer").setup({
-	ensure_installed = {
-		"black",
-		"clang-format",
-		"prettier",
-		"stylua",
-	},
-})
+require("mason-lspconfig").setup({})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
