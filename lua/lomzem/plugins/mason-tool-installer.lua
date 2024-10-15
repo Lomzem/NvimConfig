@@ -16,6 +16,7 @@ return {
 			"lua_ls",
 			"prettier",
 			"pyright",
+			"texlab",
 			"rust_analyzer",
 			"stylua",
 		},

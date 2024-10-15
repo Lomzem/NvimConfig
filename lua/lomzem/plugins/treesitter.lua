@@ -9,6 +9,7 @@ return {
 				"python",
 				"regex",
 				"rust",
+				"latex",
 				"lua",
 				"markdown",
 				"markdown_inline",
