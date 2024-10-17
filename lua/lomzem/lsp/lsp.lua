@@ -1,5 +1,1 @@
-require("lomzem.lsp.mason")
-require("lomzem.lsp.cmp")
-require("lomzem.lsp.conform")
-require("lomzem.lsp.luasnip")
 require("lomzem.lsp.lsp_mapping")
