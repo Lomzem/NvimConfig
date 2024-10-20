@@ -3,9 +3,9 @@ return {
 	event = "BufEnter",
 	config = function()
 		vim.g.codeium_disable_bindings = 1
-		vim.g.codeium_manual = 1
+		-- vim.g.codeium_manual = 1
 
-		vim.keymap.set("i", "<C-n>", function()
+		vim.keymap.set("i", "<C-y>", function()
 			return vim.fn["codeium#Accept"]()
 		end, { expr = true })
 

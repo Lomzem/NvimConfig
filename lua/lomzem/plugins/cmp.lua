@@ -1,20 +1,12 @@
 return {
 	{
-		"L3MON4D3/LuaSnip",
-		dependencies = "rafamadriz/friendly-snippets",
-		config = function()
-			require("lomzem.lsp.luasnip_config")
-		end,
-	},
-	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-cmdline",
+			-- "hrsh7th/cmp-buffer",
+			-- "hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lua",
 			"hrsh7th/cmp-path",
-			"hrsh7th/nvim-cmp",
 			"onsails/lspkind.nvim",
 			"saadparwaiz1/cmp_luasnip",
 		},
@@ -46,18 +38,6 @@ return {
 					entries = "custom",
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
-				sorting = {
-					comparators = {
-						cmp.config.compare.offset,
-						cmp.config.compare.exact,
-						cmp.config.compare.recently_used,
-						require("clangd_extensions.cmp_scores"),
-						cmp.config.compare.kind,
-						cmp.config.compare.sort_text,
-						cmp.config.compare.length,
-						cmp.config.compare.order,
-					},
-				},
 				formatting = {
 					fields = { "abbr", "menu", "kind" },
 					format = function(entry, vim_item)
