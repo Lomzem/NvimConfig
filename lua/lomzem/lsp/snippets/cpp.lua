@@ -23,6 +23,8 @@ ls.add_snippets("cpp", {
 		t("nullptr"),
 	}),
 
+	s("r", { t("return ") }),
+
 	s({
 		trig = "u",
 		name = "using namespace std",
