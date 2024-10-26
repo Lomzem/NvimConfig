@@ -26,6 +26,7 @@ return {
 					"rust_analyzer",
 					"stylua",
 					"texlab",
+					"tailwindcss",
 				},
 			},
 		},

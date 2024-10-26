@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 -- General
 -- vim.keymap.set("n", "<C-a>", "ggVG") -- Select all
-vim.keymap.set("v", "=", "<Esc>ggVG")
+vim.keymap.set("v", "+", "<Esc>ggVG")
 
 vim.keymap.set(
 	"n",
