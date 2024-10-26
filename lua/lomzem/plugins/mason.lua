@@ -10,10 +10,9 @@ return {
 			opts = {
 				auto_update = true,
 				ensure_installed = {
-					"black",
 					"clang-format",
-					"cpptools",
 					"clangd",
+					"cpptools",
 					"cssls",
 					"emmet_language_server",
 					"eslint",
@@ -23,9 +22,10 @@ return {
 					"lua_ls",
 					"prettier",
 					"pyright",
-					"texlab",
+					"ruff",
 					"rust_analyzer",
 					"stylua",
+					"texlab",
 				},
 			},
 		},
