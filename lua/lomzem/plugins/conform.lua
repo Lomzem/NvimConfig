@@ -9,10 +9,11 @@ return {
 			-- I miss autoformat :(
 			-- format_after_save = function() end,
 			formatters_by_ft = {
+				cpp = { "clang_format" },
 				go = { "gofmt" },
 				lua = { "stylua" },
+				javascript = { "prettier" },
 				python = { "black" },
-				cpp = { "clang_format" },
 			},
 			formatters = {
 				clang_format = {
