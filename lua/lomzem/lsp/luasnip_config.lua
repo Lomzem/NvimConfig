@@ -20,4 +20,10 @@ vim.keymap.set({ "i", "s" }, "<C-k>", function()
 	end
 end, { silent = true })
 
+vim.keymap.set("i", "<c-p>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end)
+
 -- vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/lomzem/lsp/snippets.lua<CR>")

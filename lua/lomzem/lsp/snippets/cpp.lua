@@ -7,12 +7,6 @@ local c = ls.choice_node
 local extras = require("luasnip.extras")
 local rep = extras.rep
 
-vim.keymap.set("i", "<c-p>", function()
-	if ls.choice_active() then
-		ls.change_choice(1)
-	end
-end)
-
 ls.add_snippets("cpp", {
 	s({
 		trig = "npt",
