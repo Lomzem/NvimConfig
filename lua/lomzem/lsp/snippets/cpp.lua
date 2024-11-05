@@ -27,6 +27,15 @@ ls.add_snippets("cpp", {
 		t("using namespace std;"),
 	}),
 
+	s("w", {
+		t("while ("),
+		i(1),
+		t({ ") {", "\t" }),
+		i(2),
+		t({ "", "}" }),
+		i(0),
+	}),
+
 	s({
 		trig = "tf",
 		name = "Traditional For Loop",
