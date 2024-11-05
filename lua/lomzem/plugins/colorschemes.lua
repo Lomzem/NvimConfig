@@ -39,4 +39,10 @@ return {
 			transparent_mode = true,
 		},
 	},
+	{
+		"navarasu/onedark.nvim",
+		opts = {
+			transparent = true,
+		},
+	},
 }

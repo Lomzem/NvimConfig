@@ -12,6 +12,9 @@ return {
 	-- 	{ "gs", "<cmd>ObsidianTOC<cr>", "n" },
 	-- 	{ "<leader>ot", "<cmd>ObsidianTags<cr>", "n" },
 	-- },
+	config = function()
+		vim.opt.conceallevel = 2 -- for obsidian
+	end,
 	opts = {
 		follow_url_func = function(url)
 			vim.ui.open(url)

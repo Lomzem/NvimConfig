@@ -2,7 +2,8 @@
 -- vim.cmd.colorscheme("gruvbox")
 -- vim.cmd.colorscheme("catppuccin-mocha")
 -- vim.cmd.colorscheme("catppuccin-frappe")
-vim.cmd.colorscheme("tokyonight-moon")
+-- vim.cmd.colorscheme("tokyonight-moon")
+vim.cmd.colorscheme("onedark")
 -- vim.cmd.colorscheme("tokyonight-night")
 -- vim.cmd.colorscheme("cyberdream")
 
