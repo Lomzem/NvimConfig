@@ -10,8 +10,3 @@ local t = ls.text_node
 --
 -- local date = function() return { os.date('%Y-%m-%d') } end
 --
-ls.add_snippets("all", {
-    s("nl", {
-        t("\\n"),
-    })
-})
