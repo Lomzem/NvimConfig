@@ -1,7 +1,7 @@
--- local ls = require("luasnip")
--- local snip = ls.snippet
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
 -- local node = ls.snippet_node
--- local text = ls.text_node
 -- local insert = ls.insert_node
 -- local func = ls.function_node
 -- local choice = ls.choice_node
@@ -10,25 +10,8 @@
 --
 -- local date = function() return { os.date('%Y-%m-%d') } end
 --
--- ls.add_snippets('all', {
---     snip({ trig = "[", snippetType = "autosnippet", name = "Open [", dscr = "Open [" }, {
---         text('['),
---         insert(1),
---         text(']'),
---         insert(0),
---     }),
---
---     snip({ trig = "(", snippetType = "autosnippet", name = "Open (", dscr = "Open (" }, {
---         text('('),
---         insert(1),
---         text(')'),
---         insert(0),
---     }),
---
---     snip({ trig = "{", snippetType = "autosnippet", name = "Open {", dscr = "Open {" }, {
---         text('{'),
---         insert(1),
---         text('}'),
---         insert(0),
---     }),
--- })
+ls.add_snippets("all", {
+    s("nl", {
+        t("\\n"),
+    })
+})
