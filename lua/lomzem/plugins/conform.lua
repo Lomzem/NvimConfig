@@ -2,12 +2,12 @@ return {
 	"stevearc/conform.nvim",
 	config = function()
 		require("conform").setup({
-			format_after_save = {
-				async = true,
-				lsp_fallback = true,
-			},
+			-- format_after_save = {
+			-- 	async = true,
+			-- 	lsp_fallback = true,
+			-- },
 			-- I miss autoformat :(
-			-- format_after_save = function() end,
+			format_after_save = function() end,
 			formatters_by_ft = {
 				cpp = { "clang_format" },
 				go = { "gofmt" },

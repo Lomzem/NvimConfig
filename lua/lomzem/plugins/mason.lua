@@ -13,6 +13,7 @@ return {
 					"clang-format",
 					"clangd",
 					"cmake",
+					"cmakelang",
 					"cpptools",
 					"cssls",
 					"emmet_language_server",
