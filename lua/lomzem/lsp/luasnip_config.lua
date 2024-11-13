@@ -6,6 +6,7 @@ require("lomzem/lsp/snippets/all")
 ls.config.set_config({
 	history = true,
 	enable_autosnippets = true,
+    update_events = {"TextChanged", "TextChangedI"}
 })
 
 vim.keymap.set({ "i", "s" }, "<C-j>", function()

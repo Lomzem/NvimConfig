@@ -3,6 +3,7 @@ local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
 local c = ls.choice_node
+local f = ls.function_node
 
 local extras = require("luasnip.extras")
 local rep = extras.rep
@@ -72,12 +73,16 @@ ls.add_snippets("cpp", {
 	}),
 
 	s("co", {
-		t("cout << "),
-		i(1),
-		c(1, {
-			t(' << "\\n"'),
-			t(""),
-		}),
-		t(";"),
+		f(function()
+			local lines = vim.api.nvim_buf_get_lines(0, 0, vim.api.nvim_buf_line_count(0), false)
+			for _, line in ipairs(lines) do
+				if line:match("using namespace std;") then
+					return "cout << "
+				end
+			end
+			return "std::cout << "
+		end),
+        i(1),
+        t(' << "\\n";'),
 	}),
 })
