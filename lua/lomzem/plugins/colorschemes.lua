@@ -45,4 +45,14 @@ return {
 			transparent = true,
 		},
 	},
+	{
+		"RedsXDD/neopywal.nvim",
+		name = "neopywal",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			use_wallust = true,
+			transparent_background = true,
+		},
+	},
 }
