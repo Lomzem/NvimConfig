@@ -54,7 +54,11 @@ ls.add_snippets("cpp", {
 		name = "main",
 		dscr = "main",
 	}, {
-		t({ "using namespace std;", "", "int main() {", "\t" }),
+		c(1, {
+			t(""),
+			t({ "using namespace std;", "", "" }),
+		}),
+		t({ "int main() {", "\t" }),
 		i(0),
 		t({ "", "\treturn 0;", "}" }),
 	}),
@@ -82,7 +86,7 @@ ls.add_snippets("cpp", {
 			end
 			return "std::cout << "
 		end),
-        i(1),
-        t(' << "\\n";'),
+		i(1),
+		t(' << "\\n";'),
 	}),
 })
