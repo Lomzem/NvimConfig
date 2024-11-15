@@ -53,6 +53,7 @@ return {
 		opts = {
 			use_wallust = true,
 			transparent_background = true,
+            no_italic = true,
 		},
 	},
 }
