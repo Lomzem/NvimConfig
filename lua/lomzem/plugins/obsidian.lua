@@ -8,6 +8,9 @@ return {
 	config = function()
 		vim.opt.conceallevel = 2 -- for obsidian
 		require("obsidian").setup({
+			follow_url_func = function(url)
+				vim.ui.open(url) -- need Neovim 0.10.0+
+			end,
 			workspaces = {
 				{
 					name = "Chico Obsidian",
