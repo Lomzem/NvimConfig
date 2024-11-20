@@ -17,4 +17,7 @@ return {
 			min_chars = 2,
 		},
 	},
+	config = function()
+		vim.opt.conceallevel = 2 -- for obsidian
+	end,
 }
