@@ -13,7 +13,7 @@ return {
 		dap.adapters.cppdbg = {
 			id = "cppdbg",
 			type = "executable",
-			command = "cppdbg",
+			command = "/home/lomzem/.local/share/nvim/mason/bin/OpenDebugAD7",
 		}
 		dap.configurations.c = {
 			{
@@ -65,10 +65,10 @@ return {
 				},
 				{
 					elements = {
-						-- {
-						-- 	id = "repl",
-						-- 	size = 0.5,
-						-- },
+						{
+							id = "repl",
+							size = 0.5,
+						},
 						{
 							id = "console",
 							size = 1,
