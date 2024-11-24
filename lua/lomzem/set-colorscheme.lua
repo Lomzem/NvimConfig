@@ -3,9 +3,9 @@
 -- vim.cmd.colorscheme("catppuccin-mocha")
 -- vim.cmd.colorscheme("catppuccin-frappe")
 -- vim.cmd.colorscheme("tokyonight-moon")
--- vim.cmd.colorscheme("onedark")
+vim.cmd.colorscheme("onedark")
 -- vim.cmd.colorscheme("tokyonight-night")
-vim.cmd.colorscheme("neopywal")
+-- vim.cmd.colorscheme("neopywal")
 -- vim.cmd.colorscheme("cyberdream")
 
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
