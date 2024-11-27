@@ -53,7 +53,20 @@ return {
 		opts = {
 			use_wallust = true,
 			transparent_background = true,
-            no_italic = true,
+			no_italic = true,
 		},
+	},
+	-- Lua
+
+	{
+		"olivercederborg/poimandres.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("poimandres").setup({
+				disable_background = true,
+				disable_float_background = true,
+			})
+		end,
 	},
 }
