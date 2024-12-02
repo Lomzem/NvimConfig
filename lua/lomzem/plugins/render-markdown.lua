@@ -9,6 +9,7 @@ return {
 	opts = {
 		render_modes = { "n", "i", "v", "c" },
 		heading = {
+            icons = {},
 			sign = false,
 			position = "inline",
 			backgrounds = {
@@ -27,8 +28,8 @@ return {
 			highlight_inline = "none",
 			border = "none",
 		},
-        bullet = {
-            right_pad = 1,
-        }
+		bullet = {
+			right_pad = 1,
+		},
 	},
 }
