@@ -4,7 +4,7 @@ return {
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
-		},
+		}
 	},
 	config = function()
 		local actions = require("telescope.actions")
@@ -61,7 +61,7 @@ return {
 		vim.keymap.set("n", "<leader>ps", require("telescope.builtin").live_grep, {})
 		vim.keymap.set("n", "<leader>cm", require("telescope.builtin").commands, {})
 		vim.keymap.set("n", "gm", require("telescope.builtin").marks, {})
-		require("telescope").load_extension("fzf")
+		-- require("telescope").load_extension("fzf")
 
 		vim.api.nvim_create_user_command("Cola", function()
 			require("telescope.builtin").colorscheme({})
