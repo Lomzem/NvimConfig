@@ -29,7 +29,7 @@ return {
 					"stylua",
 					"tailwindcss",
 					"texlab",
-					"typst",
+					"tinymist",
 				},
 			},
 		},
