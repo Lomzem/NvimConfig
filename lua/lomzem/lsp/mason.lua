@@ -30,4 +30,10 @@ require("mason-lspconfig").setup_handlers({
 	["rust_analyzer"] = function()
 		require("rust-tools").setup({})
 	end,
+	["tinymist"] = function()
+		require("lspconfig")["tinymist"].setup({
+			capabilities = capabilities,
+			offset_encoding = "utf-8",
+		})
+	end,
 })
