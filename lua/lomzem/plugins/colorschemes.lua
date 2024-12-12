@@ -19,6 +19,10 @@ return {
 		name = "rose-pine",
 		opts = {
 			variant = "moon",
+			styles = {
+				bold = true,
+				italic = false,
+			},
 			-- variant = "main",
 			-- disable_background = true,
 			-- disable_float_background = true,
