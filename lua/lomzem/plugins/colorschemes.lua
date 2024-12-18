@@ -24,8 +24,8 @@ return {
 				italic = false,
 			},
 			-- variant = "main",
-			-- disable_background = true,
-			-- disable_float_background = true,
+			disable_background = true,
+			disable_float_background = true,
 		},
 	},
 	{
