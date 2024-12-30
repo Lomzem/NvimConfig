@@ -12,7 +12,6 @@ return {
 				ensure_installed = {
 					"clang-format",
 					"clangd",
-					"cmake",
 					"cpptools",
 					"cssls",
 					"emmet_language_server",
