@@ -13,6 +13,7 @@ return {
 				go = { "gofmt" },
 				lua = { "stylua" },
 				javascript = { "prettier" },
+				svelte = { "prettier" },
 				python = { "black" },
 			},
 			formatters = {
