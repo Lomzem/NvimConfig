@@ -65,3 +65,8 @@ vim.keymap.set("v", ">", ">gv")
 -- Commands
 vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 -- vim.keymap.set("n", "<leader>co", "<cmd>Cola<CR>")
+
+vim.keymap.set("n", "<leader>no", function()
+	local res = vim.lsp.util.make_text_document_params()
+	print(res)
+end)
