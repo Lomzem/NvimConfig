@@ -28,6 +28,7 @@ return {
 					"tailwindcss",
 					"texlab",
 					"tinymist",
+                    "zls",
 				},
 			},
 		},
