@@ -1,6 +1,8 @@
 -- Check if Makefile exists
 local makefile_path = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":h") .. "/Makefile"
 
+vim.keymap.set("n", "<leader>rl", "vip:norm 0xx<cr>{dj}kdd f")
+
 local function file_exists(name)
 	local f = io.open(name, "r")
 	if f ~= nil then
@@ -33,9 +35,9 @@ vim.keymap.set("n", "<leader>mc", function()
 	end
 
 	local choice = handle:read("*a")
-    if choice == "" then
-        return
-    end
+	if choice == "" then
+		return
+	end
 
 	local sep_index = string.find(choice, ":")
 	local method = string.sub(choice, 1, sep_index - 1)
@@ -54,7 +56,7 @@ vim.keymap.set("n", "<leader>mc", function()
 		vim.cmd("term cppman " .. doc_page)
 		vim.cmd("startinsert")
 	elseif method == "vsplit" then
-        vim.fn.system("tmux split-window -h 'cppman " .. doc_page .. "; tmux kill-pane'")
+		vim.fn.system("tmux split-window -h 'cppman " .. doc_page .. "; tmux kill-pane'")
 	end
 
 	handle:close()

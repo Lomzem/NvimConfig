@@ -11,11 +11,11 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>a", function()
+		vim.keymap.set("n", "<leader>A", function()
 			harpoon:list():add()
 		end)
 
-		vim.keymap.set("n", "<leader>A", function()
+		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():clear()
 			harpoon:list():add()
 		end)
