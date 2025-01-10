@@ -43,8 +43,9 @@ vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
 vim.keymap.set("n", "D", "dd")
--- vim.keymap.set("v", "J", ":m'>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "j", "jzz")
+vim.keymap.set("n", "k", "kzz")
+vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "J", "mzJ`z") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word
 vim.keymap.set("i", "<C-x>", "<C-o>x")
