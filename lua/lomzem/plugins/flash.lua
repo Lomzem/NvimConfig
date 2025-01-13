@@ -1,16 +1,14 @@
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
-	config = function()
-		require("flash").setup({
+    opts = {
 			modes = {
 				char = {
 					label = { exclude = "hjklviardcCxDIA" },
 					highlight = { backdrop = false },
 				},
 			},
-		})
-	end,
+		},
 	keys = {
 		{
 			"s",

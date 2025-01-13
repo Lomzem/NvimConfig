@@ -39,9 +39,13 @@ return {
 		{ "<leader>nd", "<cmd>NoiceDismiss<cr>", "n", "[N]oice [D]ismiss" },
 	},
 	dependencies = {
+        {
 		"MunifTanjim/nui.nvim",
+            lazy = true,
+        },
 		{
 			"rcarriga/nvim-notify",
+            lazy = true,
 			opts = {
 				background_colour = "#000000",
 				render = "compact",

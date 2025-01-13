@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+    event = "VeryLazy",
 	opts = {
 		view_options = {
 			show_hidden = true,
@@ -8,5 +9,5 @@ return {
 			["<C-s>"] = { false, desc = "Oil Save" },
 		},
 	},
-	dependencies = { "echasnovski/mini.icons" },
+	dependencies = { "echasnovski/mini.icons" , lazy=true},
 }

@@ -12,11 +12,12 @@ return {
 
 	-- Lsp
 	"neovim/nvim-lspconfig",
-	{ "rust-lang/rust.vim", ft = "rust" },
-	{ "simrat39/rust-tools.nvim", ft = "rust" },
+	{ "rust-lang/rust.vim", ft = "rust" , lazy = true},
+	{ "simrat39/rust-tools.nvim", ft = "rust" , lazy = true},
 	{
 		"p00f/clangd_extensions.nvim",
 		ft = "cpp",
+        lazy = true,
 		opts = {
 			inlay_hints = {
 				inline = false,

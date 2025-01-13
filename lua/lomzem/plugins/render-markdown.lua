@@ -1,10 +1,10 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
+    event = "VeryLazy",
 	ft = "markdown",
 	dependencies = {
-		"latex-lsp/tree-sitter-latex",
-		"nvim-tree/nvim-web-devicons",
-		-- pip install pylatexenc
+        { "latex-lsp/tree-sitter-latex" , lazy=true},
+        { "nvim-tree/nvim-web-devicons", lazy=true},
 	},
 	opts = {
 		render_modes = { "n", "i", "v", "c" },
