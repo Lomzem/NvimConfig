@@ -1,6 +1,5 @@
 return {
 	"williamboman/mason.nvim",
-	event = "VeryLazy",
 	config = function()
 		require("mason").setup()
 		require("lomzem.lsp.lsp_mapping")
@@ -11,8 +10,8 @@ return {
 
 		local lspconfig = require("lspconfig")
 
-		local default_servers = {
-			"gopls",
+        local default_servers = {
+            "gopls",
 			"texlab",
 			"zls",
 		}
