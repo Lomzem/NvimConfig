@@ -6,13 +6,9 @@ return {
 		ensure_installed = {
 			"clang-format",
 			"clangd",
-			"cpptools",
-			"emmet-language-server",
-			"eslint-lsp",
 			"gopls",
 			"lua-language-server",
 			"prettier",
-			"pyright",
 			"ruff",
 			"rust-analyzer",
 			"stylua",
