@@ -1,5 +1,6 @@
 return {
 	"stevearc/conform.nvim",
+    event = "VeryLazy",
 	config = function()
 		require("conform").setup({
 			-- format_after_save = {

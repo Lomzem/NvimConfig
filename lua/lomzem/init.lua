@@ -2,12 +2,18 @@ require("lomzem.vimopts")
 require("lomzem.remaps")
 
 require("lomzem.lazy")
--- require("lomzem.lsp.lsp")
+require("lomzem.lsp.lsp_mapping")
 -- require("lomzem.lsp.mason")
 -- require("lomzem.set-colorscheme")
 
 -- load first harpoon on startup after everything
 if vim.fn.argc() == 0 then
-	require("grapple").select({ index = 1 })
-	vim.cmd("normal zz")
+    local grapple = require("grapple")
+    if grapple.exists({ index = 1 }) then
+        grapple.select({ index = 1 })
+        vim.cmd("normal zz")
+    else
+        require("oil").open()
+    end
+	-- require("grapple").select({ index = 1 })
 end
