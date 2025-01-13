@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>z=", "1z=") --spellcheck
 
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- Save
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
-vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
+-- vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
 vim.keymap.set("n", "<leader>w", "<Esc><cmd>w<CR>") -- Save
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-i>", "<C-i>zz")
 vim.keymap.set("n", "<C-o>", "<C-o>zz")
 vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
 
-vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
+-- vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
 
 -- Clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y') -- Saves to system clipboard
