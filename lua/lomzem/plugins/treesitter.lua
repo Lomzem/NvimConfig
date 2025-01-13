@@ -2,9 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require("nvim-treesitter.configs")
-
-		configs.setup({
+		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"python",
 				"regex",

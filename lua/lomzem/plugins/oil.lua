@@ -8,5 +8,5 @@ return {
 			["<C-s>"] = { false, desc = "Oil Save" },
 		},
 	},
-	dependencies = { "echasnovski/mini.icons", opts = {} },
+	dependencies = { "echasnovski/mini.icons" },
 }
