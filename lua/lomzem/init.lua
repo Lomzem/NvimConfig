@@ -9,7 +9,7 @@ if vim.fn.argc() == 0 then
     local grapple = require("grapple")
     if grapple.exists({ index = 1 }) then
         grapple.select({ index = 1 })
-        vim.cmd("normal zz")
+        vim.cmd("norm zz")
     else
         require("oil").open()
     end
