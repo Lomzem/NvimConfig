@@ -13,7 +13,6 @@ return {
 
 		local default_servers = {
 			"gopls",
-			"tailwindcss-language-server",
 			"texlab",
 			"zls",
 		}
