@@ -12,5 +12,5 @@ return {
 	keys = {
 		{ "<leader>pv", "<cmd>Oil<cr>" },
 	},
-	dependencies = { "echasnovski/mini.icons", lazy = true },
+	dependencies = "echasnovski/mini.icons",
 }

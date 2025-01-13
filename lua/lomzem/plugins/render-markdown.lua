@@ -1,15 +1,15 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
-    event = "VeryLazy",
+	event = "VeryLazy",
 	ft = "markdown",
 	dependencies = {
-        { "latex-lsp/tree-sitter-latex" , lazy=true},
-        { "nvim-tree/nvim-web-devicons", lazy=true},
+		"latex-lsp/tree-sitter-latex",
+		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
 		render_modes = { "n", "i", "v", "c" },
 		heading = {
-            icons = {},
+			icons = {},
 			sign = false,
 			position = "inline",
 			backgrounds = {
