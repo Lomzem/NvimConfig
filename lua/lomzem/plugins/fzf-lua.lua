@@ -1,5 +1,6 @@
 return {
 	"ibhagwan/fzf-lua",
+    event = "VeryLazy",
 	opts = {},
 	keys = {
 		{ "<C-p>", "<cmd>FzfLua files<cr>" },

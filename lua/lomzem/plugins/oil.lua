@@ -7,6 +7,7 @@ return {
 		},
 		keymaps = {
 			["<C-s>"] = { false, desc = "Oil Save" },
+			["<C-p>"] = "<cmd>FzfLua files<cr>"
 		},
 	},
 	keys = {
