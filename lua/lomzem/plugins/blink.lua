@@ -23,7 +23,8 @@ return {
 			documentation = { auto_show = true, auto_show_delay_ms = 200 },
 		},
 
-		snippets = { preset = "luasnip" },
+		-- snippets = { preset = "luasnip" },
+		snippets = nil,
 
 		appearance = {
 			use_nvim_cmp_as_default = true,

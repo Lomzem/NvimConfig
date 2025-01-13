@@ -23,7 +23,4 @@ return {
 			},
 		},
 	},
-
-	-- Misc
-	"ThePrimeagen/vim-be-good",
 }
