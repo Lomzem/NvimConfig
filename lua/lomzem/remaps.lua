@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 
 -- General
--- vim.keymap.set("n", "<C-a>", "ggVG") -- Select all
 vim.keymap.set("v", "+", "<Esc>ggVG")
 
 vim.keymap.set(
@@ -17,7 +16,6 @@ vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
 vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
-vim.keymap.set("n", "gl", "'.")
 
 vim.keymap.set("n", "<leader>z=", "1z=") --spellcheck
 
@@ -34,7 +32,6 @@ vim.keymap.set("n", "<C-i>", "<C-i>zz")
 vim.keymap.set("n", "<C-o>", "<C-o>zz")
 vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
 
-vim.keymap.set("n", "<leader>pv", "<cmd>Oil<CR>") -- Opens Netrw
 vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
 
 -- Clipboard
@@ -54,9 +51,6 @@ vim.keymap.set("i", "<C-x>", "<C-o>x")
 vim.keymap.set({ "n", "v", "o" }, "H", "_")
 vim.keymap.set({ "n", "v", "o" }, "L", "$")
 
--- Save my left pinky
-vim.keymap.set("n", "<A-a>", "A")
-
 -- Indenting
 vim.keymap.set("n", "<", "<<")
 vim.keymap.set("n", ">", ">>")
@@ -65,4 +59,3 @@ vim.keymap.set("v", ">", ">gv")
 
 -- Commands
 vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
--- vim.keymap.set("n", "<leader>co", "<cmd>Cola<CR>")
