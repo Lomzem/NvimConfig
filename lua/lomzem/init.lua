@@ -13,5 +13,4 @@ if vim.fn.argc() == 0 then
     else
         require("oil").open()
     end
-	-- require("grapple").select({ index = 1 })
 end
