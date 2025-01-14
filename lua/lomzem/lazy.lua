@@ -18,5 +18,19 @@ require("lazy").setup({ import = "lomzem.plugins" }, {
 	change_detection = {
 		notify = false,
 	},
+	performance = {
+		cache = {
+			enabled = true,
+		},
+		rtp = {
+			disabled_plugins = {
+				"netrwPlugin",
+				"gzip",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+	},
 })
-

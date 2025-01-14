@@ -1,7 +1,8 @@
 return {
 	"saghen/blink.cmp",
 	version = "*",
-    event = "VeryLazy",
+    lazy = true,
+    -- event = "VeryLazy",
 	opts = {
 		keymap = {
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },

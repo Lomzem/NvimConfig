@@ -1,1 +1,1 @@
-require("lomzem/lsp/snippets/lua")
+-- require("lomzem/lsp/snippets/lua")

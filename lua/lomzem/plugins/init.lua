@@ -11,5 +11,8 @@ return {
 	},
 
 	-- Lsp
+    {
 	"neovim/nvim-lspconfig",
+        lazy = true
+    }
 }

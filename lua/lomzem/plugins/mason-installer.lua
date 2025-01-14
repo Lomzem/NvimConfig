@@ -5,12 +5,11 @@ return {}
 -- 	opts = {
 -- 		auto_update = true,
 -- 		ensure_installed = {
---             "bacon",
--- 			"clang-format",
 -- 			"clangd",
 -- 			"gopls",
 -- 			"lua-language-server",
 -- 			"prettier",
+--             "pyright",
 -- 			"ruff",
 -- 			"rust-analyzer",
 -- 			"stylua",

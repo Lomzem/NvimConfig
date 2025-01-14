@@ -1,6 +1,7 @@
 return {
 	"ibhagwan/fzf-lua",
-	event = "VeryLazy",
+    lazy = true,
+	-- event = "VeryLazy",
 	opts = {
 		fzf_opts = {
 			["--select-1"] = true,

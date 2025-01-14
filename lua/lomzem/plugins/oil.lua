@@ -1,13 +1,14 @@
 return {
 	"stevearc/oil.nvim",
-	event = "VeryLazy",
+    lazy = true,
+	-- event = "VeryLazy",
 	opts = {
 		view_options = {
 			show_hidden = true,
 		},
 		keymaps = {
 			["<C-s>"] = { false, desc = "Oil Save" },
-			["<C-p>"] = "<cmd>FzfLua files<cr>"
+			["<C-p>"] = "<cmd>FzfLua files<cr>",
 		},
 	},
 	keys = {
