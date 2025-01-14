@@ -12,14 +12,4 @@ return {
 
 	-- Lsp
 	"neovim/nvim-lspconfig",
-	{
-		"p00f/clangd_extensions.nvim",
-		ft = "cpp",
-        lazy = true,
-		opts = {
-			inlay_hints = {
-				inline = false,
-			},
-		},
-	},
 }

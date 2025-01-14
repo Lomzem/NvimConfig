@@ -1,6 +1,5 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
-	event = "VeryLazy",
 	ft = "markdown",
 	dependencies = {
 		"latex-lsp/tree-sitter-latex",
