@@ -1,7 +1,6 @@
 return {
 	"stevearc/oil.nvim",
-    lazy = true,
-	-- event = "VeryLazy",
+	lazy = true,
 	opts = {
 		view_options = {
 			show_hidden = true,
@@ -11,6 +10,7 @@ return {
 			["<C-p>"] = "<cmd>FzfLua files<cr>",
 		},
 	},
+	cmd = "Oil",
 	keys = {
 		{ "<leader>pv", "<cmd>Oil<cr>" },
 	},
