@@ -10,8 +10,8 @@ return {
 
 		local lspconfig = require("lspconfig")
 
-        local default_servers = {
-            "gopls",
+		local default_servers = {
+			"gopls",
 			"texlab",
 			"zls",
 		}
@@ -51,9 +51,21 @@ return {
 
 		lspconfig.rust_analyzer.setup({
 			capabilities = capabilities,
-			on_attach = function()
-				require("rust-tools").setup({})
-			end,
+			settings = {
+				["rust-analyzer"] = {
+					diagnostics = {
+						enable = false,
+					},
+				},
+			},
+		})
+
+		lspconfig.bacon.setup({
+			init_options = {
+				updateOnSave = true,
+				updateOnSaveWaitMillis = 1000,
+				updateOnChange = false,
+			},
 		})
 
 		lspconfig["tinymist"].setup({

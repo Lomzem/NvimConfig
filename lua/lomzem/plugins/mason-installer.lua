@@ -1,9 +1,11 @@
+-- return {}
+
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-    event = "VeryLazy",
 	opts = {
 		auto_update = true,
 		ensure_installed = {
+            "bacon",
 			"clang-format",
 			"clangd",
 			"gopls",

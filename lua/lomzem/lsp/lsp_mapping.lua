@@ -4,12 +4,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local opts = { buffer = ev.buf }
 
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-		vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
-		vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
-		vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-		vim.keymap.set("n", "<leader>mb", "<cmd>Telescope lsp_document_symbols<CR>", opts)
+		vim.keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<CR>", opts)
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+		vim.keymap.set("n", "gr", "<cmd>FzfLua lsp_references<CR>", opts)
+		vim.keymap.set("n", "<leader>mb", "<cmd>FzfLua lsp_document_symbols<CR>", opts)
 
-		vim.keymap.set("n", "<leader>di", "<cmd>Telescope diagnostics<CR>", opts)
+		vim.keymap.set("n", "<leader>di", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", opts)
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
 		vim.keymap.set("n", "gnd", vim.diagnostic.goto_next, opts)
 		vim.keymap.set("n", "gld", vim.diagnostic.goto_prev, opts)
