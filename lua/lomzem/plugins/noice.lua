@@ -1,7 +1,6 @@
 return {
 	"folke/noice.nvim",
-    lazy = true,
-	-- event = "VeryLazy",
+	event = "VeryLazy",
 	opts = {
 		cmdline = {
 			view = "cmdline",
@@ -15,8 +14,11 @@ return {
 				-- ["cmp.entry.get_documentation"] = true,
 			},
 		},
+        bottom_search = true,
 		presets = {
 			lsp_doc_border = true,
+			long_message_to_split = true,
+			inc_rename = false,
 		},
 		routes = {
 			{
