@@ -82,15 +82,6 @@ return {
 					},
 				})
 			end,
-			["bacon"] = function()
-				lspconfig.bacon.setup({
-					init_options = {
-						updateOnSave = true,
-						updateOnSaveWaitMillis = 1000,
-						updateOnChange = false,
-					},
-				})
-			end,
 			["tinymist"] = function()
 				lspconfig["tinymist"].setup({
 					capabilities = capabilities,
