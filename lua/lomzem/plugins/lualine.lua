@@ -4,7 +4,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "auto",
+			theme = "neopywal",
 			component_separators = { left = "", right = "" },
 			-- section_separators = { left = "", right = "" },
 			section_separators = { left = "", right = "" },
