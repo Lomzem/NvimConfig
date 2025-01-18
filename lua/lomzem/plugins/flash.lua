@@ -1,6 +1,6 @@
 return {
 	"folke/flash.nvim",
-    lazy = true,
+	lazy = true,
 	opts = {
 		modes = {
 			char = {
@@ -27,6 +27,22 @@ return {
 			mode = { "n", "x", "o" },
 			function()
 				require("flash").jump()
+			end,
+			desc = "Flash",
+		},
+		{
+			"<leader>k",
+			mode = "n",
+			function()
+				-- line jump
+				require("flash").jump({
+					search = { mode = "search", max_length = 0 },
+					label = {
+						after = { 0, 0 },
+						style = "overlay",
+					},
+					pattern = "^\\s*\\w",
+				})
 			end,
 			desc = "Flash",
 		},

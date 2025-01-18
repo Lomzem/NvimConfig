@@ -14,6 +14,7 @@ return {
 				go = { "gofmt" },
 				lua = { "stylua" },
 				javascript = { "prettier" },
+				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
 				python = { "black" },
 			},

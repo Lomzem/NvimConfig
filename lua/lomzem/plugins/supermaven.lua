@@ -1,6 +1,6 @@
 return {
 	"supermaven-inc/supermaven-nvim",
-    -- enabled = false,
+	-- enabled = false,
 	event = "VeryLazy",
 	opts = {
 		keymaps = {
