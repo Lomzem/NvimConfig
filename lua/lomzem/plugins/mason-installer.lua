@@ -12,9 +12,10 @@ return {
 			"rust-analyzer",
 			"stylua",
 			"tailwindcss-language-server",
-			"typescript-language-server",
 			"texlab",
 			"tinymist", -- typst
+			"typescript-language-server",
+			"sql-formatter",
 		},
 	},
 }

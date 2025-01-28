@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-    event = "VeryLazy",
+	event = "VeryLazy",
 	config = function()
 		require("conform").setup({
 			-- format_after_save = {
@@ -16,6 +16,7 @@ return {
 				javascript = { "prettier" },
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
+				sql = { "sql_formatter" },
 				python = { "black" },
 			},
 			formatters = {

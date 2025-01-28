@@ -54,6 +54,7 @@ return {
 			["clangd"] = function()
 				lspconfig.clangd.setup({
 					capabilities = capabilities,
+                    filetypes = "cpp",
 					cmd = {
 						"clangd",
 						"--background-index",
