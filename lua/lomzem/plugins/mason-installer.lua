@@ -15,7 +15,6 @@ return {
 			"texlab",
 			"tinymist", -- typst
 			"typescript-language-server",
-			"sql-formatter",
 		},
 	},
 }
