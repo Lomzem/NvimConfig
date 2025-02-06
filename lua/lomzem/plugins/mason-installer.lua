@@ -10,10 +10,9 @@ return {
 			"pyright",
 			"ruff",
 			"rust-analyzer",
+			"rustywind",
 			"stylua",
 			"tailwindcss-language-server",
-			"texlab",
-			"tinymist", -- typst
 			"typescript-language-server",
 		},
 	},

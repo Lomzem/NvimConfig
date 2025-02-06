@@ -1,28 +1,8 @@
 -- return {}
 return {
 	"williamboman/mason.nvim",
-    build = ":MasonUpdate",
+	build = ":MasonUpdate",
 	dependencies = {
-		{
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			opts = {
-				auto_update = true,
-				ensure_installed = {
-					"clangd",
-					"gopls",
-					"lua-language-server",
-					"prettier",
-					"pyright",
-					"ruff",
-					"rust-analyzer",
-					"stylua",
-					"tailwindcss-language-server",
-					"texlab",
-					"tinymist", -- typst
-					"zls",
-				},
-			},
-		},
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
@@ -54,7 +34,7 @@ return {
 			["clangd"] = function()
 				lspconfig.clangd.setup({
 					capabilities = capabilities,
-                    filetypes = "cpp",
+					filetypes = "cpp",
 					cmd = {
 						"clangd",
 						"--background-index",

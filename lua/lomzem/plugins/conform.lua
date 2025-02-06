@@ -13,18 +13,23 @@ return {
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "gofmt" },
-				lua = { "stylua" },
+				htmldjango = { "prettier", "rustywind" },
 				javascript = { "prettier" },
-				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
+				lua = { "stylua" },
+				python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+				rust = { "rustfmt", lsp_format = "fallback" },
 				sql = { "sql_formatter" },
-				python = { "black" },
+				svelte = { "prettier" },
+				typescriptreact = { "prettier" },
 			},
 			formatters = {
 				clang_format = {
 					prepend_args = {
 						"-style={IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, PointerAlignment: Left, ReferenceAlignment: Right, BreakConstructorInitializers: AfterColon, PackConstructorInitializers: Never}",
 					},
+				},
+				rustfmt = {
+					args = { "--edition", "2021" },
 				},
 			},
 		})
