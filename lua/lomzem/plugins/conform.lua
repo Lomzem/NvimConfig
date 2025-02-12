@@ -21,6 +21,7 @@ return {
 				sql = { "sql_formatter" },
 				svelte = { "prettier" },
 				typescriptreact = { "prettier" },
+				yaml = { "yamlfmt" },
 			},
 			formatters = {
 				clang_format = {

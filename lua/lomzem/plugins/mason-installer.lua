@@ -12,8 +12,10 @@ return {
 			"rust-analyzer",
 			"rustywind",
 			"stylua",
+			"sql-formatter",
 			"tailwindcss-language-server",
 			"typescript-language-server",
+			"yamlfmt",
 		},
 	},
 }
