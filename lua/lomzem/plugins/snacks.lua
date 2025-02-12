@@ -35,6 +35,13 @@ return {
 			end,
 			desc = "LSP Symbols",
 		},
+		{
+			"<leader>MB",
+			function()
+				Snacks.picker.lsp_workspace_symbols()
+			end,
+			desc = "LSP Workspace Symbols",
+		},
 
 		{
 			"gr",
