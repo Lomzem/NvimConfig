@@ -6,6 +6,6 @@ vim.cmd("set linebreak")
 vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.tex",
 	callback = function()
-		vim.cmd("silent exec '!pdflatex %; latexmk -c'")
+		vim.cmd("silent exec '!xelatex %; latexmk -c'")
 	end,
 })
