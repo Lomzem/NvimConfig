@@ -41,20 +41,23 @@ return {
 				italic = false,
 			},
 			-- variant = "main",
-			disable_background = true,
-			disable_float_background = true,
+			-- disable_background = true,
+			-- disable_float_background = true,
 		},
 	},
 
 	{
 		"folke/tokyonight.nvim",
 		opts = {
-			transparent = true,
+			-- transparent = true,
 			styles = {
-				sidebars = "transparent",
+				-- sidebars = "transparent",
 				-- floats = "transparent",
 			},
 		},
+		init = function()
+			vim.cmd("colorscheme tokyonight")
+		end,
 	},
 
 	{
