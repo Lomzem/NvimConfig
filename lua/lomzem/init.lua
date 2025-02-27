@@ -3,8 +3,6 @@ require("lomzem.remaps")
 
 require("lomzem.lazy")
 require("lomzem.set-colorscheme")
--- vim.cmd("colorscheme tokyonight-moon")
-vim.cmd("colorscheme neopywal")
 
 if vim.fn.argc() == 0 then -- no cmd line args
 	local grapple = require("grapple")

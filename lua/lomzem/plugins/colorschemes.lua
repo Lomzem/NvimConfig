@@ -35,13 +35,13 @@ return {
 		"rose-pine/neovim",
 		name = "rose-pine",
 		opts = {
-			variant = "moon",
+			variant = "main",
 			styles = {
 				bold = true,
 				italic = false,
 			},
 			-- variant = "main",
-			-- disable_background = true,
+			disable_background = true,
 			-- disable_float_background = true,
 		},
 	},
