@@ -26,7 +26,7 @@ return {
 				api.node.open.edit()
 			else
 				-- open file as vsplit
-				api.node.open.vertical()
+				api.node.open.edit()
 			end
 
 			-- Finally refocus on tree if it was lost
@@ -35,9 +35,9 @@ return {
 
 		require("nvim-tree").setup({
 			on_attach = function(bufnr)
-				vim.keymap.set("n", "l", edit_or_open)
+				-- vim.keymap.set("n", "l", edit_or_open)
 				vim.keymap.set("n", "<cr>", edit_or_open)
-				vim.keymap.set("n", "L", vsplit_preview)
+				vim.keymap.set("n", "l", vsplit_preview)
 				vim.keymap.set("n", "h", api.tree.close)
 				vim.keymap.set("n", "q", api.tree.close)
 				vim.keymap.set("n", "H", api.tree.collapse_all)
