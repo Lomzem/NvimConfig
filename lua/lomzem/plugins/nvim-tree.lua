@@ -41,6 +41,21 @@ return {
 				vim.keymap.set("n", "h", api.tree.close)
 				vim.keymap.set("n", "q", api.tree.close)
 				vim.keymap.set("n", "H", api.tree.collapse_all)
+
+				vim.keymap.set("n", "/", function()
+					local fzf = require("fzf-lua")
+					fzf.fzf_exec("fd -H -t f -E '.git/'", {
+						prompt = ":",
+						actions = {
+							["default"] = {
+								fn = function(selected)
+									api.tree.find_file(selected[1])
+								end,
+								desc = "fuzzy find in tree",
+							},
+						},
+					})
+				end)
 			end,
 		})
 	end,
