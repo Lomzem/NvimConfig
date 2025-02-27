@@ -9,14 +9,14 @@ return {
 			["<C-e>"] = { "hide" },
 			["<C-l>"] = { "select_and_accept" },
 
-			["<C-p>"] = { "select_prev", "fallback" },
-			["<C-n>"] = { "select_next", "fallback" },
+			["<C-k>"] = { "select_prev", "fallback" },
+			["<C-j>"] = { "select_next", "fallback" },
 			--
 			["<C-u>"] = { "scroll_documentation_up", "fallback" },
 			["<C-d>"] = { "scroll_documentation_down", "fallback" },
 
-			["<C-j>"] = { "snippet_forward", "fallback" },
-			["<C-k>"] = { "snippet_backward", "fallback" },
+			-- ["<C-j>"] = { "snippet_forward", "fallback" },
+			-- ["<C-k>"] = { "snippet_backward", "fallback" },
 		},
 
 		completion = {

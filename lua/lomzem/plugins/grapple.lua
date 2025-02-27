@@ -8,7 +8,7 @@ return {
 	},
 	keys = {
 		{ "<leader>a", "<cmd>Grapple tag<cr>", desc = "Tag a file" },
-		{ "<leader>A", "<cmd>Grapple reset<cr>", desc = "Clears list" },
+		{ "<leader>A", "<cmd>Grapple reset<cr><cmd>Grapple tag<cr>", desc = "Clears list" },
 		{ "<c-e>", "<cmd>Grapple toggle_tags<cr>", desc = "Toggle tags menu" },
 
 		{ "<a-1>", "<cmd>Grapple select index=1<cr>", desc = "Select first tag" },
