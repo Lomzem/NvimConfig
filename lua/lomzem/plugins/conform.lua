@@ -20,7 +20,7 @@ return {
 				rust = { "rustfmt", lsp_format = "fallback" },
 				sql = { "sql_formatter" },
 				svelte = { "prettier" },
-				typescriptreact = { "prettier" },
+				typescriptreact = { "prettier", "rustywind" },
 				yaml = { "yamlfmt" },
 			},
 			formatters = {
