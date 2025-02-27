@@ -14,8 +14,10 @@ return {
 			"sql-formatter",
 			"stylua",
 			"tailwindcss-language-server",
-			"typescript-language-server",
+			"tinymist",
+			"vtsls",
 			"yamlfmt",
+            "texlab",
 		},
 	},
 }
