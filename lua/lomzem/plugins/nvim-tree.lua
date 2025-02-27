@@ -18,7 +18,7 @@ return {
 			end
 		end
 
-		local function vsplit_preview()
+		local function preview()
 			local node = api.tree.get_node_under_cursor()
 
 			if node.nodes ~= nil then
@@ -35,12 +35,15 @@ return {
 
 		require("nvim-tree").setup({
 			on_attach = function(bufnr)
+				local function opts(desc)
+					return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+				end
 				-- vim.keymap.set("n", "l", edit_or_open)
-				vim.keymap.set("n", "<cr>", edit_or_open)
-				vim.keymap.set("n", "l", vsplit_preview)
-				vim.keymap.set("n", "h", api.tree.close)
-				vim.keymap.set("n", "q", api.tree.close)
-				vim.keymap.set("n", "H", api.tree.collapse_all)
+				vim.keymap.set("n", "<cr>", edit_or_open, opts(""))
+				vim.keymap.set("n", "l", preview, opts(""))
+				vim.keymap.set("n", "h", api.tree.close, opts(""))
+				vim.keymap.set("n", "q", api.tree.close, opts(""))
+				vim.keymap.set("n", "H", api.tree.collapse_all, opts(""))
 
 				vim.keymap.set("n", "/", function()
 					local fzf = require("fzf-lua")
