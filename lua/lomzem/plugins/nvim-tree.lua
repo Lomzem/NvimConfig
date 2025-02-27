@@ -61,5 +61,6 @@ return {
 	end,
 	keys = {
 		{ "<c-h>", "<cmd>NvimTreeToggle<cr>" },
+		{ "<c-H>", "<cmd>NvimTreeFindFile<cr>" },
 	},
 }
