@@ -58,7 +58,7 @@ return {
 							},
 						},
 					})
-				end)
+				end, opts(""))
 			end,
 		})
 	end,
