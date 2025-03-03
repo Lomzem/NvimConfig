@@ -22,12 +22,12 @@ return {
 		completion = {
 			-- documentation = { auto_show = true, auto_show_delay_ms = 200 },
 			menu = { border = "single" },
-			documentation = { window = { border = "single" } },
+			-- documentation = { window = { border = "single" } },
 		},
-		signature = { window = { border = "single" } },
 
-		-- snippets = { preset = "luasnip" },
-		snippets = nil,
+		cmdline = {
+			enabled = true,
+		},
 
 		appearance = {
 			use_nvim_cmp_as_default = true,
@@ -40,7 +40,7 @@ return {
 		},
 
 		-- Experimental signature help support
-		-- signature = { enabled = false },
+		signature = { enabled = false },
 	},
 	opts_extend = { "sources.default" },
 }
