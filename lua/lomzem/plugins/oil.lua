@@ -7,9 +7,7 @@ return {
 		},
 		keymaps = {
 			["<C-s>"] = { false, desc = "Oil Save" },
-			["<C-p>"] = function()
-				require("snacks").picker.smart()
-			end,
+			["<C-p>"] = "<cmd>FzfLua files<cr>"
 		},
 	},
 	cmd = "Oil",
