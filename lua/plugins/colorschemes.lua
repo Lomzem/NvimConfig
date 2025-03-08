@@ -1,4 +1,11 @@
 return {
+    {
+        "shaunsingh/nord.nvim",
+        priority = 1000,
+        config = function()
+            vim.g.nord_disable_background = true
+        end
+    },
 	{
 		"RedsXDD/neopywal.nvim",
 		name = "neopywal",
@@ -66,10 +73,13 @@ return {
 	},
 
 	{
-		"navarasu/onedark.nvim",
+		"olimorris/onedarkpro.nvim",
 		opts = {
-			transparent = true,
+			options = {
+				transparency = true,
+			},
 		},
+		priority = 1000, -- Ensure it loads first
 	},
 
 	{

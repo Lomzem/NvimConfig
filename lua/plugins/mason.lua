@@ -8,7 +8,7 @@ return {
 	config = function()
 		require("mason").setup()
 		require("mason-lspconfig").setup()
-		require("lomzem.lsp.lsp_mapping")
+		require("lsp.lsp_mapping")
 		local lspconfig = require("lspconfig")
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()

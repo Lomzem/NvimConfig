@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ import = "lomzem.plugins" }, {
+require("lazy").setup({ import = "plugins" }, {
 	checker = {
 		enabled = true,
 	},
@@ -34,3 +34,5 @@ require("lazy").setup({ import = "lomzem.plugins" }, {
 		},
 	},
 })
+
+vim.cmd("colorscheme tokyonight")
