@@ -16,7 +16,7 @@ return {
 				htmldjango = { "prettier", "rustywind" },
 				javascript = { "prettier" },
 				lua = { "stylua" },
-				python = { "ruff_format" },
+				python = { "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt", lsp_format = "fallback" },
 				sql = { "sql_formatter" },
 				svelte = { "prettier" },
