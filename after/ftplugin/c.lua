@@ -20,4 +20,4 @@
 -- 	end
 -- end)
 --
--- require("lomzem/lsp/snippets/c")
+-- require("lsp/snippets/c")

@@ -1,4 +1,4 @@
-require("lomzem/lsp/snippets/tex")
+require("lsp/snippets/tex")
 vim.cmd("set spell")
 vim.cmd("set wrap")
 vim.cmd("set linebreak")

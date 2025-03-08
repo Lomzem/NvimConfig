@@ -62,4 +62,4 @@ end)
 -- 	handle:close()
 -- end)
 --
-require("lomzem/lsp/snippets/cpp")
+require("lsp/snippets/cpp")

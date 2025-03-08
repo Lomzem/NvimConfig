@@ -1,6 +1,6 @@
 -- vim.keymap.set("n", "<leader>ru", ":w<CR>:term go run %<CR>")
 vim.keymap.set("n", "<leader>ru", ":w<CR>:term go run .<CR>")
-require("lomzem/lsp/snippets/go")
+require("lsp/snippets/go")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*.go",
