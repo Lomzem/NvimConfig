@@ -32,7 +32,7 @@ ls.add_snippets("html", {
 })
 
 ls.add_snippets("typescriptreact", {
-	s({ trig = ".exd", snippetType = "autosnippet" }, {
+	s("exd", {
 		t("export default function "),
 		i(1),
 		t("("),
@@ -40,6 +40,12 @@ ls.add_snippets("typescriptreact", {
 		t({ ") {", "\t" }),
 		i(3),
 		t({ "", "}" }),
+	}),
+
+	s("i", {
+		t("import { "),
+		i(0),
+		t(" }"),
 	}),
 })
 
