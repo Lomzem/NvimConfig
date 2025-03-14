@@ -15,8 +15,6 @@ return {
 			"stylua",
 			"tailwindcss-language-server",
 			"tinymist",
-            "typescript-language-server",
-			-- "vtsls",
 			"yamlfmt",
             "texlab",
 		},

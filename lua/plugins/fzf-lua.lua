@@ -10,5 +10,11 @@ return {
 	keys = {
 		{ "<C-p>", "<cmd>FzfLua files<cr>" },
 		{ "<leader>ps", "<cmd>FzfLua live_grep<cr>" },
+		{ "gD", "<cmd>FzfLua lsp_declarations<cr>" },
+		{ "gd", "<cmd>FzfLua lsp_definitions<cr>" },
+		{ "gi", "<cmd>FzfLua lsp_implementations<cr>" },
+		{ "gm", "<cmd>FzfLua lsp_workspace_symbols<cr>" },
+		{ "gt", "<cmd>FzfLua lsp_typedefs<cr>" },
+		{ "gr", "<cmd>FzfLua lsp_references<cr>" },
 	},
 }

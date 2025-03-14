@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
 	config = function()
 		require("conform").setup({
 			-- format_after_save = {
@@ -20,7 +20,7 @@ return {
 				rust = { "rustfmt", lsp_format = "fallback" },
 				sql = { "sql_formatter" },
 				svelte = { "prettier" },
-				typescriptreact = { "prettier", "rustywind" },
+				typescriptreact = { "prettier", "rustywind", "ts_tools" },
 				yaml = { "yamlfmt" },
 			},
 			formatters = {
@@ -49,6 +49,6 @@ return {
 			require("conform").format({ async = true, lsp_fallback = true, range = range })
 		end, { range = true })
 
-		vim.keymap.set("n", "<leader>f", "<CMD>Format<CR>")
+		vim.keymap.set("n", "<leader>f", "<cmd>Format<cr>")
 	end,
 }
