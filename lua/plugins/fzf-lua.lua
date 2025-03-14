@@ -17,5 +17,6 @@ return {
 		{ "gM", "<cmd>FzfLua lsp_workspace_symbols<cr>" },
 		{ "gt", "<cmd>FzfLua lsp_typedefs<cr>" },
 		{ "gr", "<cmd>FzfLua lsp_references<cr>" },
+		{ "U", "<cmd>FzfLua lsp_code_actions<cr>" },
 	},
 }
