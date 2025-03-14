@@ -15,10 +15,15 @@ return {
 		capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 		capabilities.textDocument.completion.completionItem.snippetSupport = false
 
+		local function on_attach(client, bufnr)
+			capabilities.semanticTokensProvider = nil
+		end
+
 		require("mason-lspconfig").setup_handlers({
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
+                    on_attach = on_attach
 				})
 			end,
 			["lua_ls"] = function()

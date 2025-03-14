@@ -5,18 +5,17 @@ return {
 	-- event = "VeryLazy",
 	opts = {
 		keymap = {
-			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
-			["<C-e>"] = { "hide" },
-			["<C-l>"] = { "select_and_accept" },
+			preset = "none",
 
-			["<C-k>"] = { "select_prev", "fallback" },
-			["<C-j>"] = { "select_next", "fallback" },
-			--
-			["<C-u>"] = { "scroll_documentation_up", "fallback" },
-			["<C-d>"] = { "scroll_documentation_down", "fallback" },
+			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
+			["<c-e>"] = { "hide" },
+			["<c-l>"] = { "select_and_accept" },
 
-			-- ["<C-j>"] = { "snippet_forward", "fallback" },
-			-- ["<C-k>"] = { "snippet_backward", "fallback" },
+			["<c-k>"] = { "select_prev", "fallback" },
+			["<c-j>"] = { "select_next", "fallback" },
+
+			["<c-u>"] = { "scroll_documentation_up", "fallback" },
+			["<c-d>"] = { "scroll_documentation_down", "fallback" },
 		},
 
 		completion = {
@@ -33,6 +32,8 @@ return {
 			use_nvim_cmp_as_default = false,
 			nerd_font_variant = "mono",
 		},
+
+		snippets = { preset = "luasnip" },
 
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },

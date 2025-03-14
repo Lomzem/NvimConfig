@@ -1,5 +1,5 @@
 require("vimopts")
-require("remaps")
+require("keymaps")
 
 require("lazy_init")
 require("set-colorscheme")
@@ -13,3 +13,5 @@ if vim.fn.argc() == 0 then -- no cmd line args
         vim.cmd("Oil")
 	end
 end
+
+

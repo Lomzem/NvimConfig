@@ -49,6 +49,8 @@ return {
 			require("conform").format({ async = true, lsp_fallback = true, range = range })
 		end, { range = true })
 
-		vim.keymap.set("n", "<leader>f", "<cmd>Format<cr>")
+        if vim.fn.maparg("<leader>f", "n") == "" then
+            vim.keymap.set("n", "<leader>f", "<cmd>Format<CR>")
+        end
 	end,
 }
