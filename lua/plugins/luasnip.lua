@@ -6,7 +6,7 @@ return {
 	config = function()
 		local ls = require("luasnip")
 
-		-- require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/lua/lsp" })
 
 		ls.config.set_config({
 			history = true,

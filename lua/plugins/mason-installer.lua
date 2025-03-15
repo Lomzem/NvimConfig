@@ -5,6 +5,7 @@ return {
 		ensure_installed = {
 			"clangd",
 			"gopls",
+			"jsonls",
 			"lua-language-server",
 			"prettier",
 			"pyright",
@@ -14,10 +15,9 @@ return {
 			"sql-formatter",
 			"stylua",
 			"tailwindcss-language-server",
+			"texlab",
 			"tinymist",
 			"yamlfmt",
-            "texlab",
 		},
 	},
 }
-

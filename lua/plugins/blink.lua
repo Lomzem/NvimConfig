@@ -36,7 +36,7 @@ return {
 		snippets = { preset = "luasnip" },
 
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "buffer", "snippets" },
 			-- default = { "lsp", "path", "snippets" },
 		},
 
