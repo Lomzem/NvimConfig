@@ -1,11 +1,11 @@
 return {
-    {
-        "shaunsingh/nord.nvim",
-        priority = 1000,
-        config = function()
-            vim.g.nord_disable_background = true
-        end
-    },
+	{
+		"shaunsingh/nord.nvim",
+		priority = 1000,
+		config = function()
+			vim.g.nord_disable_background = true
+		end,
+	},
 	{
 		"RedsXDD/neopywal.nvim",
 		name = "neopywal",
@@ -66,10 +66,12 @@ return {
 	},
 
 	{
-		"ellisonleao/gruvbox.nvim",
-		opts = {
-			transparent_mode = true,
-		},
+		"sainnhe/gruvbox-material",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.gruvbox_material_transparent_background = 1
+		end,
 	},
 
 	{

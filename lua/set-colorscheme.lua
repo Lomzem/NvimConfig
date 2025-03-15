@@ -1,6 +1,0 @@
--- vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme catppuccin-mocha")
--- vim.cmd("colorscheme neopywal")
-vim.cmd("colorscheme nord")
--- vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme poimandres")
