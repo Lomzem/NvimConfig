@@ -13,5 +13,3 @@ if vim.fn.argc() == 0 then -- no cmd line args
         vim.cmd("Oil")
 	end
 end
-
-
