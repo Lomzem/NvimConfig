@@ -1,8 +1,7 @@
 return {
 	"saghen/blink.cmp",
 	version = "*",
-	lazy = true,
-	-- event = "VeryLazy",
+	event = "InsertEnter",
 	opts = {
 		keymap = {
 			preset = "none",
@@ -19,9 +18,16 @@ return {
 		},
 
 		completion = {
-			-- documentation = { auto_show = true, auto_show_delay_ms = 200 },
-			menu = { border = "single" },
-			-- documentation = { window = { border = "single" } },
+			menu = {
+				border = "single",
+				draw = {
+					treesitter = { "lsp" },
+				},
+			},
+			documentation = {
+				auto_show = true,
+				auto_show_delay_ms = 200,
+			},
 		},
 
 		cmdline = {
@@ -37,10 +43,8 @@ return {
 
 		sources = {
 			default = { "lsp", "path", "buffer", "snippets" },
-			-- default = { "lsp", "path", "snippets" },
 		},
 
-		-- Experimental signature help support
 		signature = { enabled = false },
 	},
 	opts_extend = { "sources.default" },

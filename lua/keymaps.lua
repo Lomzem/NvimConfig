@@ -24,6 +24,7 @@ vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
 -- vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
 vim.keymap.set("n", "<leader>w", "<Esc><cmd>w<CR>") -- Save
 
+-- Centering
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers page d-own
 vim.keymap.set("n", "n", "nzzzv") -- Centers search forward

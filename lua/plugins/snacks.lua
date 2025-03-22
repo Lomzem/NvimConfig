@@ -1,8 +1,11 @@
 return {
 	"folke/snacks.nvim",
 	opts = {
-		picker = {},
-		quickfile = {},
+		picker = { enabled = true },
+		quickfile = { enabled = true },
+		input = { enabled = true },
+		-- notifier = { enabled = true },
+		scope = { enabled = true },
 	},
 	keys = {
 		{
@@ -68,6 +71,12 @@ return {
 				Snacks.picker.lsp_workspace_symbols()
 			end,
 			desc = "LSP Workspace Symbols",
+		},
+		{
+			"<leader>nd",
+			function()
+				Snacks.notifier.hide()
+			end,
 		},
 	},
 }

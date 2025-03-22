@@ -1,7 +1,6 @@
 return {
 	"supermaven-inc/supermaven-nvim",
-	-- lazy = true,
-    event = "VeryLazy",
+    event = "InsertEnter",
 	opts = {
 		keymaps = {
 			accept_suggestion = "<C-t>",
