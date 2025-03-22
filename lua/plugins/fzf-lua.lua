@@ -1,5 +1,6 @@
 return {
 	"ibhagwan/fzf-lua",
+    enabled = false,
 	lazy = true,
 	opts = {
 		fzf_opts = {

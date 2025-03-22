@@ -10,6 +10,5 @@ if vim.fn.argc() == 0 then -- no cmd line args
 		grapple.select({ index = 1 })
 		vim.cmd("norm zz")
 	else
-        vim.cmd("Oil")
 	end
 end

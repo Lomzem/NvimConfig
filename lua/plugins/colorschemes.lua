@@ -13,7 +13,8 @@ return {
 		priority = 1000,
 		opts = {
 			transparent_background = true,
-			no_italic = true,
+			-- no_italic = true,
+			-- use_palette = "/home/lomzem/.cache/matugen/neopywal.vim",
 			use_palette = {
 				dark = "wallust",
 				light = "wallust",
@@ -48,9 +49,7 @@ return {
 				bold = true,
 				italic = false,
 			},
-			-- variant = "main",
 			disable_background = true,
-			-- disable_float_background = true,
 		},
 	},
 

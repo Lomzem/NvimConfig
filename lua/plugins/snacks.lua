@@ -1,84 +1,73 @@
-return {}
--- return {
--- 	lazy = true,
--- 	"folke/snacks.nvim",
--- 	opts = {
--- 		picker = {
--- 			enabled = true,
--- 		},
--- 	},
--- 	keys = {
--- 		{
--- 			"<c-p>",
--- 			function()
--- 				Snacks.picker.smart()
--- 			end,
--- 			desc = "Smart Find Files",
--- 		},
--- 		{
--- 			"<leader>ps",
--- 			function()
--- 				Snacks.picker.grep()
--- 			end,
--- 			desc = "Grep",
--- 		},
--- 		{
--- 			"<leader>di",
--- 			function()
--- 				Snacks.picker.diagnostics()
--- 			end,
--- 			desc = "Diagnostics",
--- 		},
--- 		{
--- 			"<leader>mb",
--- 			function()
--- 				Snacks.picker.lsp_symbols()
--- 			end,
--- 			desc = "LSP Symbols",
--- 		},
--- 		{
--- 			"<leader>MB",
--- 			function()
--- 				Snacks.picker.lsp_workspace_symbols()
--- 			end,
--- 			desc = "LSP Workspace Symbols",
--- 		},
---
--- 		{
--- 			"gr",
--- 			function()
--- 				Snacks.picker.lsp_references()
--- 			end,
--- 			nowait = true,
--- 			desc = "References",
--- 		},
--- 		{
--- 			"gd",
--- 			function()
--- 				Snacks.picker.lsp_definitions()
--- 			end,
--- 			desc = "Goto Definition",
--- 		},
--- 		{
--- 			"gD",
--- 			function()
--- 				Snacks.picker.lsp_declarations()
--- 			end,
--- 			desc = "Goto Declaration",
--- 		},
--- 		{
--- 			"gI",
--- 			function()
--- 				Snacks.picker.lsp_implementations()
--- 			end,
--- 			desc = "Goto Implementation",
--- 		},
--- 		{
--- 			"gy",
--- 			function()
--- 				Snacks.picker.lsp_type_definitions()
--- 			end,
--- 			desc = "Goto T[y]pe Definition",
--- 		},
--- 	},
--- }
+return {
+	"folke/snacks.nvim",
+	opts = {
+		picker = {},
+		quickfile = {},
+	},
+	keys = {
+		{
+			"<c-p>",
+			function()
+				Snacks.picker.files()
+			end,
+		},
+		{
+			"<leader>ps",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		-- lsp
+		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "Goto Definition",
+		},
+		{
+			"gD",
+			function()
+				Snacks.picker.lsp_declarations()
+			end,
+			desc = "Goto Declaration",
+		},
+		{
+			"gr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+			nowait = true,
+			desc = "References",
+		},
+		{
+			"gi",
+			function()
+				Snacks.picker.lsp_implementations()
+			end,
+			desc = "Goto Implementation",
+		},
+		{
+			"gt",
+			function()
+				Snacks.picker.lsp_type_definitions()
+			end,
+			desc = "Goto T[y]pe Definition",
+		},
+		{
+			"gm",
+			function()
+				Snacks.picker.lsp_symbols()
+			end,
+			desc = "LSP Symbols",
+		},
+		{
+			"gM",
+			function()
+				Snacks.picker.lsp_workspace_symbols()
+			end,
+			desc = "LSP Workspace Symbols",
+		},
+	},
+}
