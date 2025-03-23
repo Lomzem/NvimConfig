@@ -47,6 +47,12 @@ ls.add_snippets("typescriptreact", {
 		i(0),
 		t(" }"),
 	}),
+
+	s("cn", {
+		t('className="'),
+		i(0),
+		t('"'),
+	}),
 })
 
 ls.filetype_extend("typescriptreact", { "html" })
