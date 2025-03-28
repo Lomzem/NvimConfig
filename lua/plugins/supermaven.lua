@@ -3,7 +3,7 @@ return {
     event = "InsertEnter",
 	opts = {
 		keymaps = {
-			accept_suggestion = "<C-t>",
+			accept_suggestion = "<C-y>",
 			clear_suggestion = nil,
 			accept_word = nil,
 		},
