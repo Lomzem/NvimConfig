@@ -1,9 +1,9 @@
 return {
 	"supermaven-inc/supermaven-nvim",
-    event = "InsertEnter",
+	event = "InsertEnter",
 	opts = {
 		keymaps = {
-			accept_suggestion = "<C-y>",
+			accept_suggestion =  "<c-t>",
 			clear_suggestion = nil,
 			accept_word = nil,
 		},

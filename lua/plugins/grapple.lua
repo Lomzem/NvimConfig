@@ -1,6 +1,6 @@
 return {
 	"cbochs/grapple.nvim",
-    lazy = true,
+	lazy = true,
 	opts = {
 		scope = "cwd",
 		icons = false,
@@ -15,5 +15,6 @@ return {
 		{ "<a-2>", "<cmd>Grapple select index=2<cr>", desc = "Select second tag" },
 		{ "<a-3>", "<cmd>Grapple select index=3<cr>", desc = "Select third tag" },
 		{ "<a-4>", "<cmd>Grapple select index=4<cr>", desc = "Select fourth tag" },
+		{ "<a-p>", "<cmd>echo 'hi'" },
 	},
 }

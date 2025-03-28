@@ -1,12 +1,16 @@
 return {
 	"L3MON4D3/LuaSnip",
-	event = "VeryLazy",
+	event = "InsertEnter",
 	build = "make install_jsregexp",
 	-- dependencies = "rafamadriz/friendly-snippets",
 	config = function()
 		local ls = require("luasnip")
 
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/lua/lsp" })
+
+		for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/lsp/snippets/*.lua", true)) do
+			loadfile(ft_path)()
+		end
 
 		ls.config.set_config({
 			history = true,
