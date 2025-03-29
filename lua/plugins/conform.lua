@@ -2,40 +2,39 @@ return {
 	"stevearc/conform.nvim",
 	-- event = "VeryLazy",
 	config = function()
+		local web_formatters = { "biome", "prettierd", "rustywind" }
+
 		require("conform").setup({
-			-- format_after_save = {
-			-- 	async = true,
-			-- 	lsp_fallback = true,
-			-- },
-			-- I miss autoformat :(
-			format_after_save = function() end,
+			format_after_save = function(bufnr)
+				local ignore_filetypes = { "rust" }
+				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+					return
+				end
+				return {
+					async = true,
+					lsp_fallback = true,
+				}
+			end,
+
 			formatters_by_ft = {
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "gofmt" },
-				htmldjango = { "prettier", "rustywind" },
-				javascript = { "prettier" },
+				htmldjango = web_formatters,
+				javascript = web_formatters,
 				lua = { "stylua" },
 				python = { "ruff_format", "ruff_organize_imports" },
-				rust = { "rustfmt", lsp_format = "fallback" },
+				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
-				svelte = { "prettier" },
-				typescriptreact = { "prettier", "rustywind", "ts_tools" },
+				svelte = web_formatters,
+				typescriptreact = web_formatters,
 				yaml = { "yamlfmt" },
+				markdown = { "prettierd" },
+				["*"] = { "injected" },
 			},
-			formatters = {
-				clang_format = {
-					prepend_args = {
-						"-style={IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, PointerAlignment: Left, ReferenceAlignment: Right, BreakConstructorInitializers: AfterColon, PackConstructorInitializers: Never}",
-					},
-				},
-				rustfmt = {
-					args = { "--edition", "2021" },
-				},
-			},
-		})
 
-		vim.g.disable_autoformat = true
+			formatters = require("formatters.formatters"),
+		})
 
 		vim.api.nvim_create_user_command("Format", function(args)
 			local range = nil
@@ -49,8 +48,8 @@ return {
 			require("conform").format({ async = true, lsp_fallback = true, range = range })
 		end, { range = true })
 
-        if vim.fn.maparg("<leader>f", "n") == "" then
-            vim.keymap.set("n", "<leader>f", "<cmd>Format<CR>")
-        end
+		if vim.fn.maparg("<leader>f", "n") == "" then
+			vim.keymap.set("n", "<leader>f", "<cmd>Format<CR>")
+		end
 	end,
 }

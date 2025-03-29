@@ -4,7 +4,7 @@ local t = ls.text_node
 local i = ls.insert_node
 -- local c = ls.choice_node
 
-ls.add_snippets("all", {
+ls.add_snippets("typst", {
 
 	s({ trig = ";dm", snippetType = "autosnippet", name = "Dark Mode", dscr = "Dark Mode" }, {
 		t({ '#set page(fill: rgb("#26233a"))', '#set text(fill: rgb("#e0def4"))', "" }),

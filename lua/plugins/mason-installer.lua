@@ -3,11 +3,13 @@ return {
 	opts = {
 		auto_update = true,
 		ensure_installed = {
+			"biome",
 			"clangd",
 			"gopls",
 			"jsonls",
 			"lua-language-server",
 			"prettier",
+			"prettierd",
 			"pyright",
 			"ruff",
 			"rust-analyzer",
