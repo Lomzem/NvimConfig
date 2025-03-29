@@ -1,6 +1,7 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	cmd = { "Noice", "NoiceDismiss" },
 	opts = {
 		cmdline = {
 			view = "cmdline",
@@ -39,9 +40,6 @@ return {
 				opts = { skip = true },
 			},
 		},
-	},
-	keys = {
-		{ "<leader>nd", "<cmd>NoiceDismiss<cr>", "n", "[N]oice [D]ismiss" },
 	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",

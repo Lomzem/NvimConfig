@@ -73,9 +73,17 @@ return {
 			desc = "LSP Workspace Symbols",
 		},
 		{
+			"<leader>pd",
+			function()
+				Snacks.picker.diagnostics_buffer()
+			end,
+			desc = "Diagnostics",
+		},
+		{
 			"<leader>nd",
 			function()
 				Snacks.notifier.hide()
+				vim.cmd("NoiceDismiss")
 			end,
 		},
 	},
