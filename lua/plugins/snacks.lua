@@ -1,7 +1,19 @@
 return {
 	"folke/snacks.nvim",
 	opts = {
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			matcher = {
+				frecency = true,
+			},
+			win = {
+				input = {
+					keys = {
+						["<c-x>"] = { "edit_vsplit", mode = { "i", "n" } },
+					},
+				},
+			},
+		},
 		quickfile = { enabled = true },
 		input = { enabled = true },
 		-- notifier = { enabled = true },
