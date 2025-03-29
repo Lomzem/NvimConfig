@@ -42,7 +42,7 @@ return {
 		snippets = { preset = "luasnip" },
 
 		sources = {
-			default = { "lsp", "path", "buffer", "snippets" },
+			default = { "snippets", "lsp", "path", "buffer" },
 		},
 
 		signature = { enabled = false },

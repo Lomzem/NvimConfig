@@ -17,20 +17,21 @@ return {
 			end,
 
 			formatters_by_ft = {
+				["*"] = { "injected" },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "gofmt" },
 				htmldjango = web_formatters,
 				javascript = web_formatters,
 				lua = { "stylua" },
+				markdown = { "prettierd" },
 				python = { "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
 				svelte = web_formatters,
+				typescript = web_formatters,
 				typescriptreact = web_formatters,
 				yaml = { "yamlfmt" },
-				markdown = { "prettierd" },
-				["*"] = { "injected" },
 			},
 
 			formatters = require("formatters.formatters"),

@@ -2,34 +2,101 @@ local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+local fmt = require("luasnip.extras.fmt").fmt
+local fmta = require("luasnip.extras.fmt").fmta
+local rep = require("luasnip.extras").rep
+local f = ls.function_node
 
-ls.add_snippets("html", {
-	s({ trig = ".d", snippetType = "autosnippet" }, {
-		t('<div class="'),
-		i(1),
-		t({ '">', "\t" }),
-		i(0),
-		t({ "", "</div>" }),
-	}),
+local to_camel_case = function(text)
+	-- Handle empty input
+	if text == "" then
+		return ""
+	end
+	-- Convert first character to uppercase and remove any spaces/underscores
+	local camel = text:gsub("(%l)(%w*)", function(first, rest)
+		return first:upper() .. rest
+	end)
+	return camel
+end
 
-	s({ trig = ".bo", snippetType = "autosnippet" }, {
-		t({ "<body>", "\t" }),
-		i(0),
-		t({ "", "</body>" }),
-	}),
+local html_snippets = {}
 
-	s({ trig = ".ht", snippetType = "autosnippet" }, {
-		t({ "<html>", "\t" }),
-		i(0),
-		t({ "", "</html>" }),
-	}),
+local html_tags = {
+	"a",
+	"body",
+	"button",
+	"div",
+	"form",
+	"h1",
+	"h2",
+	"h3",
+	"h4",
+	"h5",
+	"h6",
+	"head",
+	"html",
+	"img",
+	"input",
+	"label",
+	"li",
+	"link",
+	"main",
+	"meta",
+	"p",
+	"script",
+	"section",
+	"span",
+	"style",
+	"table",
+	"tbody",
+	"td",
+	"tfoot",
+	"th",
+	"thead",
+	"tr",
+	"ul",
+}
 
-	s({ trig = ".h1", snippetType = "autosnippet" }, {
-		t({ "<h1>", "\t" }),
-		i(0),
-		t({ "", "</h1>" }),
-	}),
-})
+for _, tag in ipairs(html_tags) do
+	table.insert(
+		html_snippets,
+		s(
+			tag,
+			fmt(
+				[[
+<{1}>
+  {2}
+</{1}>
+    ]],
+				{
+					t(tag),
+					i(1),
+				}
+			)
+		)
+	)
+
+	table.insert(
+		html_snippets,
+		s(
+			tag .. ".",
+			fmt(
+				[[
+<{1} className="{2}">
+  {3}
+</{1}>
+    ]],
+				{
+					t(tag),
+					i(1),
+					i(2),
+				}
+			)
+		)
+	)
+end
+
+ls.add_snippets("html", html_snippets)
 
 ls.add_snippets("typescriptreact", {
 	s("exd", {
@@ -53,6 +120,69 @@ ls.add_snippets("typescriptreact", {
 		i(0),
 		t('"'),
 	}),
+
+	s(
+		"ar",
+		fmta(
+			[[
+() =>> {
+    <>
+}
+    ]],
+			{ i(0) }
+		)
+	),
+
+	s(
+		"arp",
+		fmta(
+			[[
+(<>) =>> {
+    <>
+}
+    ]],
+			{ i(1), i(0) }
+		)
+	),
+
+	s(
+		"uses",
+		fmta(
+			[[
+const [<>, set<>] = useState(<>);
+        ]],
+			{
+				i(1),
+				f(function(args)
+					return to_camel_case(args[1][1])
+				end, { 1 }), -- Function node to transform the first input
+				i(0),
+			}
+		)
+	),
+
+	s(
+		"fn",
+		fmta(
+			[[
+function <>() {
+    <>
+}
+        ]],
+			{ i(1), i(0) }
+		)
+	),
+
+	s(
+		"fnp",
+		fmta(
+			[[
+function <>(<>) {
+    <>
+                ]],
+			{ i(1), i(2), i(0) }
+		)
+	),
 })
 
 ls.filetype_extend("typescriptreact", { "html" })
