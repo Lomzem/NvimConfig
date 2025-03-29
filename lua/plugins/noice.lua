@@ -7,6 +7,7 @@ return {
 		},
 
 		lsp = {
+			signature = { auto_open = false },
 			progress = { enabled = true },
 			override = {
 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -14,7 +15,7 @@ return {
 				-- ["cmp.entry.get_documentation"] = true,
 			},
 		},
-        bottom_search = true,
+		bottom_search = true,
 		presets = {
 			lsp_doc_border = true,
 			long_message_to_split = true,

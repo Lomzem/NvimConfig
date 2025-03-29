@@ -7,7 +7,6 @@ return {
 			preset = "none",
 
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
-			["<c-e>"] = { "hide" },
 			["<c-l>"] = { "select_and_accept" },
 
 			["<c-k>"] = { "select_prev", "fallback" },
@@ -15,6 +14,8 @@ return {
 
 			["<c-u>"] = { "scroll_documentation_up", "fallback" },
 			["<c-d>"] = { "scroll_documentation_down", "fallback" },
+
+			["<c-e>"] = { "show_signature", "hide_signature", "fallback" },
 		},
 
 		completion = {
@@ -45,7 +46,9 @@ return {
 			default = { "snippets", "lsp", "path", "buffer" },
 		},
 
-		signature = { enabled = false },
+		signature = {
+			enabled = true,
+		},
 	},
 	opts_extend = { "sources.default" },
 }
