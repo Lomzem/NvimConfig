@@ -4,7 +4,6 @@ local t = ls.text_node
 local i = ls.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
-local rep = require("luasnip.extras").rep
 local f = ls.function_node
 
 local to_camel_case = function(text)
@@ -155,7 +154,7 @@ const [<>, set<>] = useState(<>);
 				i(1),
 				f(function(args)
 					return to_camel_case(args[1][1])
-				end, { 1 }), -- Function node to transform the first input
+				end, { 1 }),
 				i(0),
 			}
 		)
