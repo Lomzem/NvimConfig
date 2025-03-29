@@ -80,6 +80,13 @@ return {
 			desc = "Diagnostics",
 		},
 		{
+			"<leader>pD",
+			function()
+				Snacks.picker.diagnostics()
+			end,
+			desc = "Diagnostics",
+		},
+		{
 			"<leader>nd",
 			function()
 				Snacks.notifier.hide()
