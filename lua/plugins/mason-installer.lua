@@ -20,6 +20,7 @@ return {
 			"texlab",
 			"tinymist",
 			"yamlfmt",
+			"typstyle",
 		},
 	},
 }

@@ -29,6 +29,7 @@ return {
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
 				svelte = web_formatters,
+				typst = { "typstyle" },
 				typescript = web_formatters,
 				typescriptreact = web_formatters,
 				yaml = { "yamlfmt" },
