@@ -1,7 +1,6 @@
 return {
 	"numtostr/comment.nvim",
-    enabled = false,
-	lazy = false,
+	event = "VeryLazy",
 	opts = {
 		toggler = { line = "<c-_>" },
 		opleader = { line = "<c-_>" },

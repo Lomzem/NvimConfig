@@ -10,8 +10,8 @@ return {
 		enable_backwards = true, -- well ...
 		completion = false, -- if the tabkey is used in a completion pum
 		tabouts = {
-			-- { open = "'", close = "'" },
-			-- { open = '"', close = '"' },
+			{ open = "'", close = "'" },
+			{ open = '"', close = '"' },
 			{ open = "`", close = "`" },
 			{ open = "(", close = ")" },
 			{ open = "[", close = "]" },
