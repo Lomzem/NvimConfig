@@ -27,19 +27,15 @@ return {
 			mode = { "n", "x", "o" },
 			function()
 				require("flash").jump({
-					search = {
-						mode = function(str)
-							return "\\<" .. str
-						end,
-					},
-					pattern = ".",
+					search = { mode = "search", max_length = 0 },
+					pattern = "\\<\\w",
 				})
 			end,
 			desc = "Flash",
 		},
 		{
 			"<leader>k",
-			mode = "n",
+			mode = { "n", "x", "o" },
 			function()
 				-- line jump
 				require("flash").jump({
@@ -48,7 +44,7 @@ return {
 						after = { 0, 0 },
 						style = "overlay",
 					},
-					pattern = "^\\s*\\w",
+					pattern = "^\\s*.",
 				})
 			end,
 			desc = "Flash",

@@ -1,6 +1,6 @@
 -- line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.number = true
+-- vim.opt.relativenumber = true
 vim.opt.fillchars = { eob = " " }
 
 -- tabs and indenting
@@ -26,7 +26,7 @@ vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 vim.opt.guicursor = ""
--- vim.opt.laststatus = 0
+vim.opt.laststatus = 0
 vim.cmd("syntax off")
 
 -- split windows
