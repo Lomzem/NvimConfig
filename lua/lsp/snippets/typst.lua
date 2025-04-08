@@ -43,4 +43,4 @@ end
 table.insert(snippets, s("i", fmta("_<>_<>", { i(1), i(0) })))
 table.insert(snippets, s("b", fmta("**<>**<>", { i(1), i(0) })))
 
-ls.add_snippets("markdown", snippets)
+ls.add_snippets("typst", snippets)
