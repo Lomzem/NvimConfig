@@ -26,10 +26,11 @@ return {
 			"'",
 			mode = { "n", "x", "o" },
 			function()
-				require("flash").jump({
-					search = { mode = "search", max_length = 0 },
-					pattern = "\\<\\w",
-				})
+				require("flash").jump()
+				-- require("flash").jump({
+				-- 	search = { mode = "search", max_length = 0 },
+				-- 	pattern = "\\<\\w",
+				-- })
 			end,
 			desc = "Flash",
 		},
