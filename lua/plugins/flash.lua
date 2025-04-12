@@ -20,13 +20,21 @@ return {
 	},
 	keys = {
 		{
-			"<leader>vr",
-			mode = "n",
+			"r",
+			mode = "v",
 			function()
 				require("flash").treesitter()
 				vim.cmd("norm V")
 			end,
 			desc = "Flash Treesitter",
+		},
+		{
+			"dr",
+			mode = "n",
+			function()
+				require("flash").treesitter()
+				vim.cmd("norm Vd")
+			end,
 		},
 	},
 }

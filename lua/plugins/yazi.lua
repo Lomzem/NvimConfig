@@ -1,16 +1,17 @@
 return {
 	"mikavilpas/yazi.nvim",
-	event = "VeryLazy",
+	lazy = true,
 	dependencies = { "folke/snacks.nvim", lazy = true },
+	cmd = { "Yazi" },
 	keys = {
 		{
-            "<a-f>",
+			"<a-f>",
 			mode = { "n", "v" },
 			"<cmd>Yazi<cr>",
 			desc = "Open yazi at the current file",
 		},
 		{
-            "<leader>pv",
+			"<leader>pv",
 			mode = { "n", "v" },
 			"<cmd>Yazi<cr>",
 			desc = "Open yazi at the current file",

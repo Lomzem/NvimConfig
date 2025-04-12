@@ -3,6 +3,7 @@ return {
 	lazy = false,
 	dependencies = {
 		"folke/snacks.nvim",
+		"mikavilpas/yazi.nvim",
 	},
 	init = function()
 		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
@@ -14,5 +15,6 @@ return {
 				Snacks.indent.enable()
 			end,
 		},
+		no_restore_cmds = {},
 	},
 }
