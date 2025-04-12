@@ -38,7 +38,6 @@ return {
 				["<c-l>"] = { "select_and_accept" },
 				["<c-k>"] = { "select_prev", "fallback" },
 				["<c-j>"] = { "select_next", "fallback" },
-				["<cr>"] = { "accept_and_enter", "fallback" },
 			},
 			completion = { menu = { auto_show = true } },
 		},

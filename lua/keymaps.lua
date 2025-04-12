@@ -3,11 +3,7 @@ vim.g.mapleader = " "
 -- General
 vim.keymap.set("v", "+", "<Esc>ggVG")
 
-vim.keymap.set(
-	"n",
-	"y=",
-	"<cmd>silent exec '!wl-copy < %'<CR><cmd>echo 'Successfully copied all!'<CR>"
-) -- Copy all
+vim.keymap.set("n", "y=", "<cmd>silent exec '!wl-copy < %'<CR><cmd>echo 'Successfully copied all!'<CR>") -- Copy all
 vim.keymap.set("n", "<A-q>", "<cmd>q<CR>") -- Quit
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
@@ -41,8 +37,8 @@ vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
 vim.keymap.set("n", "D", "dd")
-vim.keymap.set("n", "j", "jzz")
-vim.keymap.set("n", "k", "kzz")
+-- vim.keymap.set("n", "j", "jzz")
+-- vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "J", "mzJ`z") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word

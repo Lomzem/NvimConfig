@@ -13,9 +13,6 @@ return {
 						-- clever-f style
 						[motion:lower()] = nil,
 						[motion:upper()] = nil,
-						-- jump2d style: same case goes next, opposite case goes prev
-						-- [motion] = "next",
-						-- [motion:match("%l") and motion:upper() or motion:lower()] = "prev",
 					}
 				end,
 			},
@@ -23,38 +20,11 @@ return {
 	},
 	keys = {
 		{
-			"'",
-			mode = { "n", "x", "o" },
-			function()
-				require("flash").jump()
-				-- require("flash").jump({
-				-- 	search = { mode = "search", max_length = 0 },
-				-- 	pattern = "\\<\\w",
-				-- })
-			end,
-			desc = "Flash",
-		},
-		{
-			"<leader>k",
-			mode = { "n", "x", "o" },
-			function()
-				-- line jump
-				require("flash").jump({
-					search = { mode = "search", max_length = 0 },
-					label = {
-						after = { 0, 0 },
-						style = "overlay",
-					},
-					pattern = "^\\s*.",
-				})
-			end,
-			desc = "Flash",
-		},
-		{
-			"r",
-			mode = "v",
+			"<leader>vr",
+			mode = "n",
 			function()
 				require("flash").treesitter()
+				vim.cmd("norm V")
 			end,
 			desc = "Flash Treesitter",
 		},
