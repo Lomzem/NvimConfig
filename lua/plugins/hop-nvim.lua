@@ -6,10 +6,17 @@ return {
 	},
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
-		{ "<leader>vk", "V<cmd>HopLineStart<cr>", mode = "n" },
+		{
+			"<leader>k",
+			function()
+				vim.cmd("norm V")
+				vim.cmd("HopLineStart")
+			end,
+			mode = "v",
+		},
 		{ "<leader>k", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
 		{ "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
-		{ "s", "<cmd>HopChar1<cr>", mode = { "n", "x", "o" } },
+		-- { "s", "<cmd>HopChar1<cr>", mode = { "n", "x", "o" } },
 		{
 			"d<leader>k",
 			function()
