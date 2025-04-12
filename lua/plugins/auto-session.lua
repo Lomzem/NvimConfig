@@ -9,12 +9,7 @@ return {
 		vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 	end,
 	opts = {
-		post_restore_cmds = {
-			function()
-				require("snacks")
-				Snacks.indent.enable()
-			end,
-		},
+		post_restore_cmds = {},
 		no_restore_cmds = {},
 	},
 }
