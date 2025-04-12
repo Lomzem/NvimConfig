@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	enabled = false,
+	enabled = true,
 	event = "VeryLazy",
 	opts = {
 		options = {
@@ -25,7 +25,7 @@ return {
 		sections = {
 			-- lualine_a = { "mode" },
 			lualine_a = { { "mode", separator = { left = "" } } },
-			lualine_b = { "branch", "diagnostics" },
+			lualine_b = { "diagnostics" },
 			lualine_c = { "filename" },
 			lualine_x = { "" },
 			-- lualine_z = { "location" },
