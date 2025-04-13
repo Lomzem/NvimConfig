@@ -61,3 +61,7 @@ vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 vim.keymap.set("n", "<leader>1", "`a")
 vim.keymap.set("n", "<leader>2", "`b")
 vim.keymap.set("n", "<leader>3", "`c")
+
+-- Don't have `o` add a comment
+vim.keymap.set("n", "o", "o<c-u>")
+vim.keymap.set("n", "O", "O<c-u>")
