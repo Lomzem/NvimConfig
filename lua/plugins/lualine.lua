@@ -1,14 +1,14 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	enabled = false,
+	enabled = true,
 	event = "VeryLazy",
 	opts = {
 		options = {
 			icons_enabled = true,
 			theme = "neopywal",
 			component_separators = { left = "", right = "" },
-			-- section_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
+			section_separators = { left = "", right = "" },
+			-- section_separators = { left = "", right = "" },
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -24,12 +24,22 @@ return {
 		},
 		sections = {
 			-- lualine_a = { "mode" },
-			lualine_a = { { "mode", separator = { left = "" } } },
+			lualine_a = {
+				{
+					"mode",
+					-- separator = { left = "" },
+				},
+			},
 			lualine_b = { "diagnostics" },
-			lualine_c = { "filename" },
+			lualine_c = { { "filename", path = 1 } },
 			lualine_x = { "" },
 			-- lualine_z = { "location" },
-			lualine_z = { { "location", separator = { right = "" } } },
+			lualine_z = {
+				{
+					"location",
+					-- separator = { right = "" },
+				},
+			},
 		},
 		inactive_sections = {
 			lualine_a = {},
