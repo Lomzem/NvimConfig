@@ -35,5 +35,6 @@ vim.opt.splitbelow = true
 
 -- misc
 vim.opt.swapfile = false
+vim.opt.spell = false
 vim.api.nvim_create_user_command("Wrap", "lua vim.cmd([[set wrap | set linebreak | set spell]])", {})
 vim.opt.undofile = true
