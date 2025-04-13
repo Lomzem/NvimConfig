@@ -1,44 +1,4 @@
 return {
-	{
-		"shaunsingh/nord.nvim",
-		priority = 1000,
-		config = function()
-			vim.g.nord_disable_background = true
-		end,
-	},
-	{
-		"RedsXDD/neopywal.nvim",
-		name = "neopywal",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			transparent_background = true,
-			-- no_italic = true,
-			-- use_palette = "/home/lomzem/.cache/matugen/neopywal.vim",
-			use_palette = {
-				dark = "wallust",
-				light = "wallust",
-			},
-		},
-	},
-
-	{
-		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			transparent = true,
-			borderless_pickers = false,
-		},
-	},
-
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		-- opts = {},
-		opts = { transparent_background = true },
-	},
 
 	{
 		"rose-pine/neovim",
