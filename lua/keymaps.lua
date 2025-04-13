@@ -56,3 +56,8 @@ vim.keymap.set("v", ">", ">gv")
 
 -- Commands
 vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
+
+-- Marks
+vim.keymap.set("n", "<leader>1", "`a")
+vim.keymap.set("n", "<leader>2", "`b")
+vim.keymap.set("n", "<leader>3", "`c")

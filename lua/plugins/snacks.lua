@@ -85,14 +85,14 @@ return {
 			desc = "LSP Workspace Symbols",
 		},
 		{
-			"<leader>pd",
+			"gp",
 			function()
 				Snacks.picker.diagnostics_buffer()
 			end,
 			desc = "Diagnostics",
 		},
 		{
-			"<leader>pD",
+			"gP",
 			function()
 				Snacks.picker.diagnostics()
 			end,
