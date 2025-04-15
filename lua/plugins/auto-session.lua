@@ -1,6 +1,7 @@
 return {
 	"rmagatti/auto-session",
 	lazy = false,
+    priority = 999,
 	dependencies = {
 		"folke/snacks.nvim",
 		"mikavilpas/yazi.nvim",

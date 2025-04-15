@@ -10,10 +10,10 @@ return {
 				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 					return
 				end
-				return {
-					async = true,
-					lsp_fallback = true,
-				}
+				-- return {
+				-- 	async = true,
+				-- 	lsp_fallback = true,
+				-- }
 			end,
 
 			formatters_by_ft = {
