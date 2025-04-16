@@ -11,5 +11,8 @@ return {
 			dark = "wallust",
 			light = "wallust",
 		},
+		plugins = {
+			rainbow = true,
+		},
 	},
 }
