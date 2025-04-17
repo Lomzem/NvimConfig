@@ -28,7 +28,7 @@ return {
 				python = { "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
-				svelte = web_formatters,
+				svelte = { "prettierd" },
 				typst = { "typstyle" },
 				typescript = web_formatters,
 				typescriptreact = web_formatters,

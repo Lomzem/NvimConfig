@@ -19,8 +19,9 @@ return {
 			"tailwindcss-language-server",
 			"texlab",
 			"tinymist",
-			"yamlfmt",
 			"typstyle",
+			"yamlfmt",
+            "svelte-language-server",
 		},
 	},
 }

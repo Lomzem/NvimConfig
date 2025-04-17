@@ -185,3 +185,4 @@ function <>(<>) {
 })
 
 ls.filetype_extend("typescriptreact", { "html" })
+ls.filetype_extend("svelte", { "html" })
