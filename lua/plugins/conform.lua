@@ -2,7 +2,8 @@ return {
 	"stevearc/conform.nvim",
 	-- event = "VeryLazy",
 	config = function()
-		local web_formatters = { "biome", "prettierd", "rustywind" }
+		-- local web_formatters = { "biome", "prettierd", "rustywind" }
+		local web_formatters = { "prettierd", "rustywind" }
 
 		require("conform").setup({
 			format_after_save = function(bufnr)
@@ -10,10 +11,10 @@ return {
 				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 					return
 				end
-				-- return {
-				-- 	async = true,
-				-- 	lsp_fallback = true,
-				-- }
+				return {
+					async = true,
+					lsp_fallback = true,
+				}
 			end,
 
 			formatters_by_ft = {

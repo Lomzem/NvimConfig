@@ -16,26 +16,24 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.colorschemes" },
 	},
-	{
-		checker = {
+	checker = {
+		enabled = true,
+	},
+	change_detection = {
+		notify = false,
+	},
+	performance = {
+		cache = {
 			enabled = true,
 		},
-		change_detection = {
-			notify = false,
-		},
-		performance = {
-			cache = {
-				enabled = true,
-			},
-			rtp = {
-				disabled_plugins = {
-					"netrwPlugin",
-					"gzip",
-					"tarPlugin",
-					"tohtml",
-					"tutor",
-					"zipPlugin",
-				},
+		rtp = {
+			disabled_plugins = {
+				"netrwPlugin",
+				"gzip",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
 			},
 		},
 	},
