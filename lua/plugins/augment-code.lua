@@ -1,5 +1,6 @@
 return {
 	"augmentcode/augment.vim",
+	enabled = false,
 	lazy = true,
 	cmd = "Augment",
 	config = function()

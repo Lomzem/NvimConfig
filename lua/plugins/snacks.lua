@@ -102,7 +102,7 @@ return {
 			"<leader>nd",
 			function()
 				Snacks.notifier.hide()
-				vim.cmd("NoiceDismiss")
+				-- vim.cmd("NoiceDismiss")
 			end,
 		},
 	},
