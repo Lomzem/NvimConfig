@@ -27,6 +27,7 @@ vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 vim.opt.guicursor = ""
 vim.opt.laststatus = 0
+vim.opt.cmdheight = 0
 vim.cmd("syntax off")
 
 -- split windows
