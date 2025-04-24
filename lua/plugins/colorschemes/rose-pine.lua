@@ -7,6 +7,6 @@ return {
 			bold = true,
 			italic = false,
 		},
-		disable_background = true,
+		-- disable_background = true,
 	},
 }
