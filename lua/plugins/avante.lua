@@ -15,7 +15,7 @@ return {
 			-- model = "gemini-2.0-flash",
 			timeout = 30000, -- Timeout in milliseconds
 			temperature = 0,
-			max_tokens = 8192,
+			-- max_tokens = 8192,
 			api_key_name = "GEMINI_API_KEY",
 		},
 	},

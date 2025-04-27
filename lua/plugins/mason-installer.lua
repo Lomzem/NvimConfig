@@ -3,7 +3,6 @@ return {
 	opts = {
 		auto_update = true,
 		ensure_installed = {
-			"biome",
 			"clangd",
 			"gopls",
 			"jsonls",

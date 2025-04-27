@@ -8,17 +8,18 @@ return {
 		require("conform").setup({
 			format_after_save = function(bufnr)
 				local ignore_filetypes = { "rust" }
-				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
-					return
-				end
-				return {
-					async = true,
-					lsp_fallback = true,
-				}
+				return
+				-- if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+				-- 	return
+				-- end
+				-- return {
+				-- 	async = true,
+				-- 	lsp_fallback = true,
+				-- }
 			end,
 
 			formatters_by_ft = {
-				["*"] = { "injected" },
+				-- ["*"] = { "injected" },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				go = { "gofmt" },
@@ -29,7 +30,7 @@ return {
 				python = { "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
-				svelte = { "prettierd" },
+				-- svelte = { "biome" },
 				typst = { "typstyle" },
 				typescript = web_formatters,
 				typescriptreact = web_formatters,

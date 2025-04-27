@@ -4,6 +4,7 @@ return {
 	build = ":MasonUpdate",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	},
 	config = function()
 		require("mason").setup()
@@ -23,7 +24,7 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
-                    on_attach = on_attach
+					on_attach = on_attach,
 				})
 			end,
 			["lua_ls"] = function()
