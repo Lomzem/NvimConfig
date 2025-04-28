@@ -20,7 +20,7 @@ return {
 			"tinymist",
 			"typstyle",
 			"yamlfmt",
-            "svelte-language-server",
+			"svelte-language-server",
 		},
 	},
 }
