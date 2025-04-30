@@ -2,10 +2,9 @@ return {
 	"rose-pine/neovim",
 	name = "rose-pine",
 	opts = {
-		variant = "main",
 		styles = {
 			bold = true,
-			italic = false,
+			italic = true,
 		},
 		-- disable_background = true,
 	},
