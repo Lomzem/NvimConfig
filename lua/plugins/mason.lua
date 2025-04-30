@@ -32,7 +32,7 @@ return {
 					capabilities = capabilities,
 					settings = {
 						Lua = {
-							diagnostics = { globals = { "vim" } },
+							diagnostics = { globals = { "vim", "Snacks" } },
 						},
 					},
 				})
