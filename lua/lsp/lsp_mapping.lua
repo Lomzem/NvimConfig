@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.diagnostic.config({
 			virtual_text = true,
 			-- virtual_lines = { current_line = true },
-			update_in_insert = true,
+			-- update_in_insert = true,
 		})
 
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

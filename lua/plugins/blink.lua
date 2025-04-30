@@ -7,6 +7,7 @@ return {
 			preset = "none",
 
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
+			["<c-q>"] = { "hide" },
 			["<c-l>"] = { "select_and_accept" },
 
 			["<c-k>"] = { "select_prev", "fallback" },
