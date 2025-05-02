@@ -4,7 +4,7 @@ return {
 	opts = {
 		styles = {
 			bold = true,
-			italic = true,
+			italic = false,
 		},
 		-- disable_background = true,
 	},
