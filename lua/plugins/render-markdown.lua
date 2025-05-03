@@ -28,8 +28,8 @@ return {
 			highlight_inline = "none",
 			border = "none",
 		},
-		bullet = {
-			right_pad = 1,
-		},
+		-- bullet = {
+		-- 	right_pad = 1,
+		-- },
 	},
 }
