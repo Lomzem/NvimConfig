@@ -1,19 +1,21 @@
 return {
 	"stevearc/oil.nvim",
 	lazy = true,
-    enabled = false,
+	enabled = true,
 	opts = {
 		view_options = {
 			show_hidden = true,
 		},
 		keymaps = {
 			["<C-s>"] = { false, desc = "Oil Save" },
-			["<C-p>"] = "<cmd>FzfLua files<cr>"
+			["<C-p>"] = function()
+				Snacks.picker.files()
+			end,
 		},
 	},
 	cmd = "Oil",
-	keys = {
-		{ "<leader>pv", "<cmd>Oil<cr>" },
-	},
+	-- keys = {
+	-- 	{ "<leader>pv", "<cmd>Oil<cr>" },
+	-- },
 	dependencies = "echasnovski/mini.icons",
 }
