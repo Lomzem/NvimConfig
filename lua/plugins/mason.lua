@@ -5,5 +5,5 @@ return {
 		opts = {},
 		cmd = "Mason",
 	},
-	{ "williamboman/mason-lspconfig.nvim", opts = {} },
+	{ "williamboman/mason-lspconfig.nvim", opts = {}, dependencies = "neovim/nvim-lspconfig" },
 }

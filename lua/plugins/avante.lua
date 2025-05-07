@@ -8,7 +8,12 @@ return {
 			provider = "snacks",
 			provider_opts = {},
 		},
-		provider = "gemini",
+		provider = "copilot",
+		copilot = {
+			model = "claude-3.5-sonnet",
+			max_tokens = 64000,
+			code_editing_commands = true, -- Enable code editing commands
+		},
 		gemini = {
 			endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
 			model = "gemini-2.5-flash-preview-04-17",
@@ -22,6 +27,7 @@ return {
 	build = "make",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
+		"zbirenbaum/copilot.lua",
 		"stevearc/dressing.nvim",
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
