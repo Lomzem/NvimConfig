@@ -3,6 +3,7 @@ local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 
 local snippets = {}
@@ -42,5 +43,6 @@ end
 
 table.insert(snippets, s("i", fmta("_<>_<>", { i(1), i(0) })))
 table.insert(snippets, s("b", fmta("**<>**<>", { i(1), i(0) })))
+table.insert(snippets, s("prose", fmt('#cite(<{}>, form: "prose"){}', { i(1), i(0) })))
 
 ls.add_snippets("typst", snippets)
