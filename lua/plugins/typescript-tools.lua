@@ -3,4 +3,5 @@ return {
 	enabled = true,
 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	opts = {},
+	ft = { "ts" },
 }

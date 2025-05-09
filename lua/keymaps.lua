@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("v", "+", "<Esc>ggVG")
 
 vim.keymap.set("n", "y=", "<cmd>silent exec '!wl-copy < %'<CR><cmd>echo 'Successfully copied all!'<CR>") -- Copy all
-vim.keymap.set("n", "<A-q>", "<cmd>q<CR>") -- Quit
+vim.keymap.set("n", "<a-q>", "<c-z>") -- Suspend
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
 
