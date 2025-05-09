@@ -38,3 +38,5 @@ require("lazy").setup({
 		},
 	},
 })
+
+require("lazy").update({ show = false })
