@@ -27,5 +27,8 @@ return {
 			highlight_inline = "none",
 			border = "none",
 		},
+		html = {
+			comment = { conceal = false },
+		},
 	},
 }
