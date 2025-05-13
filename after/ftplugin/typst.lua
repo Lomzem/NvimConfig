@@ -13,9 +13,9 @@ vim.opt.formatoptions:append("t")
 -- Auto-insert current comment leader when hitting o/O in normal mode
 -- vim.opt.formatoptions:append('o')
 
-vim.api.nvim_create_autocmd("BufWritePost", {
+vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.typ",
 	callback = function()
-		vim.cmd("silent !typst compile %")
+		vim.fn.jobstart({ "typst", "watch", vim.fn.expand("%:p") })
 	end,
 })
