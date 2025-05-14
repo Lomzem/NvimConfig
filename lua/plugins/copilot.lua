@@ -4,7 +4,7 @@ return {
 	cmd = "Copilot",
 	opts = {
 		suggestion = {
-			enabled = true,
+			enabled = false,
 			auto_trigger = true,
 			keymap = {
 				accept = "<c-t>",
