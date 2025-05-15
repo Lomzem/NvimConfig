@@ -10,7 +10,7 @@ return {
 			"lua-language-server",
 			"prettier",
 			"prettierd",
-			"pyright",
+			"basedpyright",
 			"ruff",
 			"rust-analyzer",
 			"rustywind",
