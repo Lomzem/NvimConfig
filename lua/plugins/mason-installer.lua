@@ -8,7 +8,6 @@ return {
 			"gopls",
 			"jsonls",
 			"lua-language-server",
-			"prettier",
 			"prettierd",
 			"basedpyright",
 			"ruff",
