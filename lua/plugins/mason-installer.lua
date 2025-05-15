@@ -4,12 +4,13 @@ return {
 	opts = {
 		auto_update = true,
 		ensure_installed = {
+			"basedpyright",
 			"clangd",
 			"gopls",
 			"jsonls",
 			"lua-language-server",
+			"markdown_oxide",
 			"prettierd",
-			"basedpyright",
 			"ruff",
 			"rust-analyzer",
 			"rustywind",
@@ -21,7 +22,6 @@ return {
 			"tinymist",
 			"typstyle",
 			"yamlfmt",
-			"markdown_oxide",
 		},
 	},
 }
