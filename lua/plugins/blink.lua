@@ -20,6 +20,9 @@ return {
 		},
 
 		completion = {
+			list = {
+				max_items = 3,
+			},
 			menu = {
 				border = "single",
 				draw = {
