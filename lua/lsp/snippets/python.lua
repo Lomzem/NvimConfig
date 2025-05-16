@@ -6,19 +6,17 @@ local c = ls.choice_node
 local fmt = require("luasnip.extras.fmt").fmt
 
 ls.add_snippets("python", {
-	s("fi", {
-		t("from "),
-		i(1),
-		t(" import "),
-		i(0),
-	}),
+	s(
+		"inm",
+		fmt(
+			[[
+def main():
+    {}
 
-	s("d", {
-		t("def "),
-		i(1),
-		t("("),
-		i(2),
-		t({ "):", "\t" }),
-		i(0),
-	}),
+if __name__ == "__main__":
+    main()
+]],
+			{ i(0, "pass") }
+		)
+	),
 })

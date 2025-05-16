@@ -44,6 +44,7 @@ end
 table.insert(snippets, s("i", fmta("_<>_<>", { i(1), i(0) })))
 table.insert(snippets, s("b", fmta("**<>**<>", { i(1), i(0) })))
 table.insert(snippets, s("prose", fmt('#cite(<{}>, form: "prose"){}', { i(1), i(0) })))
+table.insert(snippets, s("pm", t("plus.minus")))
 table.insert(
 	snippets,
 	s(
