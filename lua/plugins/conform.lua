@@ -3,7 +3,7 @@ return {
 	-- event = "VeryLazy",
 	config = function()
 		-- local web_formatters = { "biome", "prettierd", "rustywind" }
-		local web_formatters = { "prettierd", "rustywind" }
+		local web_formatters = { "prettier" }
 
 		require("conform").setup({
 			format_after_save = function(bufnr)
