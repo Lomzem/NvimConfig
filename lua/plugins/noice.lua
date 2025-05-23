@@ -9,6 +9,7 @@ return {
 				["cmp.entry.get_documentation"] = false,
 			},
 			signature = { enabled = false },
+			progress = { enabled = false },
 		},
 		presets = {
 			bottom_search = true, -- use a classic bottom cmdline for search

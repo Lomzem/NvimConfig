@@ -37,12 +37,12 @@ vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
 vim.keymap.set("n", "D", "dd")
-vim.keymap.set("n", "dd", "d$")
+-- vim.keymap.set("n", "dd", "d$")
 
 -- jk center
--- vim.keymap.set("n", "j", "jzz")
--- vim.keymap.set("n", "k", "kzz")
--- vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "j", "jzz")
+vim.keymap.set("n", "k", "kzz")
+vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "J", "<cmd>let p=getpos('.')<bar>join<bar>call setpos('.', p)<cr>") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word
 vim.keymap.set("i", "<C-x>", "<C-o>x")
@@ -50,6 +50,8 @@ vim.keymap.set("i", "<C-x>", "<C-o>x")
 -- front/back
 vim.keymap.set({ "n", "v", "o" }, "H", "_")
 vim.keymap.set({ "n", "v", "o" }, "L", "$")
+-- vim.keymap.set("n", "H", "3Hzz")
+-- vim.keymap.set("n", "L", "3Lzz")
 
 -- Indenting
 vim.keymap.set("n", "<", "<<")

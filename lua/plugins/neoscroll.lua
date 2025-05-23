@@ -1,9 +1,12 @@
 return {
 	"karb94/neoscroll.nvim",
-	enabled = false,
 	event = "VeryLazy",
 	opts = {
+		mappings = {
+			"<C-u>",
+			"<C-d>",
+		},
 		easing = "quadratic",
-		duration_multiplier = 0.35,
+		duration_multiplier = 0.4,
 	},
 }
