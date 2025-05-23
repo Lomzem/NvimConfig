@@ -21,6 +21,6 @@ return {
 	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		{ "rcarriga/nvim-notify", opts = {} },
+		"rcarriga/nvim-notify",
 	},
 }

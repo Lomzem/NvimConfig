@@ -60,7 +60,7 @@ for _, tag in ipairs(html_tags) do
 	table.insert(
 		html_snippets,
 		s(
-			{ trig = tag .. " ", snippetType = "autosnippet" },
+			tag .. " ",
 			fmt(
 				[[
 <{1}>
@@ -78,7 +78,7 @@ for _, tag in ipairs(html_tags) do
 	table.insert(
 		html_snippets,
 		s(
-			{ trig = tag .. ". ", snippetType = "autosnippet" },
+			tag .. ". ",
 			fmt(
 				[[
 <{1} class="{2}">
