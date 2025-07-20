@@ -1,16 +1,15 @@
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	event = "VeryLazy",
 	opts = {
 		auto_update = true,
 		ensure_installed = {
-			"basedpyright",
 			"clangd",
 			"gopls",
 			"jsonls",
 			"lua-language-server",
 			"markdown_oxide",
-			"prettierd",
+			"prettier",
+			"pyright",
 			"ruff",
 			"rust-analyzer",
 			"rustywind",
