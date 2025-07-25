@@ -4,6 +4,7 @@ return {
 	version = false, -- Never set this value to "*"! Never!
 	keys = {
 		{ "<leader>aa", "<cmd>AvanteAsk<cr>", mode = { "n", "v" } },
+		{ "<leader>an", "<cmd>AvanteChatNew<cr>", mode = { "n", "v" } },
 	},
 	cmd = { "AvanteAsk", "AvanteChatNew" },
 	opts = {
@@ -13,19 +14,12 @@ return {
 			provider_opts = {},
 		},
 		provider = "copilot",
-		copilot = {
-			model = "claude-3.5-sonnet",
-			max_tokens = 64000,
-			code_editing_commands = true, -- Enable code editing commands
-		},
-		gemini = {
-			endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-			model = "gemini-2.5-flash-preview-04-17",
-			-- model = "gemini-2.0-flash",
-			timeout = 30000, -- Timeout in milliseconds
-			temperature = 0,
-			-- max_tokens = 8192,
-			api_key_name = "GEMINI_API_KEY",
+		providers = {
+			copilot = {
+				model = "claude-3.5-sonnet",
+				-- max_tokens = 64000,
+				code_editing_commands = true, -- Enable code editing commands
+			},
 		},
 	},
 	build = "make",

@@ -2,6 +2,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 	callback = function(ev)
 		local opts = { buffer = ev.buf }
+		local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+		if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
+			vim.lsp.inlay_hint.enable()
+			vim.keymap.set("n", "<leader>pt", function()
+				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+			end, opts)
+		end
+
 		vim.diagnostic.config({
 			virtual_text = true,
 			-- virtual_lines = { current_line = true },
