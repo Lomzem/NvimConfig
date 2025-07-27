@@ -1,9 +1,15 @@
 return {
 	"smoka7/hop.nvim",
 	lazy = true,
-	opts = {
-		keys = "etovxqpdygfblzhckisuran",
-	},
+	config = function()
+		require("hop").setup({
+			keys = "etovxqpdygfblzhckisuran",
+			create_hl_autocmd = false,
+		})
+		vim.api.nvim_set_hl(0, "HopNextKey", { link = "FlashLabel" })
+		vim.api.nvim_set_hl(0, "HopNextKey1", { link = "FlashLabel" })
+		vim.api.nvim_set_hl(0, "HopNextKey2", { link = "FlashLabel" })
+	end,
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
 		{

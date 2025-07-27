@@ -23,7 +23,7 @@ return {
 				-- ["*"] = { "injected" },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
-				css = { "prettierd" },
+				css = { "prettier" },
 				go = { "gofmt" },
 				html = web_formatters,
 				htmldjango = web_formatters,

@@ -21,6 +21,7 @@ return {
 			"tinymist",
 			"typstyle",
 			"yamlfmt",
+			"prettierd",
 		},
 	},
 }
