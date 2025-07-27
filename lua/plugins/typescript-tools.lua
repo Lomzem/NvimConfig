@@ -8,6 +8,7 @@ return {
 	opts = {
 		settings = {
 			tsserver_file_preferences = {
+				includeInlayVariableTypeHints = "true",
 				includeInlayParameterNameHints = "all",
 				includeCompletionsForModuleExports = true,
 			},
