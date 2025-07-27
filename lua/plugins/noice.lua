@@ -10,6 +10,7 @@ return {
 			},
 			signature = { enabled = false },
 			progress = { enabled = true },
+			hover = { silent = true },
 		},
 		presets = {
 			bottom_search = true, -- use a classic bottom cmdline for search
