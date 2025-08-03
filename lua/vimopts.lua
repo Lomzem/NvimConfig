@@ -19,7 +19,7 @@ vim.opt.smartcase = true
 
 -- line wrapping
 vim.opt.wrap = false
-vim.opt.scrolloff = 8
+-- vim.opt.scrolloff = 8
 -- vim.opt.scrolloff = 999
 
 -- appearance
