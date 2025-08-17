@@ -1,7 +1,7 @@
 return {
 	"HiPhish/rainbow-delimiters.nvim",
 	main = "rainbow-delimiters.setup",
-	cond = false,
+	-- cond = false,
 	-- cond = function()
 	-- 	local excluded_cs = { "poimandres" }
 	-- 	local cur_cs = vim.g.colors_name

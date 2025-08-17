@@ -1,5 +1,10 @@
 return {
 	"folke/snacks.nvim",
+	lazy = true,
+	config = function()
+		vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
+	end,
+	cmd = { "Cola" },
 	opts = {
 		picker = {
 			enabled = true,
