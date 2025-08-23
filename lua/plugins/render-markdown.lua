@@ -23,8 +23,11 @@ return {
 		code = {
 			sign = false,
 			style = "normal",
-			highlight = "none",
-			highlight_inline = "none",
+			language = true,
+			language_icon = true,
+			language_info = true,
+			-- highlight = "none",
+			-- highlight_inline = "none",
 			border = "none",
 		},
 		html = {
