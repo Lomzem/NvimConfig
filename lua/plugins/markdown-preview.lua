@@ -4,5 +4,5 @@ return {
 	lazy = true,
 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 	ft = "markdown",
-	build = "cd app && yarn install",
+	build = "cd app && pnpm install",
 }

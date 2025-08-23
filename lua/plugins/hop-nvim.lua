@@ -6,9 +6,9 @@ return {
 			keys = "etovxqpdygfblzhckisuran",
 			create_hl_autocmd = false,
 		})
-		vim.api.nvim_set_hl(0, "HopNextKey", { link = "IncSearch" })
-		vim.api.nvim_set_hl(0, "HopNextKey1", { link = "IncSearch" })
-		vim.api.nvim_set_hl(0, "HopNextKey2", { link = "IncSearch" })
+		vim.api.nvim_set_hl(0, "HopNextKey", { link = "Substitute" })
+		vim.api.nvim_set_hl(0, "HopNextKey1", { link = "Substitute" })
+		vim.api.nvim_set_hl(0, "HopNextKey2", { link = "Substitute" })
 	end,
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
