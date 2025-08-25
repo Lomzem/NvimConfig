@@ -5,7 +5,7 @@ return {
 	event = "VeryLazy",
 	opts = {
 		keymaps = {
-			accept_suggestion = "<c-t>",
+			accept_suggestion = "<right>",
 			clear_suggestion = nil,
 			accept_word = nil,
 		},
