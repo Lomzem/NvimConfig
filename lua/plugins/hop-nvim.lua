@@ -15,7 +15,7 @@ return {
 		{
 			'"',
 			function()
-				vim.cmd("norm V")
+				vim.cmd("norm <esc>V")
 				vim.cmd("HopLineStart")
 			end,
 			mode = "v",
