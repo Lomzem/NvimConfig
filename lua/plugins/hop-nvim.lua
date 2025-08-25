@@ -23,7 +23,7 @@ return {
 		{
 			"<leader>k",
 			function()
-				vim.cmd("norm V")
+				vim.cmd("norm <esc>V")
 				vim.cmd("HopLineStart")
 			end,
 			mode = "v",
@@ -35,7 +35,7 @@ return {
 		{
 			"d<leader>k",
 			function()
-				vim.cmd("norm V")
+				vim.cmd("norm <esc>V")
 				vim.cmd("HopLineStart")
 				vim.cmd("norm d")
 			end,
