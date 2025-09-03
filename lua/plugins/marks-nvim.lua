@@ -5,7 +5,7 @@ return {
 		mappings = {
 			set_next = "m,",
 			delete_buf = "dm<leader>",
-			next = "<a-tab>",
+			next = "<a-m>",
 		},
 	},
 }
