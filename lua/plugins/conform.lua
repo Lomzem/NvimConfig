@@ -18,9 +18,23 @@ return {
 					lsp_fallback = true,
 				}
 			end,
-
+			formatters = {
+				styler = {
+					command = "R",
+					-- hijacking "https://github.com/devOpifex/r.nvim",
+					args = {
+						"-s",
+						"-e",
+						"styler::style_file(commandArgs(TRUE))",
+						"--args",
+						"$FILENAME",
+					},
+					stdin = false,
+				},
+			},
 			formatters_by_ft = {
 				-- ["*"] = { "injected" },
+				rmd = { "styler" },
 				c = { "clang_format" },
 				cpp = { "clang_format" },
 				css = { "prettier" },
@@ -34,13 +48,13 @@ return {
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
 				svelte = web_formatters,
-				typst = { "typstyle" },
 				typescript = web_formatters,
 				typescriptreact = web_formatters,
+				typst = { "typstyle" },
 				yaml = { "yamlfmt" },
 			},
 
-			formatters = require("formatters.formatters"),
+			-- formatters = require("formatters.formatters"),
 		})
 
 		vim.api.nvim_create_user_command("Format", function(args)

@@ -3,6 +3,7 @@ return {
 	opts = {
 		auto_update = true,
 		ensure_installed = {
+			"air",
 			"basedpyright",
 			"clangd",
 			"gopls",

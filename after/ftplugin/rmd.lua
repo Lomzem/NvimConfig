@@ -7,6 +7,10 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 			"-e",
 			"rmarkdown::render('" .. file_path .. "')",
 		}
-		vim.fn.jobstart(cmd)
+		vim.fn.jobstart(cmd, {
+			on_stderr = function() end,
+			on_stdout = function() end,
+			on_exit = function() end,
+		})
 	end,
 })

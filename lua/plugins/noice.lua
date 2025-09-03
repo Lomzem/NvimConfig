@@ -1,7 +1,22 @@
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
+	cmd = { "NoiceAll" },
+	keys = {
+		{ "<leader>na", "<cmd>NoiceAll<cr>" },
+	},
 	opts = {
+		commands = {
+			all = {
+				view = "split",
+				opts = {
+					enter = true,
+					format = "details",
+					size = 1000000,
+				},
+				filter = {},
+			},
+		},
 		lsp = {
 			override = {
 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
