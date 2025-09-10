@@ -13,10 +13,3 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		})
 	end,
 })
-vim.api.nvim_create_autocmd("BufNewFile", {
-
-	pattern = "*.Rmd",
-	callback = function()
-		print("hi")
-	end,
-})
