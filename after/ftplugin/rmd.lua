@@ -3,9 +3,13 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	callback = function()
 		local file_path = vim.fn.expand("%:p")
 		vim.system({ "Rscript", "-e", "rmarkdown::render('" .. file_path .. "')" }, {
-			stdout = false,
-			stderr = false,
-			detach = true,
+			-- stdout = function(_, data)
+			-- 	print(vim.inspect(data))
+			-- end,
+			-- stderr = function(_, data)
+			-- 	print(vim.inspect(data))
+			-- end,
+			-- detach = true,
 		})
 	end,
 })
