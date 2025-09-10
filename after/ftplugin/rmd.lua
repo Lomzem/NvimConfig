@@ -2,7 +2,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.Rmd",
 	callback = function()
 		local file_path = vim.fn.expand("%:p")
-		vim.system({ "Rscript", "-e", "rmarkdown::render('" .. file_path .. "')" }, {
+		vim.system({ "Rscript", "-e", "rmarkdown::render('" .. file_path .. '\', output_format = "pdf_document")' }, {
 			-- stdout = function(_, data)
 			-- 	print(vim.inspect(data))
 			-- end,
@@ -11,5 +11,12 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 			-- end,
 			-- detach = true,
 		})
+	end,
+})
+vim.api.nvim_create_autocmd("BufNewFile", {
+
+	pattern = "*.Rmd",
+	callback = function()
+		print("hi")
 	end,
 })
