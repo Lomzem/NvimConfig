@@ -8,11 +8,6 @@ return {
 			min_editor_width = 18,
 			nvimpager = "split_v",
 			R_args = { "--quiet" },
-			-- hook = {
-			-- 	after_R_start = function()
-			-- 		vim.cmd("wincmd H")
-			-- 	end,
-			-- },
 		})
 	end,
 }
