@@ -3,5 +3,16 @@ return {
 	lazy = false,
 	config = function()
 		vim.g.rout_follow_colorscheme = true
+		require("r").setup({
+			rconsole_width = 57,
+			min_editor_width = 18,
+			nvimpager = "split_v",
+			R_args = { "--quiet" },
+			-- hook = {
+			-- 	after_R_start = function()
+			-- 		vim.cmd("wincmd H")
+			-- 	end,
+			-- },
+		})
 	end,
 }
