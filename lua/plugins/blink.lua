@@ -2,6 +2,9 @@ return {
 	"saghen/blink.cmp",
 	version = "*",
 	event = "InsertEnter",
+	dependencies = {
+		{ "saghen/blink.compat", lazy = true, opts = {} },
+	},
 	opts = {
 		keymap = {
 			preset = "none",
@@ -56,10 +59,14 @@ return {
 		sources = {
 			default = { "snippets", "lsp", "path", "buffer" },
 			per_filetype = {
-				sql = { "dadbod" },
+				rmd = { "cmp_r", "snippets", "lsp", "path", "buffer" },
 			},
 			providers = {
 				dadbod = { module = "vim_dadbod_completion.blink" },
+				cmp_r = {
+					name = "cmp_r",
+					module = "blink.compat.source",
+				},
 			},
 		},
 
