@@ -19,6 +19,7 @@ vim.keymap.set("n", "<C-s>", "<cmd>w<CR>") -- Save
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>") -- Save
 -- vim.keymap.set("n", ";w", "<Esc><cmd>w<CR>") -- Save
 vim.keymap.set("n", "<leader>w", "<Esc><cmd>w<CR>") -- Save
+vim.keymap.set("n", "<leader>x", "<Esc><cmd>x<CR>") -- Save
 
 -- Centering
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
