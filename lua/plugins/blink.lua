@@ -57,7 +57,7 @@ return {
 		snippets = { preset = "luasnip" },
 
 		sources = {
-			default = { "snippets", "lsp", "path", "buffer" },
+			default = { "lazydev", "snippets", "lsp", "path", "buffer" },
 			per_filetype = {
 				rmd = { "cmp_r", "snippets", "lsp", "path", "buffer" },
 			},
@@ -66,6 +66,12 @@ return {
 				cmp_r = {
 					name = "cmp_r",
 					module = "blink.compat.source",
+				},
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					-- make lazydev completions top priority (see `:h blink.cmp`)
+					score_offset = 100,
 				},
 			},
 		},
