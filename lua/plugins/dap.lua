@@ -1,11 +1,28 @@
 ---@type LazyPluginSpec
 return {
-	"rcarriga/nvim-dap-ui",
-	lazy = true,
+	"mfussenegger/nvim-dap",
+	lazy = false,
 	dependencies = {
-		"mfussenegger/nvim-dap",
+		{
+			"igorlfs/nvim-dap-view",
+			---@module "dap-view"
+			---@type dapview.Config
+			opts = {
+				auto_toggle = true,
+				winbar = {
+					sections = { "console", "repl", "threads", "scopes", "watches" },
+					default_section = "repl",
+				},
+				windows = {
+					terminal = {
+						start_hidden = false,
+					},
+				},
+			},
+		},
 		"nvim-neotest/nvim-nio",
-		"theHamsta/nvim-dap-virtual-text",
+		"rcarriga/nvim-dap-ui",
+		{ "theHamsta/nvim-dap-virtual-text", opts = {} },
 	},
 	keys = {
 		{
@@ -15,53 +32,59 @@ return {
 			end,
 		},
 		{
-			"<leader>dq",
+			"<leader>db",
 			function()
-				require("dap").close()
-				require("dapui").close()
+				require("dap").clear_breakpoints()
 			end,
 		},
 		{
-			"<down>",
+			"<leader>dq",
+			function()
+				require("dap").close()
+				require("dap-view").close()
+				require("nvim-dap-virtual-text").refresh()
+			end,
+		},
+		{
+			"<leader>dc",
 			function()
 				require("dap").continue()
 			end,
 		},
 		{
-			"<up>",
+			"<leader>dn",
 			function()
 				require("dap").step_over()
+			end,
+		},
+		{
+			"<leader>dr",
+			function()
+				require("dap").restart()
+			end,
+		},
+		{
+			"<leader>?",
+			function()
+				local dapui = require("dapui")
+				dapui.setup()
+				dapui.eval(nil, { enter = true })
 			end,
 		},
 	},
 	config = function()
 		local dap = require("dap")
-		local dapui = require("dapui")
-		dapui.setup()
 
-		dap.listeners.before.attach.dapui_config = function()
-			dapui.open()
-		end
-		dap.listeners.before.launch.dapui_config = function()
-			dapui.open()
-		end
-		dap.listeners.before.event_terminated.dapui_config = function()
-			dapui.close()
-		end
-		dap.listeners.before.event_exited.dapui_config = function()
-			dapui.close()
-		end
-
-		dap.adapters.gdb = {
+		dap.adapters.cppdbg = {
+			id = "cppdbg",
 			type = "executable",
-			command = "gdb",
-			args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+			command = "/home/lomzem/.vscode/extensions/ms-vscode.cpptools-1.27.7-linux-x64/debugAdapters/bin/OpenDebugAD7",
 		}
 
 		dap.configurations.c = {
 			{
 				name = "Launch",
-				type = "gdb",
+				type = "cppdbg",
 				request = "launch",
 				program = function()
 					vim.system({ "make", "debug" }, {}, function() end):wait()

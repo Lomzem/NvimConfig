@@ -1,0 +1,119 @@
+return {}
+-- ---@type LazyPluginSpec
+-- return {
+-- 	"rcarriga/nvim-dap-ui",
+-- 	lazy = true,
+-- 	dependencies = {
+-- 		"mfussenegger/nvim-dap",
+-- 		"nvim-neotest/nvim-nio",
+-- 		{ "theHamsta/nvim-dap-virtual-text", opts = {} },
+-- 	},
+-- 	keys = {
+-- 		{
+-- 			"<leader>b",
+-- 			function()
+-- 				require("dap").toggle_breakpoint()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<leader>db",
+-- 			function()
+-- 				require("dap").clear_breakpoints()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<leader>dq",
+-- 			function()
+-- 				require("dap").close()
+-- 				require("dapui").close()
+-- 				require("nvim-dap-virtual-text").refresh()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<leader>dc",
+-- 			function()
+-- 				require("dap").continue()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<leader>dn",
+-- 			function()
+-- 				require("dap").step_over()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<leader>dr",
+-- 			function()
+-- 				require("dap").restart()
+-- 			end,
+-- 		},
+-- 		{
+-- 			"<space>?",
+-- 			function()
+-- 				require("dapui").eval(nil, { enter = true })
+-- 			end,
+-- 		},
+-- 	},
+-- 	config = function()
+-- 		local dap = require("dap")
+-- 		local dapui = require("dapui")
+-- 		dapui.setup({
+-- 			layouts = {
+-- 				{
+-- 					position = "left",
+-- 					size = 30,
+-- 					elements = {
+-- 						{
+-- 							id = "repl",
+-- 							size = 0.5,
+-- 						},
+-- 						{
+-- 							id = "console",
+-- 							size = 0.25,
+-- 						},
+-- 					},
+-- 				},
+-- 			},
+-- 		})
+--
+-- 		dap.listeners.before.attach.dapui_config = function()
+-- 			dapui.open()
+-- 		end
+-- 		dap.listeners.before.launch.dapui_config = function()
+-- 			dapui.open()
+-- 		end
+-- 		dap.listeners.before.event_terminated.dapui_config = function()
+-- 			dapui.close()
+-- 		end
+-- 		dap.listeners.before.event_exited.dapui_config = function()
+-- 			dapui.close()
+-- 		end
+--
+-- 		dap.adapters.gdb = {
+-- 			type = "executable",
+-- 			command = "gdb",
+-- 			args = {
+-- 				"-q",
+-- 				"--interpreter=dap",
+-- 				"--eval-command",
+-- 				"set print pretty on",
+-- 			},
+-- 		}
+--
+-- 		dap.configurations.c = {
+-- 			{
+-- 				name = "Launch",
+-- 				type = "gdb",
+-- 				request = "launch",
+-- 				program = function()
+-- 					vim.system({ "make", "debug" }, {}, function() end):wait()
+-- 					return vim.fn.getcwd() .. "/debug"
+-- 				end,
+-- 				args = {}, -- provide arguments if needed
+-- 				cwd = "${workspaceFolder}",
+-- 				stopAtBeginningOfMainSubprogram = false,
+-- 			},
+-- 		}
+-- 		dap.configurations.cpp = dap.configurations.c
+-- 	end,
+-- }
