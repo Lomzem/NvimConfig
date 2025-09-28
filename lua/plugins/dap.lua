@@ -22,7 +22,15 @@ return {
 		},
 		"nvim-neotest/nvim-nio",
 		"rcarriga/nvim-dap-ui",
-		{ "theHamsta/nvim-dap-virtual-text", opts = {} },
+		{
+			"theHamsta/nvim-dap-virtual-text",
+			---@module "nvim-dap-virtual-text"
+			---@type nvim_dap_virtual_text_options
+			opts = {
+				-- all_references = true,
+				highlight_new_as_changed = true,
+			},
+		},
 	},
 	keys = {
 		{
