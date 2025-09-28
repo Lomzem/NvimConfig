@@ -36,12 +36,12 @@ return {
 				vim.cmd("norm Vd")
 			end,
 		},
-		{
-			"s",
-			mode = { "n" },
-			function()
-				require("flash").jump()
-			end,
-		},
+		-- {
+		-- 	"s",
+		-- 	mode = { "n" },
+		-- 	function()
+		-- 		require("flash").jump()
+		-- 	end,
+		-- },
 	},
 }
