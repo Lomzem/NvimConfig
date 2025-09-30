@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		vim.system({
 			"Rscript",
 			"-e",
-			"rmarkdown::render('" .. file_path .. '\', output_format = "pdf_document")',
+			'rmarkdown::render("' .. file_path .. '", output_format = "pdf_document")',
 		}, {
 			-- stdout = function(_, data)
 			-- vim.notify(vim.inspect(err), vim.log.levels.ERROR)
@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 					vim.notify(vim.inspect(data), vim.log.levels.ERROR)
 				end
 			end,
-			detach = false,
+			detach = true,
 		})
 	end,
 })
