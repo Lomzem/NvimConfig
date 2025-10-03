@@ -3,7 +3,7 @@ return {
 	name = "rose-pine",
 	opts = {
 		styles = {
-			bold = true,
+			bold = false,
 			italic = false,
 		},
 		before_highlight = function(group, highlight, palette)
