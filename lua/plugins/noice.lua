@@ -6,6 +6,8 @@ return {
 	keys = {
 		{ "<leader>na", "<cmd>NoiceAll<cr>" },
 	},
+	---@module "noice"
+	---@type NoiceConfig
 	opts = {
 		commands = {
 			all = {
@@ -25,7 +27,9 @@ return {
 				["cmp.entry.get_documentation"] = false,
 			},
 			signature = { enabled = false },
-			progress = { enabled = true },
+			progress = {
+				enabled = false,
+			},
 			hover = { silent = true },
 		},
 		presets = {

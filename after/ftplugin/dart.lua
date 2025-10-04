@@ -18,7 +18,8 @@ vim.api.nvim_create_autocmd("BufWrite", {
 		vim.fn.jobstart({
 			"kill",
 			"-s",
-			"USR1",
+			-- "USR1",
+			"USR2",
 			pid,
 		})
 	end,
