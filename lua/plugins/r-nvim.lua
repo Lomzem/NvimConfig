@@ -7,6 +7,16 @@ return {
 	ft = { "r", "rmd" },
 	config = function()
 		vim.g.rout_follow_colorscheme = true
+		local bufs = vim.api.nvim_list_bufs()
+		local r_ft = { "r", "rmd" }
+		for _, bufnr in ipairs(bufs) do
+			local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = bufnr })
+			if vim.tbl_contains(r_ft, buf_ft) then
+				vim.keymap.set("n", "<a-q>", "<cmd>qa<cr>", {
+					buffer = bufnr,
+				})
+			end
+		end
 		require("r").setup({
 			rconsole_width = 57,
 			min_editor_width = 18,
