@@ -20,13 +20,12 @@ return {
 							buffer = 0,
 						})
 					end
-					keyset("<leader>rf", "<Plug>RStart")
-					keyset("K", "<Plug>RObjectPr")
+					keyset("<c-h>", "<Plug>RObjectPr")
+					keyset("<c-l>", "<Plug>RClearConsole")
 					keyset("<cr>", "<Plug>RSendChunk")
 					keyset("<leader><cr>", "<Plug>RSendLine")
-					keyset("<c-h>", "<Plug>RHelp")
-					keyset("<c-l>", "<Plug>RClearConsole")
-					-- keyset("<a-q>", "<cmd>qa<cr>")
+					keyset("<leader>rf", "<Plug>RStart")
+					keyset("K", "<Plug>RHelp")
 				end,
 			},
 		})

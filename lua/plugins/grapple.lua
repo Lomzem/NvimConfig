@@ -12,6 +12,11 @@ return {
 	config = function()
 		if vim.v.argv[3] == "." then
 			local grapple = require("grapple")
+			grapple.setup({
+				scope = "cwd",
+				icons = false,
+				status = true,
+			})
 			if grapple.exists({ index = 1 }) then
 				vim.defer_fn(function()
 					grapple.select({ index = 1 })
