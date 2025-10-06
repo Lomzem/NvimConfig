@@ -1,11 +1,17 @@
+---@type LazySpec
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
+	---@module "flash"
+	---@type Flash.Config
 	opts = {
 		modes = {
 			char = {
 				label = { exclude = "hjklviardcCxDIA" },
-				highlight = { backdrop = false },
+				autohide = true,
+				highlight = {
+					backdrop = false,
+				},
 				char_actions = function(motion)
 					return {
 						[";"] = "next", -- set to `right` to always go right
@@ -36,12 +42,12 @@ return {
 				vim.cmd("norm Vd")
 			end,
 		},
-		-- {
-		-- 	"s",
-		-- 	mode = { "n" },
-		-- 	function()
-		-- 		require("flash").jump()
-		-- 	end,
-		-- },
+		{
+			"s",
+			mode = { "n" },
+			function()
+				require("flash").jump()
+			end,
+		},
 	},
 }
