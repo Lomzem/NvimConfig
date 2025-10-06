@@ -1,6 +1,7 @@
+---@type LazySpec
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = "VeryLazy",
+	lazy = false,
 	build = ":TSUpdate",
 	main = "nvim-treesitter.configs",
 	opts = {

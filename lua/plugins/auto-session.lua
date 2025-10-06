@@ -1,5 +1,6 @@
 return {
 	"rmagatti/auto-session",
+	cond = false,
 	lazy = false,
 	-- priority = 999,
 	dependencies = {
