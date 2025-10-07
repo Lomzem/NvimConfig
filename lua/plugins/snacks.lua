@@ -2,14 +2,6 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
-	-- config = function()
-	-- 	-- vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
-	-- 	vim.api.nvim_create_user_command("Cola", function()
-	-- 		Snacks.input({ prompt = "hi" }, function(value)
-	-- 			vim.notify(value)
-	-- 		end)
-	-- 	end, {})
-	-- end,
 	---@module "snacks"
 	---@type snacks.Config
 	opts = {
@@ -30,6 +22,12 @@ return {
 		input = {},
 		notifier = {
 			timeout = 1500,
+		},
+		styles = {
+			notification_history = {
+				width = 100.0,
+				height = 100.0,
+			},
 		},
 	},
 	keys = {
@@ -97,13 +95,6 @@ return {
 			end,
 			desc = "LSP Workspace Symbols",
 		},
-		-- {
-		-- 	"gp",
-		-- 	function()
-		-- 		Snacks.picker.diagnostics_buffer()
-		-- 	end,
-		-- 	desc = "Diagnostics",
-		-- },
 		{
 			"gP",
 			function()
