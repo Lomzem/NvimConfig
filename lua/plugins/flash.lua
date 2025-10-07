@@ -25,15 +25,15 @@ return {
 		},
 	},
 	keys = {
-		{
-			"r",
-			mode = "v",
-			function()
-				require("flash").treesitter()
-				vim.cmd("norm V")
-			end,
-			desc = "Flash Treesitter",
-		},
+		-- {
+		-- 	"r",
+		-- 	mode = "v",
+		-- 	function()
+		-- 		require("flash").treesitter()
+		-- 		vim.cmd("norm V")
+		-- 	end,
+		-- 	desc = "Flash Treesitter",
+		-- },
 		{
 			"dr",
 			mode = "n",

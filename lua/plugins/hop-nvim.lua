@@ -12,14 +12,14 @@ return {
 	end,
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
-		{
-			'"',
-			function()
-				vim.cmd("norm <esc>V")
-				vim.cmd("HopLineStart")
-			end,
-			mode = "v",
-		},
+		-- {
+		-- 	'"',
+		-- 	function()
+		-- 		vim.cmd("norm <esc>V")
+		-- 		vim.cmd("HopLineStart")
+		-- 	end,
+		-- 	mode = "v",
+		-- },
 		{
 			"<leader>k",
 			function()
