@@ -1,7 +1,7 @@
 return {
 	"mikavilpas/yazi.nvim",
 	lazy = true,
-	dependencies = { "folke/snacks.nvim", lazy = true },
+	dependencies = { "folke/snacks.nvim" },
 	cmd = { "Yazi" },
 	keys = {
 		{

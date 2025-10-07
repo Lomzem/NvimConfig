@@ -2,10 +2,14 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
-	config = function()
-		vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
-	end,
-	cmd = { "Cola" },
+	-- config = function()
+	-- 	-- vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
+	-- 	vim.api.nvim_create_user_command("Cola", function()
+	-- 		Snacks.input({ prompt = "hi" }, function(value)
+	-- 			vim.notify(value)
+	-- 		end)
+	-- 	end, {})
+	-- end,
 	---@module "snacks"
 	---@type snacks.Config
 	opts = {
@@ -23,9 +27,10 @@ return {
 			},
 		},
 		quickfile = { enabled = true },
-		input = {},
 		scope = { enabled = true },
-		indent = { enabled = true },
+		input = {
+			enabled = true,
+		},
 	},
 	keys = {
 		{

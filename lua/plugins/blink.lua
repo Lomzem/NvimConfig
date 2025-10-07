@@ -1,7 +1,8 @@
 return {
 	"saghen/blink.cmp",
 	version = "*",
-	event = "InsertEnter",
+	lazy = true,
+	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		{ "saghen/blink.compat", lazy = true, opts = {} },
 	},
