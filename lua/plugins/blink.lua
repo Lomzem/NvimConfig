@@ -1,3 +1,4 @@
+---@type LazySpec
 return {
 	"saghen/blink.cmp",
 	version = "*",
@@ -6,6 +7,8 @@ return {
 	dependencies = {
 		{ "saghen/blink.compat", lazy = true, opts = {} },
 	},
+	---@module "blink.cmp"
+	---@type blink.cmp.Config
 	opts = {
 		keymap = {
 			preset = "none",
@@ -28,7 +31,7 @@ return {
 				-- max_items = 3,
 			},
 			menu = {
-				border = "single",
+				border = "rounded",
 				draw = {
 					treesitter = { "lsp" },
 				},
