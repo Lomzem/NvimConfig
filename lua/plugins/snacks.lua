@@ -1,10 +1,13 @@
+---@type LazySpec
 return {
 	"folke/snacks.nvim",
-	lazy = true,
+	lazy = false,
 	config = function()
 		vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
 	end,
 	cmd = { "Cola" },
+	---@module "snacks"
+	---@type snacks.Config
 	opts = {
 		picker = {
 			enabled = true,
@@ -20,9 +23,9 @@ return {
 			},
 		},
 		quickfile = { enabled = true },
-		input = { enabled = true },
-		-- notifier = { enabled = true },
+		input = {},
 		scope = { enabled = true },
+		indent = { enabled = true },
 	},
 	keys = {
 		{
@@ -107,7 +110,7 @@ return {
 			"<leader>nd",
 			function()
 				Snacks.notifier.hide()
-				vim.cmd("NoiceDismiss")
+				-- vim.cmd("NoiceDismiss")
 			end,
 		},
 	},
