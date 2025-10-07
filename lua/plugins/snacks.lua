@@ -28,7 +28,9 @@ return {
 		quickfile = {},
 		scope = {},
 		input = {},
-		notifier = {},
+		notifier = {
+			timeout = 1500,
+		},
 	},
 	keys = {
 		{
@@ -113,7 +115,12 @@ return {
 			"<leader>nd",
 			function()
 				Snacks.notifier.hide()
-				-- vim.cmd("NoiceDismiss")
+			end,
+		},
+		{
+			"<leader>na",
+			function()
+				Snacks.notifier.show_history()
 			end,
 		},
 	},

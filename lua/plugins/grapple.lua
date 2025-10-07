@@ -28,7 +28,22 @@ return {
 	keys = {
 		{ "<leader>a", "<cmd>Grapple tag<cr>", desc = "Tag a file" },
 		-- { "<leader>A", "<cmd>Grapple reset<cr><cmd>Grapple tag<cr><cmd>NoiceDismiss<cr>", desc = "Clears list" },
-		{ "<leader>A", "<cmd>Grapple reset<cr><cmd>Grapple tag<cr>", desc = "Clears list" },
+		{
+			"<leader>A",
+			function()
+				local grapple = require("grapple")
+				grapple.setup({
+					scope = "cwd",
+					icons = false,
+					status = true,
+				})
+				grapple.reset({
+					notify = false,
+				})
+				grapple.tag()
+			end,
+			desc = "Clears list",
+		},
 		{ "<c-e>", "<cmd>Grapple toggle_tags<cr>", desc = "Toggle tags menu" },
 
 		{ "<a-1>", "<cmd>Grapple select index=1<cr>" },
