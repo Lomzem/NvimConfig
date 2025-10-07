@@ -6,7 +6,7 @@ return {
 	---@module "catppuccin",
 	---@type CatppuccinOptions
 	opts = {
-		flavour = "mocha",
+		-- flavour = "macchiato",
 		auto_integration = true,
 	},
 	-- opts = { transparent_background = true },

@@ -14,7 +14,6 @@ return {
 	---@type snacks.Config
 	opts = {
 		picker = {
-			enabled = true,
 			matcher = {
 				frecency = true,
 			},
@@ -26,11 +25,10 @@ return {
 				},
 			},
 		},
-		quickfile = { enabled = true },
-		scope = { enabled = true },
-		input = {
-			enabled = true,
-		},
+		quickfile = {},
+		scope = {},
+		input = {},
+		notifier = {},
 	},
 	keys = {
 		{
