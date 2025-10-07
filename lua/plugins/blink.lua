@@ -27,9 +27,9 @@ return {
 		},
 
 		completion = {
-			list = {
-				-- max_items = 3,
-			},
+			-- list = {
+			-- max_items = 3,
+			-- },
 			menu = {
 				border = "rounded",
 				draw = {
@@ -38,7 +38,9 @@ return {
 			},
 			documentation = {
 				auto_show = false,
-				-- auto_show_delay_ms = 200,
+				window = {
+					border = "rounded",
+				},
 			},
 		},
 
