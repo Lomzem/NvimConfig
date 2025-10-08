@@ -1,13 +1,12 @@
 ---@type LazySpec
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
-	ft = "markdown",
 	dependencies = {
 		"latex-lsp/tree-sitter-latex",
 		"nvim-tree/nvim-web-devicons",
 	},
-     ---@module 'render-markdown'
-    ---@type render.md.UserConfig
+	---@module 'render-markdown'
+	---@type render.md.UserConfig
 	opts = {
 		render_modes = { "n", "i", "v", "c" },
 		heading = {
@@ -28,10 +27,10 @@ return {
 			style = "normal",
 			language = true,
 			language_icon = true,
-            highlight = "none",
-            highlight_inline = "none",
-            highlight_language = "none",
-            highlight_info = "none",
+			highlight = "none",
+			highlight_inline = "none",
+			highlight_language = "none",
+			highlight_info = "none",
 			language_info = true,
 			-- highlight = "none",
 			-- highlight_inline = "none",

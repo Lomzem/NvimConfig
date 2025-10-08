@@ -19,6 +19,9 @@ return {
 		require("r").setup({
 			rconsole_width = 57,
 			min_editor_width = 18,
+			quarto_chunk_hl = {
+				bg = "#140C0E",
+			},
 			-- nvimpager = "split_v",
 			R_args = { "--quiet" },
 			auto_start = "always",
