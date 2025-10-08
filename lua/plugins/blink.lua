@@ -4,7 +4,7 @@ return {
 	version = "*",
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
-		{ "saghen/blink.compat", lazy = true, opts = {} },
+		{ "saghen/blink.compat", opts = {} },
 	},
 	---@module "blink.cmp"
 	---@type blink.cmp.Config

@@ -1,8 +1,16 @@
+---@type LazySpec[]
 return {
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate",
-		opts = {},
+        ---@module "mason"
+        ---@type MasonSettings
+		opts = {
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:MKindberg/ghostty-ls",
+            }
+        },
 		cmd = "Mason",
 	},
 	{

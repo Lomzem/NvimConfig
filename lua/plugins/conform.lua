@@ -1,6 +1,8 @@
+---@type LazySpec
 return {
 	"stevearc/conform.nvim",
-	-- event = "VeryLazy",
+	event = "BufWritePre",
+	keys = { "<leader>f" },
 	config = function()
 		-- local web_formatters = { "biome", "prettierd", "rustywind" }
 		local web_formatters = { "prettier" }
