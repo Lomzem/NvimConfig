@@ -19,3 +19,13 @@ if vim.g.pid then
 	local dap = require("dap")
 	dap.run(dap.adapters.cppdgb)
 end
+
+---@type vim.lsp.Config
+vim.lsp.config.clangd = {
+	cmd = { "clangd", "--background-index" },
+	settings = {
+		Completion = {
+			ArgumentLists = "Delimiters",
+		},
+	},
+}

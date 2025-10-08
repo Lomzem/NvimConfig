@@ -9,7 +9,6 @@ return {
 			registries = {
 				"github:mason-org/mason-registry",
 				"github:MKindberg/ghostty-ls",
-				"github:Freed-Wu/tmux-language-server",
 			},
 		},
 		cmd = "Mason",
