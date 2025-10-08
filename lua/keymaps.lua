@@ -3,7 +3,12 @@ vim.g.mapleader = " "
 -- General
 vim.keymap.set("v", "+", "<Esc>ggVG")
 
-vim.keymap.set("n", "y=", "<cmd>silent exec '!wl-copy < %'<CR><cmd>echo 'Successfully copied all!'<CR>") -- Copy all
+vim.keymap.set("n", "y=", function()
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	local joined_lines = vim.fn.join(lines, "\n")
+	vim.fn.setreg("+", joined_lines)
+	vim.notify("Copied to clipboard", vim.log.levels.INFO)
+end) -- Copy all
 vim.keymap.set("n", "<leader>q", "<c-z>") -- Suspend
 vim.keymap.set("n", "<a-q>", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<C-c>", "<Esc>") -- Remap Ctrl+C to Esc
@@ -27,9 +32,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- Centers page up
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- Centers page d-own
 vim.keymap.set("n", "n", "nzzzv") -- Centers search forward
 vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
-vim.keymap.set("n", "<C-i>", "<C-i>zz")
-vim.keymap.set("n", "<C-o>", "<C-o>zz")
-vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
+-- vim.keymap.set("n", "<C-i>", "<C-i>zz")
+-- vim.keymap.set("n", "<C-o>", "<C-o>zz")
+-- vim.keymap.set("n", "<C-t>", "<C-t>zz") -- Centers tag stack
 
 -- vim.keymap.set("n", ";", ":") -- Who likes pressing shift?
 
@@ -44,7 +49,7 @@ vim.keymap.set("n", "D", "dd")
 -- jk center
 -- vim.keymap.set("n", "j", "jzz")
 -- vim.keymap.set("n", "k", "kzz")
-vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "G", "G")
 vim.keymap.set("n", "J", "<cmd>let p=getpos('.')<bar>join<bar>call setpos('.', p)<cr>") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word
 vim.keymap.set("i", "<C-x>", "<C-o>x")
