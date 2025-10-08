@@ -49,6 +49,20 @@ vim.keymap.set("n", "J", "<cmd>let p=getpos('.')<bar>join<bar>call setpos('.', p
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>") -- Replace current word
 vim.keymap.set("i", "<C-x>", "<C-o>x")
 
+-- jk jumplist
+vim.keymap.set({ "n", "x" }, "j", function()
+	if vim.v.count > 1 then
+		return "m'" .. vim.v.count .. "j"
+	end
+	return "j"
+end, { expr = true })
+vim.keymap.set({ "n", "x" }, "k", function()
+	if vim.v.count > 1 then
+		return "m'" .. vim.v.count .. "k"
+	end
+	return "k"
+end, { expr = true })
+
 -- front/back
 vim.keymap.set({ "n", "v", "o" }, "H", "_")
 vim.keymap.set({ "n", "v", "o" }, "L", "$")
