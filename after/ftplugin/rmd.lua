@@ -3,11 +3,13 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 	callback = function()
 		local file_path = vim.fn.expand("%:p")
 		local dir_path = vim.fs.dirname(file_path)
-		vim.system({
+		local cmd = {
 			"Rscript",
 			"-e",
 			'rmarkdown::render("' .. file_path .. '", output_format = "pdf_document", clean = TRUE)',
-		}, {
+		}
+		vim.notify(vim.inspect(cmd), vim.log.levels.INFO)
+		vim.system(cmd, {
 			-- stdout = function(_, data)
 			-- vim.notify(vim.inspect(err), vim.log.levels.ERROR)
 			-- end,

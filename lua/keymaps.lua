@@ -52,7 +52,7 @@ vim.keymap.set("n", "D", "dd")
 vim.keymap.set("n", "G", "G")
 vim.keymap.set("n", "J", "<cmd>let p=getpos('.')<bar>join<bar>call setpos('.', p)<cr>") -- Keeps cursor in place
 vim.keymap.set("n", "<leader>s", ":%s/\\<<c-r><c-w>\\>/<c-r><c-w>/gI<Left><Left><Left>") -- Replace current word
-vim.keymap.set("i", "<c-x>", "<c-o>x")
+-- vim.keymap.set("i", "<c-x>", "<c-o>x")
 
 -- jk jumplist
 vim.keymap.set({ "n", "x" }, "j", function()
@@ -84,6 +84,6 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("n", "<leader>lz", "<cmd>Lazy<CR>")
 
 -- Marks
-vim.keymap.set("n", "<leader>1", "`a")
-vim.keymap.set("n", "<leader>2", "`b")
-vim.keymap.set("n", "<leader>3", "`c")
+-- vim.keymap.set("n", "<leader>1", "`a")
+-- vim.keymap.set("n", "<leader>2", "`b")
+-- vim.keymap.set("n", "<leader>3", "`c")
