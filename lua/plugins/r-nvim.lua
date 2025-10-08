@@ -17,7 +17,7 @@ return {
 			end
 		end
 		require("r").setup({
-			rconsole_width = 57,
+			rconsole_width = 42,
 			min_editor_width = 18,
 			quarto_chunk_hl = {
 				bg = "#140C0E",

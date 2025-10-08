@@ -13,6 +13,12 @@ vim.keymap.set("n", "<leader>q", "<c-z>") -- Suspend
 vim.keymap.set("n", "<a-q>", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<c-c>", "<esc>") -- Remap Ctrl+C to Esc
 
+-- These mappings control the size of splits (height/width)
+vim.keymap.set("n", "<m-,>", "<c-w>5<")
+vim.keymap.set("n", "<m-.>", "<c-w>5>")
+vim.keymap.set("n", "<m-t>", "<c-w>+")
+vim.keymap.set("n", "<m-s>", "<c-w>-")
+
 -- Quickfix
 vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
