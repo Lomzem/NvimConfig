@@ -4,7 +4,11 @@ return {
 	version = "*",
 	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
-		{ "saghen/blink.compat", opts = {} },
+		{
+			"saghen/blink.compat",
+			opts = {},
+		},
+		"L3MON4D3/LuaSnip",
 	},
 	---@module "blink.cmp"
 	---@type blink.cmp.Config
