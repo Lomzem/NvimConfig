@@ -10,7 +10,10 @@ return {
 				"air",
 				"basedpyright",
 				"clangd",
+				"fish_lsp",
+				"ghostty-ls",
 				"gopls",
+				"hyprls",
 				"jsonls",
 				"lua-language-server",
 				"markdown_oxide",
@@ -26,8 +29,6 @@ return {
 				"tinymist",
 				"typstyle",
 				"yamlfmt",
-				"ghostty-ls",
-				"hyprls",
 			},
 		})
 		vim.lsp.config.ghostty = {

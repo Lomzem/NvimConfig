@@ -3,14 +3,15 @@ return {
 	{
 		"williamboman/mason.nvim",
 		build = ":MasonUpdate",
-        ---@module "mason"
-        ---@type MasonSettings
+		---@module "mason"
+		---@type MasonSettings
 		opts = {
-            registries = {
-                "github:mason-org/mason-registry",
-                "github:MKindberg/ghostty-ls",
-            }
-        },
+			registries = {
+				"github:mason-org/mason-registry",
+				"github:MKindberg/ghostty-ls",
+				"github:Freed-Wu/tmux-language-server",
+			},
+		},
 		cmd = "Mason",
 	},
 	{
