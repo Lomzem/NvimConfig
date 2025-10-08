@@ -1,5 +1,11 @@
+---@type LazySpec
 return {
 	"echasnovski/mini.surround",
+	keys = {
+		{ "S", mode = { "n", "v" } },
+		"dS",
+		"cs",
+	},
 	opts = {
 		mappings = {
 			add = "S", -- Add surrounding in Normal and Visual modes
@@ -8,7 +14,7 @@ return {
 			find_left = "", -- Find surrounding (to the left) default: sF
 			highlight = "", -- Highlight surrounding default: ysh
 			replace = "cs", -- Replace surrounding
-			update_n_lines = "", -- Update `n_lines`lj default: sn
+			update_n_lines = "", -- Update `n_lines`lj default: snj
 
 			suffix_last = "l", -- Suffix to search with "prev" method
 			suffix_next = "n", -- Suffix to search with "next" method

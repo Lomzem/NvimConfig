@@ -1,14 +1,13 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		lazy = true,
 		build = ":MasonUpdate",
 		opts = {},
 		cmd = "Mason",
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		event = "BufWinEnter",
+		event = "VeryLazy",
 		opts = {},
 		dependencies = "neovim/nvim-lspconfig",
 	},

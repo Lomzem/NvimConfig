@@ -1,6 +1,5 @@
 return {
 	"Wansmer/treesj",
-    lazy = true,
 	keys = {
 		{
 			"<leader>j",

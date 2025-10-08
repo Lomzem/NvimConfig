@@ -2,7 +2,6 @@ return {
 	"RedsXDD/neopywal.nvim",
 	name = "neopywal",
 	cond = false,
-	lazy = false,
 	priority = 1000,
 	opts = {
 		transparent_background = true,

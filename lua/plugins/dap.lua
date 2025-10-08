@@ -1,7 +1,6 @@
 ---@type LazyPluginSpec
 return {
 	"mfussenegger/nvim-dap",
-	lazy = false,
 	dependencies = {
 		{
 			"igorlfs/nvim-dap-view",

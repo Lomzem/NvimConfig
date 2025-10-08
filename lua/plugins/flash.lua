@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
 	"folke/flash.nvim",
-	event = "VeryLazy",
 	---@module "flash"
 	---@type Flash.Config
 	opts = {
@@ -25,6 +24,8 @@ return {
 		},
 	},
 	keys = {
+        "f",
+        "t",
 		-- {
 		-- 	"r",
 		-- 	mode = "v",

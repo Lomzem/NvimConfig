@@ -1,6 +1,5 @@
 return {
 	"R-nvim/R.nvim",
-	lazy = true,
 	dependencies = {
 		"R-nvim/cmp-r",
 	},

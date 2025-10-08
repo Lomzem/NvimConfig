@@ -1,7 +1,6 @@
 return {
 	"augmentcode/augment.vim",
 	enabled = true,
-	lazy = true,
 	cmd = "Augment",
 	config = function()
 		vim.g.augment_workspace_folders = "~/coding/djsongmatch/"

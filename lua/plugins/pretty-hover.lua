@@ -1,8 +1,7 @@
 ---@type LazySpec
 return {
 	"Fildo7525/pretty_hover",
-	lazy = true,
-	event = "LspAttach",
+	-- event = "LspAttach",
 	---@module "pretty_hover"
 	---@type PrettyHoverConfig
 	opts = {

@@ -1,6 +1,10 @@
 return {
 	"chentoast/marks.nvim",
-	event = "VeryLazy",
+	keys = {
+		"m",
+		"dm",
+		"<a-m>",
+	},
 	opts = {
 		mappings = {
 			set_next = "m,",
