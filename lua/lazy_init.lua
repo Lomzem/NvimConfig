@@ -17,7 +17,10 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.colorschemes" },
 	},
-    install = { colorscheme = { "rose-pine" } },
+	install = {
+		missing = true,
+		colorscheme = { "rose-pine" },
+	},
 	checker = {
 		enabled = true,
 	},
@@ -25,9 +28,6 @@ require("lazy").setup({
 		notify = false,
 	},
 	performance = {
-		cache = {
-			enabled = true,
-		},
 		rtp = {
 			disabled_plugins = {
 				"netrwPlugin",
