@@ -2,21 +2,19 @@
 return {
 	"cbochs/grapple.nvim",
 	lazy = false,
-	---@module "grapple"
-	---@type grapple.settings
-	opts = {
-		scope = "cwd",
-		icons = false,
-		status = true,
-	},
 	config = function()
+		local grapple = require("grapple")
+		---@module "grapple"
+		---@type grapple.settings
+		grapple.setup({
+			scope = "cwd",
+			icons = false,
+			status = true,
+			win_opts = {
+				border = "rounded",
+			},
+		})
 		if vim.v.argv[3] == "." then
-			local grapple = require("grapple")
-			grapple.setup({
-				scope = "cwd",
-				icons = false,
-				status = true,
-			})
 			if grapple.exists({ index = 1 }) then
 				vim.defer_fn(function()
 					grapple.select({ index = 1 })
@@ -32,11 +30,6 @@ return {
 			"<leader>A",
 			function()
 				local grapple = require("grapple")
-				grapple.setup({
-					scope = "cwd",
-					icons = false,
-					status = true,
-				})
 				grapple.reset({
 					notify = false,
 				})
