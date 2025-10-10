@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd("BufWrite", {
 	callback = function()
 		local pid_file_exists = vim.uv.fs_stat("/tmp/flutter-lomzem.pid")
 		if not pid_file_exists then
-			vim.notify("flutter pid file does not exist", vim.log.levels.ERROR)
+			-- vim.notify("flutter pid file does not exist", vim.log.levels.ERROR)
 			return
 		end
 		local file = io.open("/tmp/flutter-lomzem.pid", "r")
