@@ -36,6 +36,7 @@ return {
 			"<leader>b",
 			function()
 				require("dap").toggle_breakpoint()
+				vim.opt.signcolumn = "auto"
 			end,
 		},
 		{
