@@ -70,7 +70,7 @@ return {
 			per_filetype = {
 				rmd = { "cmp_r", "snippets", "lsp", "path", "buffer" },
 				ghostty = { "fonts", "snippets", "lsp", "path", "buffer" },
-				lua = { "lazydev", "snippets", "lsp", "path", "buffer" },
+				lua = { "nvim_colorschemes", "lazydev", "snippets", "lsp", "path", "buffer" },
 			},
 			providers = {
 				cmp_r = {
@@ -92,6 +92,16 @@ return {
 						local line = ctx.get_line()
 						line = vim.trim(line)
 						return vim.startswith(line, "font-family =")
+					end,
+				},
+				nvim_colorschemes = {
+					name = "nvim_colorschemes",
+					module = "custom-cmp.nvim_colorschemes",
+					async = true,
+					should_show_items = function(ctx, items)
+						local line = ctx.get_line()
+						local start = string.find(line, "vim.cmd.colorscheme")
+						return start ~= nil
 					end,
 				},
 			},

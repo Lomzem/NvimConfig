@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"AlexvZyl/nordic.nvim",
+	lazy = false,
 	priority = 1000,
 	---@module "nordic"
 	---@type NordicOptions

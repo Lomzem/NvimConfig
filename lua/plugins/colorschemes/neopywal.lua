@@ -1,5 +1,6 @@
 return {
 	"RedsXDD/neopywal.nvim",
+	lazy = false,
 	name = "neopywal",
 	cond = false,
 	priority = 1000,
