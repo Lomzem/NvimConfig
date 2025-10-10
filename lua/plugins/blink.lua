@@ -66,12 +66,13 @@ return {
 		snippets = { preset = "luasnip" },
 
 		sources = {
-			default = { "lazydev", "snippets", "lsp", "path", "buffer" },
+			default = { "snippets", "lsp", "path", "buffer" },
 			per_filetype = {
 				rmd = { "cmp_r", "snippets", "lsp", "path", "buffer" },
+				ghostty = { "fonts", "snippets", "lsp", "path", "buffer" },
+				lua = { "lazydev", "snippets", "lsp", "path", "buffer" },
 			},
 			providers = {
-				dadbod = { module = "vim_dadbod_completion.blink" },
 				cmp_r = {
 					name = "cmp_r",
 					module = "blink.compat.source",
@@ -81,6 +82,17 @@ return {
 					module = "lazydev.integrations.blink",
 					-- make lazydev completions top priority (see `:h blink.cmp`)
 					score_offset = 100,
+				},
+				fonts = {
+					name = "fonts",
+					module = "custom-cmp.fonts",
+					async = true,
+					should_show_items = function(ctx, items)
+						local keyword = require("blink.cmp.config").completion.keyword
+						local line = ctx.get_line()
+						line = vim.trim(line)
+						return vim.startswith(line, "font-family =")
+					end,
 				},
 			},
 		},
