@@ -34,7 +34,13 @@ return {
 		{
 			"<c-p>",
 			function()
-				Snacks.picker.files()
+				local dirname = vim.fn.expand("%:p:h")
+				local substr = string.find(dirname, ".config/nvim")
+				if substr then
+					Snacks.picker.files({ ignored = true })
+				else
+					Snacks.picker.files()
+				end
 			end,
 		},
 		{
