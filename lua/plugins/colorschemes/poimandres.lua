@@ -13,8 +13,8 @@ return {
 	config = function()
 		---@type PoimandresConfig
 		local opts = {
-			disable_background = true,
-			disable_float_background = true,
+			-- disable_background = true,
+			-- disable_float_background = true,
 		}
 		require("poimandres").setup(opts)
 		vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { link = "markdownH1" })

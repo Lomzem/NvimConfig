@@ -5,9 +5,9 @@ return {
 			keys = "etovxqpdygfblzhckisuran",
 			create_hl_autocmd = false,
 		})
-		vim.api.nvim_set_hl(0, "HopNextKey", { link = "Substitute" })
-		vim.api.nvim_set_hl(0, "HopNextKey1", { link = "Substitute" })
-		vim.api.nvim_set_hl(0, "HopNextKey2", { link = "Substitute" })
+		vim.api.nvim_set_hl(0, "HopNextKey", { link = "label" })
+		vim.api.nvim_set_hl(0, "HopNextKey1", { link = "label" })
+		vim.api.nvim_set_hl(0, "HopNextKey2", { link = "label" })
 	end,
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
@@ -28,8 +28,8 @@ return {
 			mode = "v",
 		},
 		{ "<leader>k", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		{ '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		{ "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
+		{ "'", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
+		{ '"', "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
 		-- { "s", "<cmd>HopChar1<cr>", mode = { "n", "x", "o" } },
 		{
 			"d<leader>k",

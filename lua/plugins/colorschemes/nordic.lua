@@ -6,9 +6,9 @@ return {
 	---@module "nordic"
 	---@type NordicOptions
 	opts = {
-		transparent = {
-			bg = true,
-			float = true,
-		},
+		-- transparent = {
+		-- 	bg = true,
+		-- 	float = true,
+		-- },
 	},
 }
