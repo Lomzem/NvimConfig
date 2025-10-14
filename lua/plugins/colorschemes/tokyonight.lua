@@ -5,11 +5,11 @@ return {
 	---@module "tokyonight"
 	---@type tokyonight.Config
 	opts = {
-		transparent = true,
+		-- transparent = true,
 		style = "night",
-		styles = {
-			sidebars = "transparent",
-			floats = "transparent",
-		},
+		-- styles = {
+		-- 	sidebars = "transparent",
+		-- 	floats = "transparent",
+		-- },
 	},
 }
