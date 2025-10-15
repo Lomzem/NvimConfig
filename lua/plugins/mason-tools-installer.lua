@@ -12,6 +12,7 @@ return {
 				"clangd",
 				"fish_lsp",
 				"ghostty-ls",
+				"glsl_analyzer",
 				"gopls",
 				"hyprls",
 				"jsonls",
