@@ -63,10 +63,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 
-		vim.keymap.set("n", "gp", function()
+		vim.keymap.set("n", "<m-p>", function()
 			vim.diagnostic.jump({ count = -1, float = true })
 		end)
-		vim.keymap.set("n", "gn", function()
+		vim.keymap.set("n", "<m-n>", function()
 			vim.diagnostic.jump({ count = 1, float = true })
 		end)
 

@@ -20,9 +20,9 @@ vim.keymap.set("n", "<m-t>", "<c-w>+")
 vim.keymap.set("n", "<m-s>", "<c-w>-")
 
 -- Quickfix
-vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
+-- vim.keymap.set("n", "<A-n>", "<cmd>cnext<CR>zz")
+-- vim.keymap.set("n", "<A-p>", "<cmd>cprev<CR>zz")
+-- vim.keymap.set("n", "<A-d>", "<cmd>cclose<CR>")
 
 vim.keymap.set("n", "z=", "1z=") --spellcheck
 
