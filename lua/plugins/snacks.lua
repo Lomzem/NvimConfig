@@ -22,6 +22,7 @@ return {
 		input = {},
 		notifier = {
 			timeout = 1500,
+			style = "minimal",
 		},
 		styles = {
 			notification_history = {

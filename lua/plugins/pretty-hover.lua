@@ -5,7 +5,7 @@ return {
 	---@module "pretty_hover"
 	---@type PrettyHoverConfig
 	opts = {
-		border = "rounded",
+		border = "none",
 	},
 	keys = {
 		{

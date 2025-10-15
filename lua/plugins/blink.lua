@@ -15,26 +15,19 @@ return {
 	opts = {
 		keymap = {
 			preset = "none",
-
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<c-q>"] = { "hide" },
 			["<c-l>"] = { "select_and_accept" },
-
 			["<c-k>"] = { "select_prev", "fallback" },
 			["<c-j>"] = { "select_next", "fallback" },
-
 			["<c-u>"] = { "scroll_documentation_up", "fallback" },
 			["<c-d>"] = { "scroll_documentation_down", "fallback" },
-
 			["<c-e>"] = { "show_signature", "hide_signature", "fallback" },
 		},
 
 		completion = {
-			-- list = {
-			-- max_items = 3,
-			-- },
 			menu = {
-				border = "rounded",
+				border = "none",
 				draw = {
 					treesitter = { "lsp" },
 				},
@@ -42,7 +35,7 @@ return {
 			documentation = {
 				auto_show = false,
 				window = {
-					border = "rounded",
+					border = "none",
 				},
 			},
 		},
