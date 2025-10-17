@@ -7,12 +7,4 @@ return {
 	opts = {
 		border = "none",
 	},
-	keys = {
-		{
-			"K",
-			function()
-				require("pretty_hover").hover()
-			end,
-		},
-	},
 }
