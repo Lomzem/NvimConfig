@@ -8,7 +8,7 @@ vim.keymap.set("n", "{", "?^\\w<cr>zz", {
 local sections = {}
 local file = vim.api.nvim_buf_get_name(0)
 for lineno, line in ipairs(vim.api.nvim_buf_get_lines(0, 0, -1, false)) do
-	local section = line:match("^%u+")
+	local section = line:match("^%w[%w%s]+")
 	if not section then
 		goto continue
 	end
@@ -72,14 +72,14 @@ for lineno, line in ipairs(vim.api.nvim_buf_get_lines(0, 0, -1, false)) do
 	::continue::
 end
 
-vim.keymap.set("n", "<leader>gm", function()
+vim.keymap.set("n", "gm", function()
 	Snacks.picker.pick({
 		items = flags,
 		format = "text",
 	})
 end)
 
-vim.keymap.set("n", "<leader>gM", function()
+vim.keymap.set("n", "gM", function()
 	Snacks.picker.pick({
 		items = sections,
 		format = "text",
