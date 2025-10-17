@@ -1,5 +1,6 @@
 return {
 	"yetone/avante.nvim",
+	cond = false,
 	version = false, -- Never set this value to "*"! Never!
 	keys = {
 		{ "<leader>aa", "<cmd>AvanteAsk<cr>", mode = { "n", "v" } },

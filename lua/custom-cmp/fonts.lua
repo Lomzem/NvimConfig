@@ -16,6 +16,8 @@ function source:get_completions(ctx, callback)
 	local fonts = vim.split(handle:read("*a"), "\n")
 	handle:close()
 	for _, font in ipairs(fonts) do
+		-- Remove "Mono"
+		font = font:sub(1, #font - #" Mono")
 		---@type blink.cmp.CompletionItem
 		local item = {
 			label = font,

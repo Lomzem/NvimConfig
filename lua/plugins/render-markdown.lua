@@ -5,6 +5,7 @@ return {
 		"latex-lsp/tree-sitter-latex",
 		"nvim-tree/nvim-web-devicons",
 	},
+	ft = { "markdown", "markdown_inline" },
 	---@module 'render-markdown'
 	---@type render.md.UserConfig
 	opts = {

@@ -30,12 +30,15 @@ return {
 					local keyset = function(key, rhs)
 						vim.keymap.set("n", key, rhs, {
 							buffer = 0,
+							noremap = true,
 						})
 					end
 					keyset("<c-h>", "<Plug>RObjectPr")
 					keyset("<c-l>", "<Plug>RClearConsole")
 					keyset("<cr>", "<Plug>RSendChunk")
-					keyset("<leader><cr>", "<Plug>RSendLine")
+					keyset("<c-p>", function()
+						require("r").run.action("RSendFile")
+					end)
 					keyset("<leader>rf", "<Plug>RStart")
 					keyset("K", "<Plug>RHelp")
 				end,

@@ -18,11 +18,11 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 			-- stdout = function(_, data)
 			-- vim.notify(vim.inspect(err), vim.log.levels.ERROR)
 			-- end,
-			stderr = function(_, data)
-				if data and vim.startswith(data, "Error:") then
-					vim.notify(vim.inspect(data), vim.log.levels.ERROR)
-				end
-			end,
+			-- stderr = function(_, data)
+			-- if data and vim.startswith(data, "Error:") then
+			-- 	vim.notify(vim.inspect(data), vim.log.levels.ERROR)
+			-- end
+			-- end,
 			detach = true,
 		})
 	end,
