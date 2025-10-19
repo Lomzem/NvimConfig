@@ -62,7 +62,7 @@ return {
 			default = { "snippets", "lsp", "path", "buffer" },
 			per_filetype = {
 				rmd = { "cmp_r", "snippets", "lsp", "path", "buffer" },
-				toml = { "fonts", "snippets", "lsp", "path", "buffer" },
+				conf = { "fonts", "snippets", "lsp", "path", "buffer" },
 				lua = { "nvim_colorschemes", "lazydev", "snippets", "lsp", "path", "buffer" },
 			},
 			providers = {
@@ -84,7 +84,7 @@ return {
 						local keyword = require("blink.cmp.config").completion.keyword
 						local line = ctx.get_line()
 						line = vim.trim(line)
-						return vim.startswith(line, "family =")
+						return vim.startswith(line, "font_family")
 					end,
 				},
 				nvim_colorschemes = {
