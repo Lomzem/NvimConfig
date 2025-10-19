@@ -32,11 +32,6 @@ return {
 				"yamlfmt",
 			},
 		})
-		vim.lsp.config.ghostty = {
-			cmd = { "ghostty-ls" },
-			filetypes = { "ghostty" },
-		}
-		vim.lsp.enable("ghostty")
 		mason_tools_installer.clean()
 		mason_tools_installer.check_install(true, false)
 	end,
