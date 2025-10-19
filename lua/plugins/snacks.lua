@@ -2,35 +2,39 @@
 return {
 	"folke/snacks.nvim",
 	lazy = false,
-	---@module "snacks"
-	---@type snacks.Config
-	opts = {
-		picker = {
-			matcher = {
-				frecency = true,
-			},
-			win = {
-				input = {
-					keys = {
-						["<c-x>"] = { "edit_vsplit", mode = { "i", "n" } },
+	config = function()
+		---@module "snacks"
+		---@type snacks.Config
+		local opts = {
+			picker = {
+				matcher = {
+					frecency = true,
+				},
+				win = {
+					input = {
+						keys = {
+							["<c-x>"] = { "edit_vsplit", mode = { "i", "n" } },
+						},
 					},
 				},
 			},
-		},
-		quickfile = {},
-		scope = {},
-		input = {},
-		notifier = {
-			timeout = 1500,
-			style = "minimal",
-		},
-		styles = {
-			notification_history = {
-				width = 100.0,
-				height = 100.0,
+			quickfile = {},
+			scope = {},
+			input = {},
+			notifier = {
+				timeout = 1500,
+				style = "minimal",
 			},
-		},
-	},
+			styles = {
+				notification_history = {
+					width = 100.0,
+					height = 100.0,
+				},
+			},
+		}
+		require("snacks").setup(opts)
+		vim.api.nvim_create_user_command("Cola", Snacks.picker.colorschemes, {})
+	end,
 	keys = {
 		{
 			"<c-p>",
@@ -38,7 +42,7 @@ return {
 				local dirname = vim.fn.expand("%:p:h")
 				local hidden_ignored_dirs = {
 					"/home/lomzem/dotfiles/.config/zsh",
-					"/home/lomzem//.config/nvim",
+					"/home/lomzem/.config/nvim",
 				}
 				for _, dir in ipairs(hidden_ignored_dirs) do
 					if dirname:find(dir) then
