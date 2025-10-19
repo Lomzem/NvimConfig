@@ -36,12 +36,17 @@ return {
 			"<c-p>",
 			function()
 				local dirname = vim.fn.expand("%:p:h")
-				local substr = string.find(dirname, ".config/nvim")
-				if substr then
-					Snacks.picker.files({ ignored = true })
-				else
-					Snacks.picker.files()
+				local hidden_ignored_dirs = {
+					"/home/lomzem/dotfiles/.config/zsh",
+					"/home/lomzem//.config/nvim",
+				}
+				for _, dir in ipairs(hidden_ignored_dirs) do
+					if dirname:find(dir) then
+						Snacks.picker.files({ ignored = true, hidden = true })
+						return
+					end
 				end
+				Snacks.picker.files()
 			end,
 		},
 		{
