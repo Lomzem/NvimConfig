@@ -6,6 +6,8 @@ vim.keymap.set("n", "{", "?^\\w<cr>zz", {
 })
 vim.keymap.set("n", "u", "<c-u>zz", { buffer = 0, noremap = true, nowait = true })
 vim.keymap.set("n", "d", "<c-d>zz", { buffer = 0, noremap = true, nowait = true })
+vim.keymap.set("n", "j", "jzz", { buffer = 0 })
+vim.keymap.set("n", "k", "kzz", { buffer = 0 })
 
 local sections = {}
 local file = vim.api.nvim_buf_get_name(0)
