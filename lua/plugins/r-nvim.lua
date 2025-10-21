@@ -36,9 +36,10 @@ return {
 					keyset("<c-h>", "<Plug>RObjectPr")
 					keyset("<c-l>", "<Plug>RClearConsole")
 					keyset("<cr>", "<Plug>RSendChunk")
-					keyset("<c-p>", function()
-						require("r").run.action("RSendFile")
-					end)
+					keyset("<leader><cr>", "<Plug>RSendLine")
+					-- keyset("<c-p>", function()
+					-- 	require("r").run.action("RSendFile")
+					-- end)
 					keyset("<leader>rf", "<Plug>RStart")
 					keyset("K", "<Plug>RHelp")
 				end,
