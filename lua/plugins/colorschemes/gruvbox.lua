@@ -2,5 +2,9 @@
 return {
 	"ellisonleao/gruvbox.nvim",
 	lazy = false,
-	opts = {},
+	---@module "gruvbox"
+	---@type GruvboxConfig
+	opts = {
+		contrast = "hard",
+	},
 }
