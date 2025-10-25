@@ -7,6 +7,6 @@ return {
 	---@type KanagawaConfig
 	opts = {
 		undercurl = false,
-		-- transparent = true,
+		transparent = true,
 	},
 }

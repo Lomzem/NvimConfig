@@ -1,5 +1,8 @@
 vim.keymap.set("n", "<leader>ru", ":w<CR>:term dart run %<CR>")
 
+local HOT_RELOAD = "USR1"
+local HOT_RESTART = "USR2"
+
 vim.api.nvim_create_autocmd("BufWrite", {
 	pattern = "*.dart",
 	callback = function()
@@ -18,8 +21,7 @@ vim.api.nvim_create_autocmd("BufWrite", {
 		vim.fn.jobstart({
 			"kill",
 			"-s",
-			-- "USR1",
-			"USR2",
+			HOT_RELOAD,
 			pid,
 		})
 	end,
