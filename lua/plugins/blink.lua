@@ -27,6 +27,7 @@ return {
 
 		completion = {
 			menu = {
+				auto_show = false,
 				border = "none",
 				draw = {
 					treesitter = { "lsp" },
@@ -101,7 +102,12 @@ return {
 		},
 
 		signature = {
-			enabled = false,
+			enabled = true,
+			trigger = {
+				enabled = true,
+				show_on_accept = true,
+				show_on_insert = true,
+			},
 		},
 	},
 	opts_extend = { "sources.default" },
