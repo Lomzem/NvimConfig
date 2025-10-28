@@ -16,6 +16,12 @@ vim.opt.formatoptions:append("t")
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = "*.typ",
 	callback = function()
-		vim.fn.jobstart({ "typst", "watch", vim.fn.expand("%:p") })
+		local filename = vim.fn.expand("%:p")
+		local basename = vim.fs.basename(filename)
+		if vim.startswith(basename, "inc_") then
+			-- Library file, don't compile/watch it
+			return
+		end
+		vim.fn.jobstart({ "typst", "watch", filename })
 	end,
 })
