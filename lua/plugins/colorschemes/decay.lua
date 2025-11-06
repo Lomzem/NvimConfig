@@ -1,7 +1,12 @@
 ---@type LazySpec
 return {
 	"decaycs/decay.nvim",
-	name = "decay",
 	lazy = false,
-	opts = {},
+	opts = {
+		style = "decayce",
+		palette_overrides = {
+			-- `comments` default: #3F4947
+			comments = "#54625f",
+		},
+	},
 }
