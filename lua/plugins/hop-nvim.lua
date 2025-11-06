@@ -28,8 +28,8 @@ return {
 			mode = "v",
 		},
 		{ "<leader>k", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		{ "'", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		{ '"', "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
+		{ '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
+		{ "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
 		-- { "s", "<cmd>HopChar1<cr>", mode = { "n", "x", "o" } },
 		{
 			"d<leader>k",

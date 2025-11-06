@@ -8,6 +8,7 @@ return {
 			auto_update = true,
 			ensure_installed = {
 				"air",
+				"nil",
 				"basedpyright",
 				"clangd",
 				"fish_lsp",
@@ -30,6 +31,7 @@ return {
 				"tinymist",
 				"typstyle",
 				"yamlfmt",
+				"nixpkgs-fmt",
 			},
 		})
 		mason_tools_installer.clean()

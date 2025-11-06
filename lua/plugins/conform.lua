@@ -39,6 +39,7 @@ return {
 				-- ["*"] = { "injected" },
 				rmd = { "styler" },
 				c = { "clang_format" },
+				nix = { "nixpkgs_fmt" },
 				cpp = { "clang_format" },
 				css = { "prettier" },
 				go = { "gofmt" },
