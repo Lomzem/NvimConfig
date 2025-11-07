@@ -5,7 +5,7 @@ require("lsp.lsp_mapping")
 require("lazy_init")
 require("autocmd")
 
-local success = pcall(require, "set-colorscheme")
+local success = pcall(require, "color")
 if not success then
 	vim.cmd.colorscheme("catppuccin-mocha")
 end
