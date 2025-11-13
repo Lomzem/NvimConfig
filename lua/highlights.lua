@@ -9,6 +9,7 @@ local groups = {
 	"StatusLine",
 	"StatusLineNC",
 	"NormalFloat",
+	"CursorLineNr",
 }
 
 for _, group in ipairs(groups) do

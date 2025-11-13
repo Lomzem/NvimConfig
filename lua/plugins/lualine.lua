@@ -48,7 +48,7 @@ return {
 				lualine_a = {
 					{
 						"mode",
-						-- separator = { left = "" },
+						separator = { left = "" },
 					},
 				},
 				lualine_b = { "diagnostics" },
@@ -58,7 +58,7 @@ return {
 				lualine_z = {
 					{
 						"location",
-						-- separator = { right = "" },
+						separator = { right = "" },
 					},
 				},
 			},

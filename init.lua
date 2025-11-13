@@ -9,6 +9,7 @@ local success = pcall(require, "color")
 if not success then
 	vim.cmd.colorscheme("catppuccin-mocha")
 end
+
 require("highlights")
 
 for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/autocmd/*.lua", true)) do
