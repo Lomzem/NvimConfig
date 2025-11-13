@@ -40,5 +40,12 @@ return {
 			mode = { "x", "o" },
 			desc = "Inner Class",
 		},
+		{
+			"yac",
+			function()
+				require("nvim-treesitter-textobjects.select").select_textobject("@class.outer", "textobjects")
+				vim.api.nvim_feedkeys('"+y', "n", false)
+			end,
+		},
 	},
 }
