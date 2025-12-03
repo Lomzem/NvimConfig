@@ -100,15 +100,10 @@ return {
 		sources = {
 			default = { "snippets", "lsp", "path" },
 			per_filetype = {
-				rmd = { "cmp_r", "snippets", "lsp", "path" },
 				conf = { "fonts", "snippets", "lsp", "path" },
 				lua = { "nvim_colorschemes", "lazydev", "snippets", "lsp", "path" },
 			},
 			providers = {
-				cmp_r = {
-					name = "cmp_r",
-					module = "blink.compat.source",
-				},
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",
