@@ -13,17 +13,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 			"-e",
 			'rmarkdown::render("' .. file_path .. '", output_format = "pdf_document", clean = TRUE)',
 		}
-		-- vim.notify(vim.inspect(cmd), vim.log.levels.INFO)
 		vim.system(cmd, {
-			-- stdout = function(_, data)
-			-- vim.notify(vim.inspect(err), vim.log.levels.ERROR)
-			-- end,
-			-- stderr = function(_, data)
-			-- if data and vim.startswith(data, "Error:") then
-			-- 	vim.notify(vim.inspect(data), vim.log.levels.ERROR)
-			-- end
-			-- end,
 			detach = true,
-		})
+		}, function(_)
+			local files = vim.fs.find(function(name, path)
+				return name:match(".+%.aux$") or name:match(".+%.log$")
+			end, { limit = math.huge, type = "file" })
+			for _, file in ipairs(files) do
+				vim.fs.rm(file)
+			end
+		end)
 	end,
 })
