@@ -13,8 +13,8 @@ return {
 		},
 	},
 	cmd = "Oil",
-	-- keys = {
-	-- 	{ "<leader>pv", "<cmd>Oil<cr>" },
-	-- },
+	keys = {
+		{ "<leader>pv", "<cmd>Oil<cr>" },
+	},
 	dependencies = "echasnovski/mini.icons",
 }

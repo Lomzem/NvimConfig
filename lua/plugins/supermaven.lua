@@ -18,7 +18,11 @@ return {
 		{
 			"<a-'>",
 			function()
-				vim.g.supermavenenabled = vim.g.supermavenenabled == "true" and "false" or "true"
+				if vim.g.supermavenenabled == "false" then
+					vim.g.supermavenenabled = "true"
+				else
+					vim.g.supermavenenabled = "false"
+				end
 				if vim.g.supermavenenabled == "true" then
 					vim.cmd("SupermavenStart")
 					print("Supermaven is enabled")

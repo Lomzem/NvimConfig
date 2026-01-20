@@ -47,7 +47,7 @@ return {
 				javascript = web_formatters,
 				lua = { "stylua" },
 				html = { "prettier" },
-				markdown = { "prettierd" },
+				markdown = { "mdformat" },
 				python = { "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },

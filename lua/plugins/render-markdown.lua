@@ -5,10 +5,15 @@ return {
 		"latex-lsp/tree-sitter-latex",
 		"nvim-tree/nvim-web-devicons",
 	},
-	ft = { "markdown", "markdown_inline" },
+	ft = {
+		"markdown",
+		"markdown_inline",
+	},
 	---@module 'render-markdown'
 	---@type render.md.UserConfig
 	opts = {
+		file_types = { "markdown", "markdown_inline", "tasks" },
+		anti_conceal = { enabled = false },
 		render_modes = { "n", "i", "v", "c" },
 		heading = {
 			icons = {},
