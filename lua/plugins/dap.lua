@@ -86,7 +86,7 @@ return {
 		dap.adapters.cppdbg = {
 			id = "cppdbg",
 			type = "executable",
-			command = "/home/lomzem/.vscode/extensions/ms-vscode.cpptools-1.27.7-linux-x64/debugAdapters/bin/OpenDebugAD7",
+			command = "/usr/share/cpptools-debug/bin/OpenDebugAD7",
 		}
 
 		dap.configurations.c = {
@@ -95,8 +95,9 @@ return {
 				type = "cppdbg",
 				request = "launch",
 				program = function()
-					vim.system({ "make", "debug" }, {}, function() end):wait()
-					return vim.fn.getcwd() .. "/debug"
+					local path = vim.fn.getcwd() .. "/build/tests"
+					vim.notify(path)
+					return path
 				end,
 				args = {}, -- provide arguments if needed
 				cwd = "${workspaceFolder}",

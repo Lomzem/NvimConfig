@@ -10,6 +10,7 @@ return {
 				"air",
 				"basedpyright",
 				"clangd",
+				"cmake",
 				"fish_lsp",
 				"ghostty-ls",
 				"glsl_analyzer",
@@ -17,7 +18,8 @@ return {
 				"hyprls",
 				"jsonls",
 				"lua-language-server",
-				"markdown_oxide",
+				"mdformat",
+				"nixpkgs-fmt",
 				"prettier",
 				"ruff",
 				"rust-analyzer",
@@ -30,7 +32,6 @@ return {
 				"tinymist",
 				"typstyle",
 				"yamlfmt",
-				"nixpkgs-fmt",
 			},
 		})
 		mason_tools_installer.clean()
