@@ -33,6 +33,7 @@ return {
 			style = "normal",
 			language = true,
 			language_icon = true,
+			language_name = false,
 			-- highlight = "none",
 			-- highlight_inline = "none",
 			-- highlight_language = "none",
