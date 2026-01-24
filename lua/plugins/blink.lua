@@ -46,7 +46,13 @@ return {
 			},
 		},
 
-		cmdline = {},
+		cmdline = {
+			sources = { "cmdline", "path", "buffer" },
+			keymap = {
+				preset = "inherit",
+			},
+			completion = { menu = { auto_show = true } },
+		},
 
 		appearance = {
 			use_nvim_cmp_as_default = true,
