@@ -23,6 +23,7 @@ return {
 				"tailwindcss-language-server",
 				"texlab",
 				"tinymist",
+				"tsgo",
 				"typstyle",
 				"yamlfmt",
 			},
