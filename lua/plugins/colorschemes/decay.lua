@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
 	"decaycs/decay.nvim",
-	lazy = false,
 	opts = {
 		style = "decayce",
 		palette_overrides = {

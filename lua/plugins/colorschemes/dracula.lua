@@ -1,7 +1,6 @@
 --- @type LazySpec
 return {
 	"Mofiqul/dracula.nvim",
-	lazy = false,
 	priority = 1000,
 	---@module "dracula"
 	---@type DraculaConfig

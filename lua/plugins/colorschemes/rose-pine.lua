@@ -2,7 +2,6 @@
 return {
 	"rose-pine/neovim",
 	name = "rose-pine",
-	lazy = false,
 	---@module "rose-pine"
 	---@type Options
 	opts = {
