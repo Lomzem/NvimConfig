@@ -61,6 +61,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		})
 
 		vim.keymap.set("n", "K", function()
+			---@type HoverConfiguration
+			local hover_config = {
+				border = "single",
+			}
 			require("pretty_hover").hover()
 		end, opts)
 

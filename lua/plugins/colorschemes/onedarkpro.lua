@@ -1,6 +1,5 @@
 return {
 	"olimorris/onedarkpro.nvim",
-	lazy = false,
 	opts = {
 		options = {
 			-- transparency = true,

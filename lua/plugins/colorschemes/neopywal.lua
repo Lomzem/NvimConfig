@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
 	"RedsXDD/neopywal.nvim",
-	lazy = false,
 	priority = 1000,
 	---@module "neopywal"
 	---@type NeopywalOptions

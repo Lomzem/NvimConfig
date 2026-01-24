@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
 	"folke/tokyonight.nvim",
-	lazy = false,
 	---@module "tokyonight"
 	---@type tokyonight.Config
 	opts = {

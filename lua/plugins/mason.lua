@@ -8,7 +8,6 @@ return {
 		opts = {
 			registries = {
 				"github:mason-org/mason-registry",
-				"github:MKindberg/ghostty-ls",
 			},
 		},
 		cmd = "Mason",

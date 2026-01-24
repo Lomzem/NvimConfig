@@ -11,7 +11,10 @@ end
 ---@type LazySpec
 return {
 	dir = "~/coding/tasks-nvim/",
-	lazy = false,
+	cmd = { "Tasks", "TasksAuth", "TasksSync", "TasksPurge" },
+	keys = {
+		{ "<leader>tl", "<cmd>Tasks<cr>" },
+	},
 	opts = {
 		client_id = GOOGLE_CLIENT_ID,
 		client_secret = GOOGLE_CLIENT_SECRET,

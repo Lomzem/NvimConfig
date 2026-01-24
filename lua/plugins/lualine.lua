@@ -78,10 +78,10 @@ return {
 		local lualine = require("lualine")
 		lualine.setup(opts)
 
-		vim.g.lualine_enabled = 0
-		lualine.hide({
-			place = { "statusline" },
-			unhide = false,
-		})
+		vim.g.lualine_enabled = 1
+		-- lualine.hide({
+		-- 	place = { "statusline" },
+		-- 	unhide = false,
+		-- })
 	end,
 }

@@ -30,10 +30,10 @@ return {
 		completion = {
 			menu = {
 				auto_show = true,
-				border = "none",
+				border = "single",
 				direction_priority = { "s" },
 				draw = {
-					align_to = "cursor",
+					align_to = "none",
 					treesitter = { "lsp" },
 				},
 				scrollbar = false,
@@ -41,21 +41,12 @@ return {
 			documentation = {
 				auto_show = false,
 				window = {
-					border = "none",
+					border = "single",
 				},
 			},
 		},
 
-		cmdline = {
-			enabled = true,
-			keymap = {
-				preset = "none",
-				["<c-l>"] = { "select_and_accept" },
-				["<c-k>"] = { "select_prev", "fallback" },
-				["<c-j>"] = { "select_next", "fallback" },
-			},
-			completion = { menu = { auto_show = true } },
-		},
+		cmdline = {},
 
 		appearance = {
 			use_nvim_cmp_as_default = true,
