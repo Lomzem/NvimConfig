@@ -130,5 +130,11 @@ return {
 				Snacks.notifier.show_history()
 			end,
 		},
+		{
+			"<leader>gc",
+			function()
+				Snacks.picker.commands()
+			end,
+		},
 	},
 }
