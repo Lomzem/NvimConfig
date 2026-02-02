@@ -9,7 +9,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 			filename,
 		}, {
 			on_exit = function()
-				vim.notify("flex finished")
 				vim.fn.jobstart({
 					"gcc",
 					lex_file,
@@ -23,7 +22,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 						end
 					end,
 				})
-				vim.notify("gcc finished")
 			end,
 		})
 	end,
