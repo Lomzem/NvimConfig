@@ -11,7 +11,7 @@ return {
 			format_after_save = function(bufnr)
 				-- local ignore_filetypes = { "rust" }
 				-- local ignore_filetypes = { "ghostty" }
-				local ignore_filetypes = { "python" }
+				-- local ignore_filetypes = { "python" }
 				-- return
 				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 					return
