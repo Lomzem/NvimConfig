@@ -26,6 +26,7 @@ return {
 				"tsgo",
 				"typstyle",
 				"yamlfmt",
+				"tex-fmt",
 			},
 		})
 		mason_tools_installer.clean()

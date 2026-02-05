@@ -12,6 +12,7 @@ return {
 				-- local ignore_filetypes = { "rust" }
 				-- local ignore_filetypes = { "ghostty" }
 				-- local ignore_filetypes = { "python" }
+				local ignore_filetypes = {}
 				-- return
 				if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
 					return
@@ -37,21 +38,22 @@ return {
 			},
 			formatters_by_ft = {
 				-- ["*"] = { "injected" },
-				rmd = { "styler" },
 				c = { "clang_format" },
-				nix = { "nixpkgs_fmt" },
 				cpp = { "clang_format" },
 				css = { "prettier" },
 				go = { "gofmt" },
+				html = { "prettier" },
 				htmldjango = web_formatters,
 				javascript = web_formatters,
 				lua = { "stylua" },
-				html = { "prettier" },
 				markdown = { "mdformat" },
+				nix = { "nixpkgs_fmt" },
 				python = { "ruff_format", "ruff_organize_imports" },
+				rmd = { "styler" },
 				rust = { "rustfmt" },
 				sql = { "sql_formatter" },
 				svelte = web_formatters,
+				tex = { "tex-fmt" },
 				typescript = web_formatters,
 				typescriptreact = web_formatters,
 				typst = { "typstyle" },
