@@ -1,7 +1,7 @@
 ---@type LazySpec
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
 	config = function()
 		local mason_tools_installer = require("mason-tool-installer")
 		mason_tools_installer.setup({
