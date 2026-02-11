@@ -1,5 +1,6 @@
 return {
 	"R-nvim/R.nvim",
+	enabled = false,
 	dependencies = {
 		"R-nvim/cmp-r",
 	},
