@@ -12,11 +12,6 @@ return {
 					sections = { "console", "repl", "threads", "scopes", "watches" },
 					default_section = "repl",
 				},
-				windows = {
-					terminal = {
-						start_hidden = false,
-					},
-				},
 			},
 		},
 		"nvim-neotest/nvim-nio",
@@ -95,9 +90,11 @@ return {
 				type = "cppdbg",
 				request = "launch",
 				program = function()
-					local path = vim.fn.getcwd() .. "/build/tests"
-					vim.notify(path)
-					return path
+					local executable = vim.env.DEBUG_EXE
+					if executable == nil then
+						vim.notify("DEBUG_EXE not set", vim.log.levels.ERROR)
+					end
+					return executable
 				end,
 				args = {}, -- provide arguments if needed
 				cwd = "${workspaceFolder}",
