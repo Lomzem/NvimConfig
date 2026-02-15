@@ -17,7 +17,6 @@ return {
 				"prettier",
 				"pyright",
 				"ruff",
-				"rust-analyzer",
 				"rustywind",
 				"stylua",
 				"tailwindcss-language-server",
