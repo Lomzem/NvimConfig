@@ -1,7 +1,7 @@
 ---@type LazySpec[]
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		build = ":MasonUpdate",
 		---@module "mason"
 		---@type MasonSettings
@@ -13,7 +13,7 @@ return {
 		cmd = "Mason",
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"mason-lspconfig.nvim",
 		event = "VeryLazy",
 		opts = {},
 		dependencies = "neovim/nvim-lspconfig",
