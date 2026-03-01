@@ -1,9 +1,21 @@
 local function find_exe()
 	local executable = vim.env.DEBUG_EXE
-	if executable == nil then
-		vim.notify("DEBUG_EXE not set", vim.log.levels.ERROR)
+	if executable ~= nil then
+		return executable
 	end
-	return executable
+
+	local exe = vim.fs.find("debug", {
+		type = "file",
+		limit = 1,
+	})
+	if #exe > 0 then
+		return exe[1]
+	end
+
+	vim.notify("DEBUG_EXE not set", vim.log.levels.WARN)
+	vim.notify("debug executable not found", vim.log.levels.WARN)
+
+	return nil
 end
 
 ---@type LazyPluginSpec
