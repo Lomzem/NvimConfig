@@ -5,7 +5,6 @@ return {
 		-- lazy = false,
         event = { "BufReadPost", "BufNewFile" },
 		build = ":TSUpdate",
-		main = "nvim-treesitter.configs",
 		opts = {
 			sync_install = false,
 			auto_install = true,

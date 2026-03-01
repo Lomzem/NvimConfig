@@ -1,3 +1,11 @@
+local function find_exe()
+	local executable = vim.env.DEBUG_EXE
+	if executable == nil then
+		vim.notify("DEBUG_EXE not set", vim.log.levels.ERROR)
+	end
+	return executable
+end
+
 ---@type LazyPluginSpec
 return {
 	"mfussenegger/nvim-dap",
@@ -78,6 +86,12 @@ return {
 	config = function()
 		local dap = require("dap")
 
+		dap.adapters.gdb = {
+			type = "executable",
+			command = "gdb",
+			args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+		}
+
 		dap.adapters.cppdbg = {
 			id = "cppdbg",
 			type = "executable",
@@ -87,15 +101,9 @@ return {
 		dap.configurations.c = {
 			{
 				name = "Launch",
-				type = "cppdbg",
+				type = "gdb",
 				request = "launch",
-				program = function()
-					local executable = vim.env.DEBUG_EXE
-					if executable == nil then
-						vim.notify("DEBUG_EXE not set", vim.log.levels.ERROR)
-					end
-					return executable
-				end,
+				program = find_exe,
 				args = {}, -- provide arguments if needed
 				cwd = "${workspaceFolder}",
 				stopAtBeginningOfMainSubprogram = false,
