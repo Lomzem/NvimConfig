@@ -13,7 +13,7 @@ return {
 		cmd = "Mason",
 	},
 	{
-		"mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		event = "VeryLazy",
 		opts = {},
 		dependencies = "neovim/nvim-lspconfig",
