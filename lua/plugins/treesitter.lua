@@ -20,6 +20,7 @@ return {
 				"yaml",
 				"latex",
 				"csv",
+				"typst",
 			},
 		},
 	},
