@@ -9,6 +9,7 @@ local function find_exe()
 		limit = 1,
 	})
 	if #exe > 0 then
+		vim.notify(vim.inspect(exe), vim.log.levels.INFO)
 		return exe[1]
 	end
 

@@ -5,7 +5,8 @@ return {
 	keys = { "<leader>f" },
 	config = function()
 		-- local web_formatters = { "biome", "prettierd", "rustywind" }
-		local web_formatters = { "prettier" }
+		-- local web_formatters = { "prettier" }
+		local web_formatters = { "prettier", "rustywind" }
 
 		require("conform").setup({
 			format_after_save = function(bufnr)
@@ -46,7 +47,7 @@ return {
 				htmldjango = web_formatters,
 				javascript = web_formatters,
 				lua = { "stylua" },
-				markdown = { "mdformat" },
+				-- markdown = { "mdformat" },
 				nix = { "nixpkgs_fmt" },
 				python = { "ruff_format", "ruff_organize_imports" },
 				rmd = { "styler" },
