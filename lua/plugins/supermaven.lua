@@ -1,6 +1,9 @@
 return {
 	"supermaven-inc/supermaven-nvim",
 	event = "InsertEnter",
+	init = function()
+		vim.g.supermavenenabled = "false"
+	end,
 	opts = {
 		keymaps = {
 			accept_suggestion = "<right>",
@@ -24,11 +27,11 @@ return {
 					vim.g.supermavenenabled = "false"
 				end
 				if vim.g.supermavenenabled == "true" then
-					vim.cmd("SupermavenStart")
-					print("Supermaven is enabled")
+					vim.cmd("silent !SupermavenStart")
+					vim.notify("Supermaven is enabled", vim.log.levels.INFO)
 				else
-					vim.cmd("SupermavenStop")
-					print("Supermaven is disabled")
+					vim.cmd("silent !SupermavenStop")
+					vim.notify("Supermaven is disabled", vim.log.levels.INFO)
 				end
 			end,
 		},

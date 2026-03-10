@@ -55,8 +55,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			end, opts)
 		end
 
+		vim.opt.signcolumn = "yes"
 		vim.diagnostic.config({
-			virtual_text = true,
+			virtual_text = false,
 			update_in_insert = false,
 		})
 
