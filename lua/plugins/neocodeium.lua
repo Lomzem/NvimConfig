@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"monkoose/neocodeium",
+	cond = false,
 	event = "InsertEnter",
 	opts = {},
 	keys = {

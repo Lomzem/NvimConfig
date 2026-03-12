@@ -1,6 +1,7 @@
 require("vimopts")
 require("keymaps")
 
+require("lsp_init")
 require("lsp.lsp_mapping")
 require("lazy_init")
 require("autocmd")
