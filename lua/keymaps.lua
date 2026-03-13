@@ -10,6 +10,7 @@ vim.keymap.set("n", "y=", function()
 	vim.notify("Copied to clipboard", vim.log.levels.INFO)
 end) -- Copy all
 vim.keymap.set("n", "<leader>q", "<c-z>") -- Suspend
+vim.keymap.set("n", "<a-w>", "<c-z>") -- Suspend
 vim.keymap.set("n", "<a-q>", "<cmd>q<CR>") -- Quit
 vim.keymap.set("i", "<c-c>", "<esc>") -- Remap Ctrl+C to Esc
 
