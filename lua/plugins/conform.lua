@@ -2,6 +2,7 @@
 return {
 	"stevearc/conform.nvim",
 	event = "BufWritePre",
+	cond = true,
 	keys = { "<leader>f" },
 	config = function()
 		-- local web_formatters = { "biome", "prettierd", "rustywind" }

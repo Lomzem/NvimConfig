@@ -8,13 +8,13 @@ return {
 				local lualine = require("lualine")
 				if vim.g.lualine_enabled == 0 then
 					lualine.hide({
-						place = { "statusline" },
+						place = { "statusline", "tabline", "winbar" },
 						unhide = true,
 					})
 					vim.g.lualine_enabled = 1
 				else
 					lualine.hide({
-						place = { "statusline" },
+						place = { "statusline", "tabline", "winbar" },
 						unhide = false,
 					})
 					vim.g.lualine_enabled = 0

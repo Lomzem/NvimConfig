@@ -29,7 +29,7 @@ vim.opt.updatetime = 50
 vim.opt.laststatus = 0
 vim.opt.cmdheight = 0
 vim.o.syntax = "on"
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 
 -- split windows
 vim.opt.splitright = true
