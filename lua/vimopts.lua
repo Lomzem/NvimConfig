@@ -19,13 +19,10 @@ vim.opt.smartcase = true
 
 -- line wrapping
 vim.opt.wrap = false
--- vim.opt.scrolloff = 8
--- vim.opt.scrolloff = 999
 
 -- appearance
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
--- vim.opt.guicursor = ""
 vim.opt.laststatus = 0
 vim.opt.cmdheight = 0
 vim.o.syntax = "on"
@@ -38,5 +35,4 @@ vim.opt.splitbelow = true
 -- misc
 vim.opt.swapfile = false
 vim.opt.spell = false
-vim.api.nvim_create_user_command("Wrap", "lua vim.cmd([[set wrap | set linebreak | set spell]])", {})
 vim.opt.undofile = true
