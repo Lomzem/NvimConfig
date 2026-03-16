@@ -34,6 +34,10 @@ vim.keymap.set("n", "<leader>w", "<esc><cmd>silent w<cr>") -- Save
 vim.keymap.set("n", "<leader>x", "<esc><cmd>silent x<cr>") -- Save
 vim.keymap.set("n", "<cr>", "zz")
 
+-- Comment
+vim.keymap.set("n", "<c-_>", "gcc", { remap = true })
+vim.keymap.set("v", "<c-_>", "gc", { remap = true })
+
 -- Centering
 vim.keymap.set("n", "<c-u>", "<c-u>zz") -- Centers page up
 vim.keymap.set("n", "<c-d>", "<c-d>zz") -- Centers page d-own
