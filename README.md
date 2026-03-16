@@ -40,7 +40,6 @@
 - [monkoose/neocodeium](https://github.com/monkoose/neocodeium)
 - [mrcjkb/rustaceanvim](https://github.com/mrcjkb/rustaceanvim)
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [numtostr/comment.nvim](https://github.com/numtostr/comment.nvim)
 - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [nvim-neotest/nvim-nio](https://github.com/nvim-neotest/nvim-nio)
