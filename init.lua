@@ -1,9 +1,7 @@
 require("vimopts")
 require("keymaps")
 
-require("lsp_init")
-require("lsp.lsp_mapping")
-require("lsp.lsp_progress")
+require("lsp-setup")
 
 require("lazy_init")
 require("autocmd")
