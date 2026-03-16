@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"WhoIsSethDaniel/mason-tool-installer.nvim",
+	enabled = false,
 	cmd = {
 		"MasonToolsClean",
 		"MasonToolsInstall",

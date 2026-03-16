@@ -2,6 +2,7 @@
 return {
 	{
 		"mason-org/mason.nvim",
+		enabled = false,
 		build = ":MasonUpdate",
 		---@module "mason"
 		---@type MasonSettings
@@ -14,6 +15,7 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
+		enabled = false,
 		event = "VeryLazy",
 		opts = {},
 		dependencies = "neovim/nvim-lspconfig",
