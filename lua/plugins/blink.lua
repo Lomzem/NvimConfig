@@ -15,6 +15,9 @@ return {
 	---@module "blink.cmp"
 	---@type blink.cmp.Config
 	opts = {
+		fuzzy = {
+			implementation = "rust",
+		},
 		keymap = {
 			preset = "none",
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
