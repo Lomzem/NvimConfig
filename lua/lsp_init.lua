@@ -1,6 +1,6 @@
 local installed_lsp = {
     "html",
-    "lua-language-server",
+    "lua_ls",
 }
 
 for _, lsp in ipairs(installed_lsp) do

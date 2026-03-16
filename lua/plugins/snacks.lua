@@ -136,5 +136,11 @@ return {
 				Snacks.picker.commands()
 			end,
 		},
+		{
+			"gh",
+			function()
+				Snacks.picker.help()
+			end,
+		},
 	},
 }
