@@ -19,41 +19,25 @@ local function autosnip(name, nodes)
 end
 
 ---comment
----@param lib string
----@return boolean found_lib
----@return boolean found_using_namespace_std
-local function findlib(lib)
+---@return boolean found_namespace
+local function find_namespace()
 	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-	local found_lib = false
 	local found_using_namespace_std = false
 	for _, line in ipairs(lines) do
-		if line:match("#include <" .. lib .. ">") then
-			found_lib = true
-		elseif line:match("using namespace std;") then
+		if line:match("using namespace std;") then
 			found_using_namespace_std = true
 		end
 	end
-	if not found_lib then
-		if vim.api.nvim_buf_get_lines(0, 0, 1, false)[1]:match("int main") then
-			vim.api.nvim_buf_set_lines(0, 0, 0, false, { "#include <" .. lib .. ">", "" })
-		else
-			vim.api.nvim_buf_set_lines(0, 0, 0, false, { "#include <" .. lib .. ">" })
-		end
-	end
-	return found_lib, found_using_namespace_std
+	return found_using_namespace_std
 end
 
-local function autoimport(trigger, expansion, library)
-	return autosnip(trigger, {
-		fn(function()
-			local _, found_using_namespace_std = findlib(library)
-			if found_using_namespace_std then
-				return expansion
-			else
-				return "std::" .. expansion
-			end
-		end),
-	})
+---@param expansion string
+local function prefix_std(expansion)
+	if find_namespace() then
+		return expansion
+	else
+		return "std::" .. expansion
+	end
 end
 
 ls.add_snippets("cpp", {
@@ -61,16 +45,13 @@ ls.add_snippets("cpp", {
 		t("nullptr "),
 	}),
 
-	autoimport("cout ", "cout << ", "iostream"),
-	autoimport("cin ", "cin >> ", "iostream"),
-	autoimport("string ", "string ", "string"),
+	autosnip("cout ", { t(prefix_std("cout << ")) }),
+	autosnip("cin ", { t(prefix_std("cin >> ")) }),
 
 	autosnip("vec<", {
 		d(1, function(_)
-			local _, found_using = findlib("vector")
-			local expansion = found_using and "vector<" or "std::vector<"
 			return sn(nil, {
-				t(expansion),
+				t(prefix_std("vector<")),
 				i(1),
 				t(">"),
 			})
