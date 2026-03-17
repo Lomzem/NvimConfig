@@ -1,6 +1,6 @@
 return {
 	"mikavilpas/yazi.nvim",
-	cond = false,
+	enabled = false,
 	dependencies = { "folke/snacks.nvim" },
 	cmd = { "Yazi" },
 	keys = {

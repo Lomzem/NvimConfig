@@ -2,7 +2,7 @@
 return {
 	"ray-x/lsp_signature.nvim",
 	event = "LspAttach",
-	cond = false,
+	enabled = false,
 	opts = {
 		bind = false,
 		floating_window = true,

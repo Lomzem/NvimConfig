@@ -1,6 +1,6 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	cond = false,
+	enabled = false,
 	event = "VeryLazy",
 	keys = {
 		{
