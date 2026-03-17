@@ -30,6 +30,8 @@ vim.keymap.set("n", "<cr>", "zz")
 -- Comment and preserve cursor position
 vim.keymap.set("n", "<c-_>", ":let p=getpos('.')<CR>gcc:call setpos('.', p)<CR>", { remap = true })
 vim.keymap.set("v", "<c-_>", "gc", { remap = true })
+vim.keymap.set("n", "<c-/>", ":let p=getpos('.')<CR>gcc:call setpos('.', p)<CR>", { remap = true })
+vim.keymap.set("v", "<c-/>", "gc", { remap = true })
 
 -- Centering
 vim.keymap.set("n", "<c-u>", "<c-u>zz") -- Centers page up
