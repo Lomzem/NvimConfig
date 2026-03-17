@@ -2,7 +2,7 @@ local ls = require("luasnip")
 
 local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
-local fn = ls.function_node
+local fmta = require("luasnip.extras.fmt").fmta
 local i = ls.insert_node
 local s = ls.snippet
 local sn = ls.snippet_node
@@ -75,4 +75,16 @@ ls.add_snippets("cpp", {
 	}),
 
 	s("i", fmt([[#include <{}>{}]], { i(1), i(0) })),
+
+	s(
+		"for",
+		fmta(
+			[[
+for (<>; <>; <>) {
+    <>
+}
+    ]],
+			{ i(1), i(2), i(3), i(0) }
+		)
+	),
 })

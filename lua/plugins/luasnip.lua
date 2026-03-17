@@ -18,12 +18,12 @@ return {
 			update_events = { "TextChanged", "TextChangedI" },
 		})
 
-		vim.keymap.set({ "i", "s" }, "<c-n>", function()
+		vim.keymap.set({ "i", "s" }, "<tab>", function()
 			if ls.expand_or_jumpable() then
 				ls.expand_or_jump()
 			end
 		end, { silent = true })
-		vim.keymap.set({ "i", "s" }, "<c-p>", function()
+		vim.keymap.set({ "i", "s" }, "<s-tab>", function()
 			if ls.jumpable(-1) then
 				ls.jump(-1)
 			end

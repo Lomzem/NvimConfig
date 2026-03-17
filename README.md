@@ -30,6 +30,7 @@
 - [max397574/colortils.nvim](https://github.com/max397574/colortils.nvim)
 - [mfussenegger/nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [mikavilpas/yazi.nvim](https://github.com/mikavilpas/yazi.nvim)
+- [mikesmithgh/kitty-scrollback.nvim](https://github.com/mikesmithgh/kitty-scrollback.nvim)
 - [monkoose/neocodeium](https://github.com/monkoose/neocodeium)
 - [mrcjkb/rustaceanvim](https://github.com/mrcjkb/rustaceanvim)
 - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
