@@ -27,10 +27,10 @@ return {
 			end,
 			mode = "v",
 		},
-		{ "<leader>k", "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
+		{ '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
 		-- { '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
 		-- { "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
-		{ '"', "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
+		{ "<leader>k", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
 		{
 			"d<leader>k",
 			function()
