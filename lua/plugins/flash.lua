@@ -31,26 +31,17 @@ return {
 	keys = {
 		"f",
 		"t",
-		-- {
-		-- 	"r",
-		-- 	mode = "v",
-		-- 	function()
-		-- 		require("flash").treesitter()
-		-- 		vim.cmd("norm V")
-		-- 	end,
-		-- 	desc = "Flash Treesitter",
-		-- },
 		{
 			"dr",
 			mode = "n",
 			function()
-				require("flash").treesitter()
+				local result = require("flash").treesitter()
 				vim.cmd("norm Vd")
 			end,
 		},
 		{
 			"'",
-			mode = { "n" },
+			mode = { "n", "v", "x", "o" },
 			function()
 				require("flash").jump()
 			end,

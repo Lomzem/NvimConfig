@@ -45,6 +45,7 @@ vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
 vim.keymap.set("n", "D", "dd")
+vim.keymap.set("n", "d%", "v%D")
 
 -- jk center
 vim.keymap.set("n", "G", "G")
