@@ -49,7 +49,7 @@ return {
 			end,
 		},
 		{
-			"s",
+			"'",
 			mode = { "n" },
 			function()
 				require("flash").jump()
