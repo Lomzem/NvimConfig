@@ -38,5 +38,12 @@ return {
 				require("flash").jump()
 			end,
 		},
+		{
+			"s",
+			mode = { "n", "v", "x", "o" },
+			function()
+				require("flash").jump()
+			end,
+		},
 	},
 }
