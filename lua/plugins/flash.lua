@@ -32,14 +32,6 @@ return {
 		"f",
 		"t",
 		{
-			"dr",
-			mode = "n",
-			function()
-				local result = require("flash").treesitter()
-				vim.cmd("norm Vd")
-			end,
-		},
-		{
 			"'",
 			mode = { "n", "v", "x", "o" },
 			function()
