@@ -4,6 +4,11 @@ return {
 	---@module "flash"
 	---@type Flash.Config
 	opts = {
+		search = {
+			-- regex search :)
+			---@type Flash.Pattern.Mode
+			mode = "search",
+		},
 		modes = {
 			char = {
 				label = { exclude = "hjklviardcCxDIA" },
@@ -24,8 +29,8 @@ return {
 		},
 	},
 	keys = {
-        "f",
-        "t",
+		"f",
+		"t",
 		-- {
 		-- 	"r",
 		-- 	mode = "v",
