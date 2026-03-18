@@ -47,16 +47,9 @@ ls.add_snippets("cpp", {
 
 	autosnip("cout ", { t(prefix_std("cout << ")) }),
 	autosnip("cin ", { t(prefix_std("cin >> ")) }),
+	autosnip("string ", { t(prefix_std("string ")) }),
 
-	autosnip("vec<", {
-		d(1, function(_)
-			return sn(nil, {
-				t(prefix_std("vector<")),
-				i(1),
-				t(">"),
-			})
-		end),
-	}),
+	s("vec", fmt([[{}<{}> {}]], { t(prefix_std("vector")), i(1), i(0) })),
 
 	autosnip("endl ", { t("<< '\\n';") }),
 
