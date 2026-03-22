@@ -21,10 +21,11 @@ return {
 			quickfile = {},
 			scope = {},
 			input = {},
-			notifier = {
-				timeout = 1500,
-				style = "minimal",
-			},
+		notifier = {
+			timeout = 1500,
+			style = "minimal",
+			top_down = false,
+		},
 			styles = {
 				notification_history = {
 					width = 100.0,
