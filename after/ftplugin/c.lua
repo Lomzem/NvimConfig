@@ -1,3 +1,4 @@
+--
 -- local makefile_path = vim.fn.fnamemodify(vim.fn.expand("%:p"), ":h") .. "/Makefile"
 --
 -- local function file_exists(name)

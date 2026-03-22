@@ -25,6 +25,7 @@ vim.keymap.set("n", "z=", "1z=") --spellcheck
 
 vim.keymap.set("n", "<c-s>", "<cmd>silent w<cr>") -- Save
 vim.keymap.set("i", "<c-s>", "<esc><cmd>silent w<cr>") -- Save
+vim.keymap.set("n", "<leader>w", "<esc><cmd>silent w<cr>") -- Save
 vim.keymap.set("n", "<cr>", "zz")
 
 -- Comment and preserve cursor position

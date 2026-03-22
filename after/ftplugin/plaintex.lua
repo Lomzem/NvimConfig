@@ -1,1 +1,1 @@
-vim.cmd("set filetype=tex")
+-- vim.cmd("set filetype=tex")
