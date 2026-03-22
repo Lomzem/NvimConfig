@@ -1,16 +1,15 @@
 local ls = require("luasnip")
 
-local d = ls.dynamic_node
+-- local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local i = ls.insert_node
 local s = ls.snippet
-local sn = ls.snippet_node
+-- local sn = ls.snippet_node
 local t = ls.text_node
 
 local autosnip = require("lsp-setup.snippets.snip_utils").autosnip
 
----comment
 ---@return boolean found_namespace
 local function find_namespace()
 	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
@@ -37,27 +36,21 @@ ls.add_snippets("cpp", {
 		t("nullptr "),
 	}),
 
-	autosnip("cout ", { t(prefix_std("cout << ")) }),
-	autosnip("cin ", { t(prefix_std("cin >> ")) }),
+	s("cout", { t(prefix_std("cout << ")) }),
+	s("cin", { t(prefix_std("cin >> ")) }),
 	autosnip("string ", { t(prefix_std("string ")) }),
 
 	s("vec", fmt([[{}<{}> {}]], { t(prefix_std("vector")), i(1), i(0) })),
 
 	autosnip("endl ", { t("<< '\\n';") }),
 
-	autosnip("int main ", {
+	s("main", {
 		t({ "int main() {", "\t" }),
 		i(0),
 		t({ "", "\treturn 0;", "}" }),
 	}),
 
-	s({
-		trig = "u",
-		name = "using namespace std",
-		dscr = "using namespace std",
-	}, {
-		t("using namespace std;"),
-	}),
+	s("u", t("using namespace std;")),
 
 	s("i", fmt([[#include <{}>{}]], { i(1), i(0) })),
 
