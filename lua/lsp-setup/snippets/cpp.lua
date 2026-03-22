@@ -1,6 +1,7 @@
 local ls = require("luasnip")
 
 -- local d = ls.dynamic_node
+local f = ls.function_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local i = ls.insert_node
@@ -24,11 +25,13 @@ end
 
 ---@param expansion string
 local function prefix_std(expansion)
-	if find_namespace() then
-		return expansion
-	else
+	return f(function()
+		if find_namespace() then
+			return expansion
+		end
+
 		return "std::" .. expansion
-	end
+	end, {})
 end
 
 ls.add_snippets("cpp", {
@@ -36,11 +39,11 @@ ls.add_snippets("cpp", {
 		t("nullptr "),
 	}),
 
-	s("cout", { t(prefix_std("cout << ")) }),
-	s("cin", { t(prefix_std("cin >> ")) }),
-	autosnip("string ", { t(prefix_std("string ")) }),
+	s("cout", { prefix_std("cout << ") }),
+	s("cin", { prefix_std("cin >> ") }),
+	autosnip("string ", { prefix_std("string ") }),
 
-	s("vec", fmt([[{}<{}> {}]], { t(prefix_std("vector")), i(1), i(0) })),
+	s("vec", fmt([[{}<{}> {}]], { prefix_std("vector"), i(1), i(0) })),
 
 	autosnip("endl ", { t("<< '\\n';") }),
 
