@@ -21,33 +21,26 @@ return {
 			enable_autosnippets = true,
 			update_events = { "TextChanged", "TextChangedI" },
 		})
-
-		vim.keymap.set({ "i", "s" }, "<tab>", function()
-			return require("luasnip").jumpable(1) --
-					and "<Plug>luasnip-jump-next"
-				or "<Plug>(neotab-out)"
-		end, {
+	end,
+	keys = {
+		{
+			"<tab>",
+			function()
+				return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump"
+					or "<Plug>(neotab-out)"
+			end,
 			expr = true,
 			silent = true,
-		})
-
-		vim.keymap.set({ "i", "s" }, "<s-tab>", function()
-			if ls.jumpable(-1) then
-				ls.jump(-1)
-			end
-		end, { silent = true })
-	end,
-	-- keys = {
-	-- 	{
-	-- 		"<Tab>",
-	-- 		function()
-	-- 			return require("luasnip").jumpable(1) --
-	-- 					and "<Plug>luasnip-jump-next"
-	-- 				or "<Plug>(neotab-out)"
-	-- 		end,
-	-- 		expr = true,
-	-- 		silent = true,
-	-- 		mode = "i",
-	-- 	},
-	-- },
+			mode = "i",
+		},
+		{
+			"<s-tab>",
+			function()
+				return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<Plug>(neotab-reverse)"
+			end,
+			expr = true,
+			silent = true,
+			mode = "i",
+		},
+	},
 }
