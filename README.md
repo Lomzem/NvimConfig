@@ -63,6 +63,7 @@
 - [RedsXDD/neopywal.nvim](https://github.com/RedsXDD/neopywal.nvim)
 - [abhilash26/mapledark.nvim](https://github.com/abhilash26/mapledark.nvim)
 - [catppuccin/nvim](https://github.com/catppuccin/nvim)
+- [datsfilipe/vesper.nvim](https://github.com/datsfilipe/vesper.nvim)
 - [decaycs/decay.nvim](https://github.com/decaycs/decay.nvim)
 - [ellisonleao/gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
 - [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
@@ -75,6 +76,7 @@
 - [rmehri01/onenord.nvim](https://github.com/rmehri01/onenord.nvim)
 - [rose-pine/neovim](https://github.com/rose-pine/neovim)
 - [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
+- [savq/melange-nvim](https://github.com/savq/melange-nvim)
 - [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)
 - [vague2k/vague.nvim](https://github.com/vague2k/vague.nvim)
 
