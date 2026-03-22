@@ -8,15 +8,7 @@ local s = ls.snippet
 local sn = ls.snippet_node
 local t = ls.text_node
 
----@param name string
-local function autosnip(name, nodes)
-	return s({
-		trig = name,
-		snippetType = "autosnippet",
-		name = name,
-		dscr = name,
-	}, nodes)
-end
+local autosnip = require("lsp-setup.snippets.snip_utils").autosnip
 
 ---comment
 ---@return boolean found_namespace

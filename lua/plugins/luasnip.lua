@@ -1,15 +1,19 @@
+---@type LazySpec
 return {
 	"L3MON4D3/LuaSnip",
 	event = "InsertEnter",
 	build = "make install_jsregexp",
-	-- dependencies = "rafamadriz/friendly-snippets",
+	dependencies = { "neotab.nvim" },
 	config = function()
 		local ls = require("luasnip")
 
-		-- require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/lua/lsp" })
-
 		for _, ft_path in ipairs(vim.api.nvim_get_runtime_file("lua/lsp-setup/snippets/*.lua", true)) do
-			loadfile(ft_path)()
+			local ok, err = loadfile(ft_path)
+			if ok then
+				ok()
+			else
+				vim.print("LuaSnip load error: " .. err .. " in " .. ft_path)
+			end
 		end
 
 		ls.config.set_config({
@@ -19,19 +23,31 @@ return {
 		})
 
 		vim.keymap.set({ "i", "s" }, "<tab>", function()
-			if ls.expand_or_jumpable() then
-				ls.expand_or_jump()
-			end
-		end, { silent = true })
+			return require("luasnip").jumpable(1) --
+					and "<Plug>luasnip-jump-next"
+				or "<Plug>(neotab-out)"
+		end, {
+			expr = true,
+			silent = true,
+		})
+
 		vim.keymap.set({ "i", "s" }, "<s-tab>", function()
 			if ls.jumpable(-1) then
 				ls.jump(-1)
 			end
 		end, { silent = true })
-		-- vim.keymap.set("i", "<a-p>", function()
-		-- 	if ls.choice_active() then
-		-- 		ls.change_choice(1)
-		-- 	end
-		-- end)
 	end,
+	-- keys = {
+	-- 	{
+	-- 		"<Tab>",
+	-- 		function()
+	-- 			return require("luasnip").jumpable(1) --
+	-- 					and "<Plug>luasnip-jump-next"
+	-- 				or "<Plug>(neotab-out)"
+	-- 		end,
+	-- 		expr = true,
+	-- 		silent = true,
+	-- 		mode = "i",
+	-- 	},
+	-- },
 }

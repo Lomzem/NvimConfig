@@ -4,15 +4,7 @@ local s = ls.snippet
 local i = ls.insert_node
 local fmta = require("luasnip.extras.fmt").fmta
 
----@param name string
-local function autosnip(name, nodes)
-	return s({
-		trig = name,
-		snippetType = "autosnippet",
-		name = name,
-		dscr = name,
-	}, nodes)
-end
+local autosnip = require("lsp-setup.snippets.snip_utils").autosnip
 
 ls.add_snippets("lua", {
 	s(
