@@ -12,6 +12,7 @@ local t = ls.text_node
 ls.add_snippets("tex", {
 	s("em", t({ "\\vspace{1em}", "" })),
 	s("it", fmta("\\textit{<>}<>", { i(1), i(0) })),
+	s("verb", fmta("\\verb|<>|<>", { i(1), i(0) })),
 
 	s(
 		"tc",
