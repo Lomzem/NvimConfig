@@ -19,7 +19,7 @@ ls.add_snippets("tex", {
 			[[
 \begin{tcolorbox}
     <>
-\end{tcolorbox
+\end{tcolorbox}
     ]],
 			{ i(0) }
 		)
