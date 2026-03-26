@@ -10,6 +10,7 @@
 - [Wansmer/treesj](https://github.com/Wansmer/treesj)
 - [augmentcode/augment.vim](https://github.com/augmentcode/augment.vim)
 - [b0o/incline.nvim](https://github.com/b0o/incline.nvim)
+- [benlubas/molten-nvim](https://github.com/benlubas/molten-nvim)
 - [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim)
 - [chentoast/marks.nvim](https://github.com/chentoast/marks.nvim)
 - [echasnovski/mini.ai](https://github.com/echasnovski/mini.ai)

@@ -19,18 +19,18 @@ return {
 		-- 	end,
 		-- 	mode = "v",
 		-- },
-		{
-			"<leader>k",
-			function()
-				vim.cmd("norm <esc>V")
-				vim.cmd("HopLineStart")
-			end,
-			mode = "v",
-		},
+		-- {
+		-- 	"<leader>k",
+		-- 	function()
+		-- 		vim.cmd("norm <esc>V")
+		-- 		vim.cmd("HopLineStart")
+		-- 	end,
+		-- 	mode = "v",
+		-- },
 		{ '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
 		-- { '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		-- { "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
-		{ "<leader>k", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
+		-- { "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o", "v" } },
+		-- { "<leader>k", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
 		{
 			"d<leader>k",
 			function()
@@ -38,7 +38,6 @@ return {
 				vim.cmd("HopLineStart")
 				vim.cmd("norm d")
 			end,
-			mode = { "n" },
 		},
 	},
 }
