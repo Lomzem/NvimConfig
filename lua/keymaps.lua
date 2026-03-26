@@ -35,10 +35,10 @@ vim.keymap.set("n", "<c-/>", ":let p=getpos('.')<CR>gcc:call setpos('.', p)<CR>"
 vim.keymap.set("v", "<c-/>", "gc", { remap = true })
 
 -- Centering
-vim.keymap.set("n", "<c-u>", "<c-u>zz") -- Centers page up
-vim.keymap.set("n", "<c-d>", "<c-d>zz") -- Centers page d-own
-vim.keymap.set("n", "n", "nzzzv") -- Centers search forward
-vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
+-- vim.keymap.set("n", "<c-u>", "<c-u>zz") -- Centers page up
+-- vim.keymap.set("n", "<c-d>", "<c-d>zz") -- Centers page d-own
+-- vim.keymap.set("n", "n", "nzzzv") -- Centers search forward
+-- vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
 
 -- Clipboard
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y') -- Saves to system clipboard
