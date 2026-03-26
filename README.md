@@ -24,6 +24,7 @@
 - [folke/snacks.nvim](https://github.com/folke/snacks.nvim)
 - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [igorlfs/nvim-dap-view](https://github.com/igorlfs/nvim-dap-view)
+- [karb94/neoscroll.nvim](https://github.com/karb94/neoscroll.nvim)
 - [kawre/neotab.nvim](https://github.com/kawre/neotab.nvim)
 - [latex-lsp/tree-sitter-latex](https://github.com/latex-lsp/tree-sitter-latex)
 - [lervag/vimtex](https://github.com/lervag/vimtex)
