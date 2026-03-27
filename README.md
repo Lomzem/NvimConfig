@@ -13,6 +13,7 @@
 - [benlubas/molten-nvim](https://github.com/benlubas/molten-nvim)
 - [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim)
 - [chentoast/marks.nvim](https://github.com/chentoast/marks.nvim)
+- [chomosuke/typst-preview.nvim](https://github.com/chomosuke/typst-preview.nvim)
 - [echasnovski/mini.ai](https://github.com/echasnovski/mini.ai)
 - [echasnovski/mini.icons](https://github.com/echasnovski/mini.icons)
 - [echasnovski/mini.move](https://github.com/echasnovski/mini.move)
