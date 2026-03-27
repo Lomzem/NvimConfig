@@ -4,8 +4,9 @@ local installed_lsp = {
 	"html",
 	"jsonls",
 	"lua_ls",
-	"tsgo",
 	"texlab",
+	"tsgo",
+	"tinymist",
 }
 
 for _, lsp in ipairs(installed_lsp) do

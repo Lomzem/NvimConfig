@@ -38,7 +38,6 @@ return {
 				tex = { "tex-fmt" },
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
-				typst = { "typstyle" },
 				yaml = { "yamlfmt" },
 			},
 			-- formatters = require("formatters.formatters"),
