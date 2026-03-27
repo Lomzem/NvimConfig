@@ -41,7 +41,13 @@ vim.keymap.set("v", "<c-/>", "gc", { remap = true })
 -- vim.keymap.set("n", "N", "Nzzzv") -- Centers search backwards
 
 -- Clipboard
-vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y') -- Saves to system clipboard
+vim.keymap.set({ "n", "v", "x" }, "<leader>y", function()
+	vim.cmd("normal! y")
+	local reg = vim.fn.getreg('"')
+	local trimmed = vim.fn.trim(reg)
+	vim.fn.setreg("+", trimmed)
+end, { silent = true })
+
 vim.keymap.set("n", "Y", "yy")
 
 -- Line editing shortcut
