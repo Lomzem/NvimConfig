@@ -1,3 +1,14 @@
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+	pattern = ":",
+	callback = function()
+		vim.schedule(function()
+			if vim.fn.getcmdtype() == ":" and vim.fn.getcmdline() == "" then
+				require("blink.cmp").show({ providers = { "cmdline" } })
+			end
+		end)
+	end,
+})
+
 ---@type LazySpec
 return {
 	"saghen/blink.cmp",
@@ -45,12 +56,13 @@ return {
 				end,
 			},
 		},
-	},
-
-	cmdline = {
-		keymap = {
-			preset = "cmdline",
+		cmdline = {
+			keymap = {
+				preset = "inherit",
+			},
+			completion = {
+				menu = { auto_show = true },
+			},
 		},
-		completion = { menu = { auto_show = true } },
 	},
 }
