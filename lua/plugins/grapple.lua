@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"cbochs/grapple.nvim",
+	cond = false,
 	lazy = false,
 	config = function()
 		local grapple = require("grapple")

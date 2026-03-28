@@ -6,14 +6,16 @@ vim.keymap.set("v", "+", "<esc>ggVG")
 vim.keymap.set("n", "y=", function()
 	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
 	local joined_lines = vim.fn.join(lines, "\n")
+	joined_lines = vim.fn.trim(joined_lines)
 	vim.fn.setreg("+", joined_lines)
 	vim.notify("Copied to clipboard", vim.log.levels.INFO)
 end) -- Copy all
 
 vim.keymap.set("n", "<leader>q", "<c-z>") -- Suspend
-vim.keymap.set("n", "<a-w>", "<c-z>") -- Suspend
+vim.keymap.set("n", "<leader>x", "<cmd>x<cr>") -- Suspend
 vim.keymap.set("n", "<a-q>", "<cmd>q<CR>") -- Quit
-vim.keymap.set("i", "<c-c>", "<esc>") -- Remap Ctrl+C to Esc
+vim.keymap.set("i", "<c-c>", "<esc>")
+vim.keymap.set("i", "<m-[>", "<esc>")
 
 -- These mappings control the size of splits (height/width)
 vim.keymap.set("n", "<m-,>", "<c-w>5<")

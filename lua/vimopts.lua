@@ -1,6 +1,6 @@
 -- line numbers
-vim.opt.number = false
-vim.opt.relativenumber = false
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.fillchars = { eob = " " }
 
 -- tabs and indenting
@@ -27,6 +27,7 @@ vim.opt.laststatus = 0
 vim.opt.cmdheight = 0
 vim.o.syntax = "on"
 vim.opt.signcolumn = "yes"
+vim.o.winborder = "single"
 
 -- split windows
 vim.opt.splitright = true

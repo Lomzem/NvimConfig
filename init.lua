@@ -1,3 +1,11 @@
+local cwd = vim.fn.getcwd()
+for _, file in ipairs(vim.v.oldfiles) do
+	-- Check if the file path starts with the current directory
+	if vim.fn.fnamemodify(file, ":p"):sub(1, #cwd) == cwd then
+		vim.cmd("edit " .. file)
+		return
+	end
+end
 require("vimopts")
 require("keymaps")
 

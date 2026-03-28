@@ -5,7 +5,7 @@ return {
 	---@module "neotab"
 	---@type ntab.user.config
 	opts = {
-		tabkey = "",
-		reverse_key = "",
+		-- tabkey = "",
+		-- reverse_key = "",
 	},
 }

@@ -3,7 +3,7 @@ return {
 	"L3MON4D3/LuaSnip",
 	event = "InsertEnter",
 	build = "make install_jsregexp",
-	dependencies = { "neotab.nvim" },
+	-- dependencies = { "neotab.nvim" },
 	config = function()
 		local ls = require("luasnip")
 
@@ -24,19 +24,18 @@ return {
 	end,
 	keys = {
 		{
-			"<tab>",
+			"<c-n>",
 			function()
-				return require("luasnip").expand_or_jumpable() and "<Plug>luasnip-expand-or-jump"
-					or "<Plug>(neotab-out)"
+				require("luasnip").expand_or_jumpable()
 			end,
 			expr = true,
 			silent = true,
 			mode = "i",
 		},
 		{
-			"<s-tab>",
+			"<c-p>",
 			function()
-				return require("luasnip").jumpable(-1) and "<Plug>luasnip-jump-prev" or "<Plug>(neotab-reverse)"
+				require("luasnip").jumpable(-1)
 			end,
 			expr = true,
 			silent = true,
