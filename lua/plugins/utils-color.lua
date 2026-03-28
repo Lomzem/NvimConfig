@@ -13,7 +13,6 @@ return {
 	},
 	cmd = { "Colortils" },
 	keys = {
-		-- { "<leader>v", "<cmd>Colortils picker<cr>" },
 		{ "<leader>v", "<cmd>Colortils darken<cr>" },
 	},
 }

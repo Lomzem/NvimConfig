@@ -13,8 +13,7 @@ vim.api.nvim_create_autocmd("CmdlineEnter", {
 return {
 	"saghen/blink.cmp",
 	version = "1.*",
-	lazy = false,
-	-- event = { "InsertEnter", "CmdlineEnter" },
+	event = "VeryLazy",
 	dependencies = {
 		"saghen/blink.compat",
 	},

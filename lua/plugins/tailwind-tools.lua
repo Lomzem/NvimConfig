@@ -9,7 +9,8 @@ return {
 	opts = {
 		document_color = {
 			enabled = true, -- can be toggled by commands
-			kind = "inline", -- "inline" | "foreground" | "background"
+			---@type "inline" | "foreground" | "background"
+			kind = "background",
 		},
 	},
 }
