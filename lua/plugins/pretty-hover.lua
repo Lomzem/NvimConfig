@@ -14,9 +14,7 @@
 ---@field multi_server boolean? Flag detecting whether you want to use the new multi lsp support or not
 
 ---@type HoverConfiguration
-local opts = {
-	border = "single",
-}
+local opts = {}
 
 ---@type LazySpec
 return {

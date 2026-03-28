@@ -5,11 +5,11 @@ return {
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
-	ft = "tsx",
+	ft = { "tsx", "jsx", "html" },
 	opts = {
 		document_color = {
 			enabled = true, -- can be toggled by commands
-			kind = "background", -- "inline" | "foreground" | "background"
+			kind = "inline", -- "inline" | "foreground" | "background"
 		},
 	},
 }
