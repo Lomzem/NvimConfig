@@ -46,6 +46,7 @@
 - [smoka7/hop.nvim](https://github.com/smoka7/hop.nvim)
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)
+- [supermaven-inc/supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)
 - [theHamsta/nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
