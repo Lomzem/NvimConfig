@@ -24,21 +24,17 @@ return {
 	end,
 	keys = {
 		{
-			"<c-n>",
+			"<c-j>",
 			function()
-				require("luasnip").expand_or_jumpable()
+				require("luasnip").expand_or_jump()
 			end,
-			expr = true,
-			silent = true,
 			mode = "i",
 		},
 		{
-			"<c-p>",
+			"<c-k>",
 			function()
 				require("luasnip").jumpable(-1)
 			end,
-			expr = true,
-			silent = true,
 			mode = "i",
 		},
 	},

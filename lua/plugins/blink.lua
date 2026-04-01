@@ -22,16 +22,11 @@ return {
 	opts = {
 		keymap = {
 			preset = "none",
-			["<m-k>"] = { "select_prev", "fallback" },
-			["<m-j>"] = { "select_next", "fallback" },
-			["<m-l>"] = { "select_and_accept", "fallback" },
-
-			["<c-k>"] = { "select_prev", "fallback" },
-			["<c-j>"] = { "select_next", "fallback" },
+			["<c-p>"] = { "select_prev", "fallback" },
+			["<c-n>"] = { "select_next", "fallback" },
 			["<c-l>"] = { "select_and_accept", "fallback" },
 
-			["<m-e>"] = { "hide", "fallback" },
-			["<m-space>"] = { "show", "show_documentation", "hide_documentation" },
+			["<c-e>"] = { "hide", "fallback" },
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
 
 			["<m-1>"] = {
