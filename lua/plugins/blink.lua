@@ -26,6 +26,9 @@ return {
 			["<c-n>"] = { "select_next", "fallback" },
 			["<c-l>"] = { "select_and_accept", "fallback" },
 
+			["<C-u>"] = { "scroll_documentation_up", "fallback" },
+			["<C-d>"] = { "scroll_documentation_down", "fallback" },
+
 			["<c-e>"] = { "hide", "fallback" },
 			["<c-space>"] = { "show", "show_documentation", "hide_documentation" },
 
