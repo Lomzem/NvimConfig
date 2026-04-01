@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
 	"cbochs/grapple.nvim",
-	cond = false,
 	lazy = false,
 	config = function()
 		local grapple = require("grapple")
@@ -11,22 +10,18 @@ return {
 			scope = "cwd",
 			icons = false,
 			status = true,
-			win_opts = {
-				border = "rounded",
-			},
 		})
-		if vim.v.argv[3] == "." then
-			if grapple.exists({ index = 1 }) then
-				vim.defer_fn(function()
-					grapple.select({ index = 1 })
-				end, 0)
-			end
-		end
+		-- if vim.v.argv[3] == "." then
+		-- 	if grapple.exists({ index = 1 }) then
+		-- 		vim.defer_fn(function()
+		-- 			grapple.select({ index = 1 })
+		-- 		end, 0)
+		-- 	end
+		-- end
 	end,
 	cmd = { "Grapple" },
 	keys = {
 		{ "<leader>a", "<cmd>Grapple tag<cr>", desc = "Tag a file" },
-		-- { "<leader>A", "<cmd>Grapple reset<cr><cmd>Grapple tag<cr><cmd>NoiceDismiss<cr>", desc = "Clears list" },
 		{
 			"<leader>A",
 			function()
