@@ -42,6 +42,7 @@ return {
 			sql = { "sql_formatter" },
 			svelte = { "prettier" },
 			tex = { "tex-fmt" },
+			toml = { "tombi" },
 			typescript = { "prettier" },
 			typescriptreact = { "prettier" },
 			yaml = { "yamlfmt" },
