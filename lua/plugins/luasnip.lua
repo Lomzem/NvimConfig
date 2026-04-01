@@ -3,7 +3,6 @@ return {
 	"L3MON4D3/LuaSnip",
 	event = "InsertEnter",
 	build = "make install_jsregexp",
-	-- dependencies = { "neotab.nvim" },
 	config = function()
 		local ls = require("luasnip")
 
