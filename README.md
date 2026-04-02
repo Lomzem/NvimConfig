@@ -76,6 +76,7 @@
 - [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material)
 - [savq/melange-nvim](https://github.com/savq/melange-nvim)
 - [shaunsingh/nord.nvim](https://github.com/shaunsingh/nord.nvim)
+- [thepogsupreme/mountain.nvim](https://github.com/thepogsupreme/mountain.nvim)
 - [thesimonho/kanagawa-paper.nvim](https://github.com/thesimonho/kanagawa-paper.nvim)
 - [vague2k/vague.nvim](https://github.com/vague2k/vague.nvim)
 - [zenbones-theme/zenbones.nvim](https://github.com/zenbones-theme/zenbones.nvim)
