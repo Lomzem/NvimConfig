@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"b0o/incline.nvim",
+	cond = false,
 	event = "VeryLazy",
 	config = function()
 		require("incline").setup({
