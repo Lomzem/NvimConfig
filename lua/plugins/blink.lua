@@ -58,6 +58,25 @@ return {
 				end,
 			},
 		},
+		sources = {
+			providers = {
+				path = {
+					opts = {
+						get_cwd = function(context)
+							local bufname = vim.api.nvim_buf_get_name(context.bufnr)
+
+							-- zsh edit-command-line uses a temp file in /tmp, so use the
+							-- original shell cwd for relative path completion in that buffer.
+							if bufname:match("^/tmp/zsh") and vim.env.ZSH_EDIT_COMMAND_LINE_CWD then
+								return vim.env.ZSH_EDIT_COMMAND_LINE_CWD
+							end
+
+							return vim.fn.expand(("#%d:p:h"):format(context.bufnr))
+						end,
+					},
+				},
+			},
+		},
 		cmdline = {
 			keymap = {
 				preset = "inherit",
