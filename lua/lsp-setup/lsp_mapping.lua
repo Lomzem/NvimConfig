@@ -12,10 +12,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 
 		vim.opt.signcolumn = "yes"
-		vim.diagnostic.config({
-			virtual_text = false,
-			update_in_insert = false,
-		})
+		-- vim.diagnostic.config({
+		-- 	virtual_text = false,
+		-- 	update_in_insert = false,
+		-- })
 
 		vim.keymap.set("n", "K", function()
 			---@type HoverConfiguration
