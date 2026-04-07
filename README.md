@@ -39,6 +39,7 @@
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-treesitter/nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 - [pmizio/typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim)
+- [rachartier/tiny-inline-diagnostic.nvim](https://github.com/rachartier/tiny-inline-diagnostic.nvim)
 - [rcarriga/nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [rmagatti/auto-session](https://github.com/rmagatti/auto-session)
 - [saghen/blink.cmp](https://github.com/saghen/blink.cmp)
