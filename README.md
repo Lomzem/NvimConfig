@@ -69,6 +69,7 @@
 - [neanias/everforest-nvim](https://github.com/neanias/everforest-nvim)
 - [olimorris/onedarkpro.nvim](https://github.com/olimorris/onedarkpro.nvim)
 - [olivercederborg/poimandres.nvim](https://github.com/olivercederborg/poimandres.nvim)
+- [oxfist/night-owl.nvim](https://github.com/oxfist/night-owl.nvim)
 - [projekt0n/github-nvim-theme](https://github.com/projekt0n/github-nvim-theme)
 - [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim)
 - [rktjmp/lush.nvim](https://github.com/rktjmp/lush.nvim)
