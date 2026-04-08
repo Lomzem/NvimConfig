@@ -1,7 +1,9 @@
 local installed_lsp = {
 	"basedpyright",
 	"clangd",
+	"svelte",
 	"html",
+	"tailwindcss",
 	"jsonls",
 	"lua_ls",
 	"texlab",
