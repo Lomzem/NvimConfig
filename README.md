@@ -8,6 +8,7 @@
 - [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - [MunifTanjim/nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 - [Wansmer/treesj](https://github.com/Wansmer/treesj)
+- [augmentcode/augment.vim](https://github.com/augmentcode/augment.vim)
 - [b0o/incline.nvim](https://github.com/b0o/incline.nvim)
 - [benlubas/molten-nvim](https://github.com/benlubas/molten-nvim)
 - [cbochs/grapple.nvim](https://github.com/cbochs/grapple.nvim)

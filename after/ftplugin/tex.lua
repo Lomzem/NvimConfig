@@ -10,7 +10,6 @@ vim.opt_local.linebreak = true
 vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = "*.tex",
 	callback = function()
-		vim.notify("Compiling LaTeX document...")
 		local file = vim.fn.expand("%:p")
 		local file_basename = vim.fn.fnamemodify(file, ":t:r")
 		local cmd = string.format("pdflatex %s; latexmk -c", file)
