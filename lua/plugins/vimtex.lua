@@ -1,6 +1,7 @@
 ---@type LazySpec
 return {
 	"lervag/vimtex",
+	cond = false,
 	lazy = false, -- See https://github.com/lervag/vimtex
 	config = function()
 		vim.g.vimtex_view_method = "zathura"
