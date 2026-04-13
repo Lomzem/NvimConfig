@@ -7,6 +7,7 @@ return {
 		---@type snacks.Config
 		local opts = {
 			picker = {
+				layout = { preset = "select" },
 				matcher = {
 					frecency = true,
 				},
@@ -21,11 +22,11 @@ return {
 			quickfile = {},
 			scope = {},
 			input = {},
-		notifier = {
-			timeout = 1500,
-			style = "minimal",
-			top_down = false,
-		},
+			notifier = {
+				timeout = 1500,
+				style = "minimal",
+				top_down = false,
+			},
 			styles = {
 				notification_history = {
 					width = 100.0,
@@ -40,17 +41,6 @@ return {
 		{
 			"<c-p>",
 			function()
-				local dirname = vim.fn.expand("%:p:h")
-				local hidden_ignored_dirs = {
-					"/home/lomzem/dotfiles/.config/zsh",
-					"/home/lomzem/.config/nvim",
-				}
-				for _, dir in ipairs(hidden_ignored_dirs) do
-					if dirname:find(dir) then
-						Snacks.picker.files({ ignored = true, hidden = true })
-						return
-					end
-				end
 				Snacks.picker.files()
 			end,
 		},

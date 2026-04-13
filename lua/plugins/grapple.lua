@@ -11,13 +11,6 @@ return {
 			icons = false,
 			status = true,
 		})
-		-- if vim.v.argv[3] == "." then
-		-- 	if grapple.exists({ index = 1 }) then
-		-- 		vim.defer_fn(function()
-		-- 			grapple.select({ index = 1 })
-		-- 		end, 0)
-		-- 	end
-		-- end
 	end,
 	cmd = { "Grapple" },
 	keys = {
