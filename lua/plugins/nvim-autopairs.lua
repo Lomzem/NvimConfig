@@ -11,7 +11,10 @@ return {
 		})
 
 		npairs.add_rules({
-			Rule("<", ">"):with_move(cond.after_text(">")),
+			Rule("<", ">")
+				:with_pair(cond.none())
+				:with_move(cond.done())
+				:use_key(">"),
 		})
 	end,
 }
