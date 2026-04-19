@@ -1,6 +1,7 @@
 return {
 	"windwp/nvim-ts-autotag",
-	ft = { "html", "xml", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+	cond = false,
+	ft = { "html", "xml", "javascriptreact", "typescriptreact" },
 	opts = {
 		opts = {
 			enable_close = true, -- Auto close tags
