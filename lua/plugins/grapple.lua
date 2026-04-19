@@ -11,6 +11,9 @@ return {
 			icons = false,
 			status = true,
 		})
+		if grapple.exists({ index = 1 }) then
+			grapple.select({ index = 1 })
+		end
 	end,
 	cmd = { "Grapple" },
 	keys = {
