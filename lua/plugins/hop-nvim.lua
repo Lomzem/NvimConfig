@@ -1,5 +1,6 @@
 return {
 	"smoka7/hop.nvim",
+	lazy = false,
 	config = function()
 		require("hop").setup({
 			keys = "etovxqpdygfblzhckisuran",
@@ -11,33 +12,32 @@ return {
 	end,
 	cmd = { "HopLineStart", "HopWord" },
 	keys = {
-		-- {
-		-- 	'"',
-		-- 	function()
-		-- 		vim.cmd("norm <esc>V")
-		-- 		vim.cmd("HopLineStart")
-		-- 	end,
-		-- 	mode = "v",
-		-- },
-		-- {
-		-- 	"<leader>k",
-		-- 	function()
-		-- 		vim.cmd("norm <esc>V")
-		-- 		vim.cmd("HopLineStart")
-		-- 	end,
-		-- 	mode = "v",
-		-- },
-		{ '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		-- { '"', "<cmd>HopLineStart<cr>", mode = { "n", "x", "o" } },
-		-- { "'", "<cmd>HopWord<cr>", mode = { "n", "x", "o", "v" } },
-		-- { "<leader>k", "<cmd>HopWord<cr>", mode = { "n", "x", "o" } },
 		{
-			"d<leader>k",
+			"<cr>",
 			function()
-				vim.cmd("norm <esc>V")
-				vim.cmd("HopLineStart")
-				vim.cmd("norm d")
+				require("hop").hint_lines_skip_whitespace()
 			end,
+			mode = { "n", "x", "o" },
+		},
+		{
+			"d<cr>",
+			function()
+				local start_line = vim.fn.line(".")
+				local hop = require("hop")
+
+				local opts = setmetatable({}, { __index = hop.opts })
+				hop.hint_with_regex(
+					require("hop.jump_regex").regex_by_line_start_skip_whitespace(),
+					opts,
+					function(jump_target)
+						local target_line = jump_target.cursor.row
+						local from_line = math.min(start_line, target_line)
+						local to_line = math.max(start_line, target_line)
+						vim.cmd(string.format("%d,%dd", from_line, to_line))
+					end
+				)
+			end,
+			mode = { "n" },
 		},
 	},
 }
