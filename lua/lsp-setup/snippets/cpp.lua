@@ -39,13 +39,13 @@ ls.add_snippets("cpp", {
 		t("nullptr "),
 	}),
 
-	s("cout", { prefix_std("cout << ") }),
-	s("cin", { prefix_std("cin >> ") }),
-	autosnip("string ", { prefix_std("string ") }),
+	-- s("cout", { prefix_std("cout << ") }),
+	-- s("cin", { prefix_std("cin >> ") }),
+	-- autosnip("string ", { prefix_std("string ") }),
 
-	s("vec", fmt([[{}<{}> {}]], { prefix_std("vector"), i(1), i(0) })),
+	-- s("vec", fmt([[{}<{}> {}]], { prefix_std("vector"), i(1), i(0) })),
 
-	autosnip("endl ", { t("<< '\\n';") }),
+	-- autosnip("endl ", { t("<< '\\n';") }),
 
 	s("main", {
 		t({ "int main() {", "\t" }),
@@ -57,7 +57,7 @@ ls.add_snippets("cpp", {
 
 	s("i", fmt([[#include <{}>{}]], { i(1), i(0) })),
 
-	s("pair", fmt([[{}<{}, {}> {}]], { prefix_std("pair"), i(1), i(2), i(0) })),
+	-- s("pair", fmt([[{}<{}, {}> {}]], { prefix_std("pair"), i(1), i(2), i(0) })),
 
 	s(
 		"for",

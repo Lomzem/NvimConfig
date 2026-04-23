@@ -13,7 +13,9 @@ return {
 		})
 
 		if vim.v.argv[3] == "." and grapple.exists({ index = 1 }) then
-			grapple.select({ index = 1 })
+			vim.schedule(function()
+				grapple.select({ index = 1 })
+			end)
 		end
 	end,
 	cmd = { "Grapple" },
